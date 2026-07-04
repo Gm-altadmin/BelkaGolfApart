@@ -1,0 +1,38 @@
+{
+  "name": "belka-golf-website",
+  "version": "1.0.0",
+  "description": "Belka Golf Residence - Belek, Antalya'da lüks apart tatil kompleksi için responsive web sitesi",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8000 -o",
+    "dev": "http-server -p 8000 -c-1",
+    "build": "echo 'Build script not required for static site'",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "belka",
+    "golf",
+    "residence",
+    "belek",
+    "antalya",
+    "resort",
+    "apart",
+    "tatil",
+    "holiday",
+    "vacation",
+    "luxury"
+  ],
+  "author": "Belka Golf Residence",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kullanici-adi/belka-golf-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kullanici-adi/belka-golf-website/issues"
+  },
+  "homepage": "https://belkagolfapart.com",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
