@@ -356,7 +356,7 @@
 
     /* ══ POOL SECTION ══ */
     #pool-section { height: 80vh; min-height: 500px; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; overflow: hidden; }
-    .pool-bg { position: absolute; inset: 0; background: url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg') center center / cover no-repeat; z-index: 1; transition: transform 0.5s; }
+    .pool-bg { position: absolute; inset: 0; background: url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp') center center / cover no-repeat; z-index: 1; transition: transform 0.5s; }
     #pool-section:hover .pool-bg { transform: scale(1.05); }
     .pool-overlay { position: absolute; inset: 0; background: rgba(8,18,10,0.5); z-index: 2; }
     .pool-content { position: relative; z-index: 3; max-width: 700px; padding: 0 40px; }
@@ -406,17 +406,6 @@
     .gc-arrow:hover { background: #b8923a; border-color: #b8923a; }
     .gc-prev { left: 24px; }
     .gc-next { right: 24px; }
-    .gc-thumbs {
-      display: flex; gap: 12px; margin-top: 18px; overflow-x: auto; padding-bottom: 8px;
-    }
-    .gc-thumbs::-webkit-scrollbar { height: 5px; }
-    .gc-thumbs::-webkit-scrollbar-thumb { background: #d8cdb8; border-radius: 3px; }
-    .gc-thumb {
-      flex: 0 0 auto; width: 110px; height: 74px; overflow: hidden; cursor: pointer;
-      opacity: 0.5; border: 2px solid transparent; transition: all 0.3s;
-    }
-    .gc-thumb img { width: 100%; height: 100%; object-fit: cover; }
-    .gc-thumb.active, .gc-thumb:hover { opacity: 1; border-color: #b8923a; }
 
     /* ══ VIKING19 ══ */
     #viking {
@@ -537,7 +526,6 @@
       .gc-arrow { width: 40px; height: 40px; font-size: 0.85rem; }
       .gc-caption { font-size: 1.15rem; left: 20px; bottom: 18px; }
       .gc-counter { right: 20px; bottom: 22px; }
-      .gc-thumb { width: 84px; height: 58px; }
       .footer-grid { grid-template-columns: minmax(0,1fr); }
       .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
     }
@@ -704,11 +692,11 @@
     <div class="bb-actions">
       <div class="bb-pay-row">
         <label class="bb-pay-opt">
-          <input type="radio" name="bb-pay" value="havale" checked/>
+          <input type="radio" name="bb-pay" value="havale" id="bb-pay-havale" checked/>
           <span data-i18n="bb_wire">Havale/EFT</span>
         </label>
         <label class="bb-pay-opt">
-          <input type="radio" name="bb-pay" value="kart"/>
+          <input type="radio" name="bb-pay" value="kart" id="bb-pay-kart"/>
           <span data-i18n="bb_card">Kredi Kartı</span>
         </label>
       </div>
@@ -750,7 +738,7 @@
       </div>
     </div>
     <div class="intro-image reveal">
-      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt="Belka Golf Residence Pool"/>
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt="Belka Golf Residence Pool"/>
     </div>
   </div>
 </section>
@@ -810,7 +798,7 @@
       </div>
     </div>
     <div class="map-container reveal">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.665!2d31.0556!3d36.8625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c33b0000000000%3A0x0!2zMzbCsDUxJzQ1LjAiTiAzMcKwMDMnMjAuMiJF!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps?q=Belka+Golf+Residence,+M.+Akif+Ersoy+Cad.+Belka+Golf+Sitesi+A+Blok+No:25,+Belek,+Antalya,+Turkey&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </div>
 </div>
@@ -993,19 +981,6 @@
       <div class="gc-counter"><span id="gcCurrent">01</span> / 11</div>
     </div>
 
-    <div class="gc-thumbs" id="gcThumbs">
-      <div class="gc-thumb active" onclick="gcGoTo(0)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt=""/></div>
-      <div class="gc-thumb" onclick="gcGoTo(1)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt=""/></div>
-      <div class="gc-thumb" onclick="gcGoTo(2)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt=""/></div>
-      <div class="gc-thumb" onclick="gcGoTo(3)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt=""/></div>
-      <div class="gc-thumb" onclick="gcGoTo(4)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt=""/></div>
-      <div class="gc-thumb" onclick="gcGoTo(5)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt=""/></div>
-      <div class="gc-thumb" onclick="gcGoTo(6)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt=""/></div>
-      <div class="gc-thumb" onclick="gcGoTo(7)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt=""/></div>
-      <div class="gc-thumb" onclick="gcGoTo(8)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt=""/></div>
-      <div class="gc-thumb" onclick="gcGoTo(9)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt=""/></div>
-      <div class="gc-thumb" onclick="gcGoTo(10)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt=""/></div>
-    </div>
   </div>
 </section>
 
@@ -1029,7 +1004,7 @@
     </p>
     <a href="https://wa.me/905322622773?text=Viking19 paketi hakkında bilgi almak istiyorum"
        class="btn-primary reveal" target="_blank"
-       style="display:inline-flex;align-items:center;gap:10px;width:fit-content" data-i18n="btn_book">
+       style="display:inline-flex;align-items:center;gap:10px;width:fit-content" data-i18n="viking_book_btn">
       Rezervasyon Yap
     </a>
 
@@ -1231,7 +1206,6 @@ revEls.forEach(el => revObs.observe(el));
 
 /* ══ GALERİ KAROSELİ ══ */
 const gcSlides = document.querySelectorAll('.gc-slide');
-const gcThumbs = document.querySelectorAll('.gc-thumb');
 const gcStage = document.getElementById('gcStage');
 const gcCurrentEl = document.getElementById('gcCurrent');
 let gcIndex = 0;
@@ -1240,14 +1214,7 @@ const gcTotal = gcSlides.length;
 
 function gcRender() {
   gcSlides.forEach((s, i) => s.classList.toggle('active', i === gcIndex));
-  gcThumbs.forEach((t, i) => t.classList.toggle('active', i === gcIndex));
   if (gcCurrentEl) gcCurrentEl.textContent = String(gcIndex + 1).padStart(2, '0');
-  const activeThumb = gcThumbs[gcIndex];
-  const thumbsContainer = document.getElementById('gcThumbs');
-  if (activeThumb && thumbsContainer) {
-    const targetLeft = activeThumb.offsetLeft - (thumbsContainer.clientWidth / 2) + (activeThumb.clientWidth / 2);
-    thumbsContainer.scrollTo({ left: targetLeft, behavior: 'smooth' });
-  }
 }
 function gcNext() { gcIndex = (gcIndex + 1) % gcTotal; gcRender(); gcResetAutoplay(); }
 function gcPrev() { gcIndex = (gcIndex - 1 + gcTotal) % gcTotal; gcRender(); gcResetAutoplay(); }
@@ -1440,6 +1407,24 @@ function initBooking() {
   const btn = document.getElementById('bb-reserve-btn');
   if (btn) btn.addEventListener('click', bbReserve);
 
+  const havalePayEl = document.getElementById('bb-pay-havale');
+  if (havalePayEl && !havalePayEl.dataset.boundPayRedirect) {
+    havalePayEl.dataset.boundPayRedirect = '1';
+    havalePayEl.addEventListener('change', () => {
+      if (havalePayEl.checked) {
+        window.open(`https://wa.me/${WA_NUM}?text=${encodeURIComponent('Hesap numaranızı verir misiniz?')}`, '_blank');
+      }
+    });
+  }
+
+  const cardPayEl = document.getElementById('bb-pay-kart');
+  if (cardPayEl && !cardPayEl.dataset.boundPayRedirect) {
+    cardPayEl.dataset.boundPayRedirect = '1';
+    cardPayEl.addEventListener('change', () => {
+      if (cardPayEl.checked) window.open('https://payment.belkagolf.com', '_blank');
+    });
+  }
+
   bbUpdate();
 }
 
@@ -1452,6 +1437,7 @@ const translations = {
     hero_title:'Lüks apart tatil,<br><em>ev konforu ile</em>',
     hero_desc:'Belek\'in kalbinde, golf sahaları hemen yanı başında, özel havuzlu and tam donanımlı apart daireler. Her konaklamada ev gibi hissedin.',
     btn_book:'<i class="fab fa-whatsapp"></i> Rezervasyon Yap',
+    viking_book_btn:'Rezervasyon Yap',
     btn_view_rooms:'Daireleri Gör',
     rating_text:'500+ Misafir Puanı',
     bb_main_title:'Rezervasyon Yap', bb_main_sub:'En iyi fiyat garantisi • Direkt rezervasyon',
@@ -1515,6 +1501,7 @@ const translations = {
     hero_title:'Luxury apart holiday,<br><em>with home comfort</em>',
     hero_desc:'Luxury apartments with private pool and fully equipped in the heart of Belek, right next to golf courses. Feel like home in every stay.',
     btn_book: '<i class="fab fa-whatsapp"></i> BOOK NOW',
+    viking_book_btn: 'Book Now',
     btn_view_rooms:'View Rooms',
     rating_text:'500+ Guest Points',
     bb_main_title:'Make a Reservation', bb_main_sub:'Best price guarantee • Direct booking',
@@ -1578,6 +1565,7 @@ const translations = {
     hero_title:'Luxus-Apart-Urlaub,<br><em>mit Wohnkomfort</em>',
     hero_desc:'Luxusapartments mit privatem Pool und voll ausgestattet im Herzen von Belek, direkt neben Golfplätzen. Fühlen Sie sich bei jedem Aufenthalt wie zu Hause.',
     btn_book:'<i class="fab fa-whatsapp"></i> Jetzt Buchen',
+    viking_book_btn:'Jetzt Buchen',
     btn_view_rooms:'Zimmer ansehen',
     rating_text:'500+ Gästepunkte',
     bb_main_title:'Reservierung vornehmen', bb_main_sub:'Bestpreisgarantie • Direktbuchung',
@@ -1641,6 +1629,7 @@ const translations = {
     hero_title:'Роскошный апарт-отдых,<br><em>с домашним комфортом</em>',
     hero_desc:'Роскошные апартаменты с частным бассейном и полным оборудованием в самом сердце Белека, прямо рядом с полями для гольфа. Чувствуйте себя как дома в каждой поездке.',
     btn_book:'<i class="fab fa-whatsapp"></i> Забронировать',
+    viking_book_btn:'Забронировать',
     btn_view_rooms:'Посмотреть номера',
     rating_text:'500+ баллов гостей',
     bb_main_title:'Сделать бронирование', bb_main_sub:'Гарантия лучшей цены • Прямое бронирование',
