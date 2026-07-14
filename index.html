@@ -32,7 +32,7 @@
     "url": "https://belkagolfapart.com",
     "telephone": "+90-532-262-27-73",
     "email": "info@belkagolf.com",
-    "priceRange": "85€-135€",
+    "priceRange": "109€-155€",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Belek Mah. Mehmet Akif Ersoy Cad. 25",
@@ -168,7 +168,7 @@
     /* ══ HERO ══ */
     #hero {
       height: 100vh; min-height: 640px; position: relative;
-      display: flex; align-items: flex-end; overflow: hidden;
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-end; overflow: hidden;
     }
     .hero-bg {
       position: absolute; inset: 0;
@@ -184,6 +184,8 @@
     .hero-content {
       position: relative; z-index: 2;
       padding: 0 80px 100px; max-width: 900px; width: 100%;
+      text-align: center;
+      margin: 0 auto;
     }
     .hero-label {
       font-size: 0.7rem; font-weight: 500; letter-spacing: 0.3em;
@@ -203,11 +205,11 @@
     .hero-desc {
       font-size: 0.95rem; font-weight: 400; color: rgba(255,255,255,0.92);
       line-height: 1.75; letter-spacing: 0.02em; max-width: 520px;
-      margin-bottom: 36px; text-shadow: 0 2px 14px rgba(0,0,0,0.6);
+      margin: 0 auto 36px auto; text-shadow: 0 2px 14px rgba(0,0,0,0.6);
       opacity: 0; animation: fadeUp 1s ease 0.7s forwards;
     }
     .hero-actions {
-      display: flex; gap: 16px; flex-wrap: wrap;
+      display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
       opacity: 0; animation: fadeUp 1s ease 0.9s forwards;
     }
     .btn-primary {
@@ -226,8 +228,10 @@
     }
     .btn-ghost:hover { border-color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.08); }
     .hero-rating {
-      position: absolute; right: 80px; bottom: 100px; z-index: 2;
+      position: relative; z-index: 2;
       text-align: center; opacity: 0; animation: fadeUp 1s ease 1.1s forwards;
+      margin-top: 40px;
+      padding-bottom: 100px;
     }
     .rating-score {
       font-family: 'Cormorant Garamond', serif;
@@ -534,11 +538,12 @@
       </a>
       <a href="#daireler" class="btn-ghost" data-i18n="btn_view_rooms">Daireleri Gör</a>
     </div>
-  </div>
-  <div class="hero-rating">
-    <div class="rating-score">4.8</div>
-    <div class="rating-stars">★★★★★</div>
-    <div class="rating-text" data-i18n="rating_text">500+ Misafir Puanı</div>
+    
+    <div class="hero-rating">
+      <div class="rating-score">4.8</div>
+      <div class="rating-stars">★★★★★</div>
+      <div class="rating-text" data-i18n="rating_text">500+ Misafir Puanı</div>
+    </div>
   </div>
 </section>
 
@@ -552,9 +557,9 @@
     <div class="bb-field">
       <label class="bb-label" data-i18n="bb_room">ODA TİPİ</label>
       <select id="bb-room" class="bb-select">
-        <option value="85">1+1 Exclusive Poolside</option>
-        <option value="99" selected>2+1 Deluxe Poolside</option>
-        <option value="120">3+1 Dublex Apt.</option>
+        <option value="148">1+1 Exclusive Poolside</option>
+        <option value="184" selected>2+1 Deluxe Poolside</option>
+        <option value="211">3+1 Dublex Apt.</option>
       </select>
     </div>
     <div class="bb-field">
@@ -747,7 +752,7 @@
         <h3 class="room-name" data-i18n="room1_name">1+1 Exclusive Poolside</h3>
         <p class="room-desc" data-i18n="room1_desc">Havuz başında, modern dekorasyonu and sunduğu özel imkânlarla çiftler için ideal, şık and konforlu bir kaçış noktası.</p>
         <div class="room-footer">
-          <div class="room-price">85 <sub>€</sub> <sub data-i18n="room_from">Gecelik</sub></div>
+          <div class="room-price">109 <sub>€</sub> <sub data-i18n="room_from">Gecelik</sub></div>
           <a href="https://wa.me/905322622773?text=1%2B1%20Exclusive%20Poolside%20dairesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="room-link" data-i18n="room_inquire">Bilgi Al →</a>
         </div>
       </div>
@@ -762,7 +767,7 @@
         <h3 class="room-name" data-i18n="room2_name">2+1 Deluxe Poolside</h3>
         <p class="room-desc" data-i18n="room2_desc">Lüksü and fonksiyonelliği bir araya getiren, geniş balkonlu and tam donanımlı mutfağıyla uzun süreli konaklamalar için kusursuz bir tercih.</p>
         <div class="room-footer">
-          <div class="room-price">99 <sub>€</sub> <sub data-i18n="room_from">Gecelik</sub></div>
+          <div class="room-price">135 <sub>€</sub> <sub data-i18n="room_from">Gecelik</sub></div>
           <a href="https://wa.me/905322622773?text=2%2B1%20Deluxe%20Poolside%20dairesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="room-link" data-i18n="room_inquire">Bilgi Al →</a>
         </div>
       </div>
@@ -777,7 +782,7 @@
         <h3 class="room-name" data-i18n="room3_name">3+1 Dublex Apt.</h3>
         <p class="room-desc" data-i18n="room3_desc">Geniş aileler için tasarlanmış, havuz manzarası eşliğinde ferah yaşam alanları and modern mimarinin en seçkin örnekleri.</p>
         <div class="room-footer">
-          <div class="room-price">120 <sub>€</sub> <sub data-i18n="room_from">Gecelik</sub></div>
+          <div class="room-price">155 <sub>€</sub> <sub data-i18n="room_from">Gecelik</sub></div>
           <a href="https://wa.me/905322622773?text=3%2B1%20Dublex%20dairesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="room-link" data-i18n="room_inquire">Bilgi Al →</a>
         </div>
       </div>
