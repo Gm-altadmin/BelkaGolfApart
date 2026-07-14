@@ -251,8 +251,9 @@
     .bb-subtitle { font-size: 0.7rem; color: rgba(255,255,255,0.45); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 28px; }
     .bb-form {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: minmax(0,2fr) repeat(4, minmax(0,1fr));
       gap: 16px; align-items: end;
+      width: 100%;
     }
     .bb-field { display: flex; flex-direction: column; gap: 8px; }
     .bb-label {
@@ -314,12 +315,12 @@
 
     /* ══ INTRO ══ */
     #intro { padding: 120px 80px; background: #fff; }
-    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .intro-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 80px; align-items: center; }
     .section-eyebrow { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.35em; text-transform: uppercase; color: #b8923a; margin-bottom: 16px; }
     .gold-line { width: 40px; height: 1px; background: #b8923a; }
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 400; color: #1a1a1a; line-height: 1.2; margin-bottom: 24px; }
     .intro-desc { font-size: 1.05rem; line-height: 1.8; color: #4a4a4a; margin-bottom: 40px; }
-    .intro-features { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .intro-features { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 32px; }
     .intro-feat-item h4 { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; color: #1a1a1a; margin-bottom: 8px; }
     .intro-feat-item p { font-size: 0.85rem; line-height: 1.6; color: #777; }
     .intro-image { position: relative; padding-bottom: 125%; overflow: hidden; }
@@ -328,7 +329,7 @@
 
     /* ══ KONUM ══ */
     #konum-section { padding: 100px 80px; background: #faf8f4; }
-    .loc-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
+    .loc-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.5fr); gap: 60px; }
     .loc-list { display: flex; flex-direction: column; gap: 24px; }
     .loc-item { display: flex; gap: 20px; align-items: flex-start; }
     .loc-icon { font-size: 1.2rem; color: #b8923a; margin-top: 3px; }
@@ -338,7 +339,7 @@
 
     /* ══ DAİRELER ══ */
     #daireler { padding: 120px 80px; background: #fff; }
-    .rooms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 60px; }
+    .rooms-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 32px; margin-top: 60px; }
     .room-card { background: #fff; border: 1px solid #f0ece5; transition: all 0.4s; }
     .room-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.07); border-color: transparent; }
     .room-img { height: 280px; overflow: hidden; }
@@ -362,7 +363,7 @@
 
     /* ══ ÖZELLİKLER ══ */
     #ozellikler { padding: 120px 80px; background: #faf8f4; }
-    .feats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 60px; }
+    .feats-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 40px; margin-top: 60px; }
     .feat-box { text-align: center; }
     .feat-icon { font-size: 1.8rem; color: #b8923a; margin-bottom: 20px; }
     .feat-box h4 { font-size: 0.9rem; font-weight: 600; color: #1a1a1a; margin-bottom: 10px; }
@@ -419,7 +420,7 @@
 
     /* ══ VIKING19 ══ */
     #viking {
-      display: grid; grid-template-columns: 1fr 1fr;
+      display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr);
       min-height: 70vh;
     }
     .viking-img {
@@ -439,12 +440,12 @@
     /* ══ PLATFORM PUANLARI BANDI ══ */
     .platform-bar {
       background: #fff;
-      display: flex; align-items: stretch;
+      display: flex; align-items: stretch; flex-wrap: wrap;
       border-bottom: 1px solid #f0ece5;
       border-top: 1px solid #f0ece5;
     }
     .platform-item {
-      flex: 1; min-width: 160px; padding: 22px 28px;
+      flex: 1 1 160px; min-width: 0; padding: 22px 28px;
       text-align: center; border-right: 1px solid #f0ece5;
       transition: background 0.2s;
     }
@@ -464,7 +465,7 @@
 
     /* ══ YORUMLAR ══ */
     #yorumlar { padding: 120px 80px; background: #fff; }
-    .rev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 60px; }
+    .rev-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 32px; margin-top: 60px; }
     .rev-card { padding: 40px; border: 1px solid #f0ece5; text-align: center; }
     .rev-stars { color: #b8923a; font-size: 0.7rem; letter-spacing: 3px; margin-bottom: 20px; }
     .rev-text { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; color: #1a1a1a; line-height: 1.5; margin-bottom: 24px; }
@@ -472,7 +473,7 @@
 
     /* ══ FOOTER ══ */
     footer { background: #08120a; color: #fff; padding: 100px 80px 40px; }
-    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 60px; margin-bottom: 80px; }
+    .footer-grid { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.2fr); gap: 60px; margin-bottom: 80px; }
     .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #fff; margin-bottom: 20px; }
     .footer-desc { font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.8; margin-bottom: 30px; }
     .footer-social { display: flex; gap: 16px; }
@@ -501,33 +502,58 @@
       nav { padding: 0 32px; }
       .hero-content { padding: 0 40px 80px; }
       #booking-bar { padding: 40px; }
-      .bb-form { grid-template-columns: 1.5fr 1fr 1fr; }
+      .bb-form { grid-template-columns: repeat(3, minmax(0,1fr)); }
       #intro, #daireler, #ozellikler, #galeri, #viking, #yorumlar, #konum-section, footer { padding-left: 40px; padding-right: 40px; }
-      .feats-grid { grid-template-columns: repeat(2, 1fr); }
+      .feats-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
     @media (max-width: 992px) {
-      .intro-grid, .loc-grid { grid-template-columns: 1fr; gap: 40px; }
-      #viking { grid-template-columns: 1fr; }
+      .intro-grid, .loc-grid { grid-template-columns: minmax(0,1fr); gap: 40px; }
+      #viking { grid-template-columns: minmax(0,1fr); }
       .viking-img { height: 50vh; }
       .viking-text { padding: 60px 40px; }
-      .rooms-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+      .rooms-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .rev-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .footer-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
     @media (max-width: 768px) {
       .nav-links, .lang-switcher { display: none; }
       .hamburger { display: flex; }
-      .bb-form { grid-template-columns: 1fr; }
+      #booking-bar { padding: 32px 24px; }
+      .bb-form { grid-template-columns: minmax(0,1fr); }
       .bb-bottom { flex-direction: column; align-items: stretch; }
+      .bb-summary-box { max-width: 100%; }
       .bb-actions { min-width: 100%; }
-      .rooms-grid { grid-template-columns: 1fr; }
+      .bb-extras { gap: 16px 24px; }
+      #intro, #daireler, #ozellikler, #galeri, #viking, #yorumlar, #konum-section, footer { padding-left: 24px; padding-right: 24px; }
+      .viking-text { padding: 60px 24px; }
+      .hero-content { padding: 0 24px 80px; }
+      nav { padding: 0 20px; }
+      .intro-features { grid-template-columns: minmax(0,1fr); }
+      .rooms-grid { grid-template-columns: minmax(0,1fr); }
+      .rev-grid { grid-template-columns: minmax(0,1fr); }
+      .platform-item { flex: 1 1 50%; border-right: none; border-bottom: 1px solid #f0ece5; }
+      .platform-item:nth-child(2n) { border-right: none; }
       .gc-stage { aspect-ratio: 4/3.4; max-height: none; }
       .gc-arrow { width: 40px; height: 40px; font-size: 0.85rem; }
       .gc-caption { font-size: 1.15rem; left: 20px; bottom: 18px; }
       .gc-counter { right: 20px; bottom: 22px; }
       .gc-thumb { width: 84px; height: 58px; }
-      .gal-1 { grid-column: span 2; grid-row: span 1; }
-      .footer-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: minmax(0,1fr); }
       .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      #booking-bar { padding: 24px 16px; }
+      .bb-title { font-size: 1.3rem; }
+      .bb-form { gap: 12px; }
+      .bb-pay-row { flex-direction: column; gap: 10px; }
+      .bb-extras { flex-direction: column; gap: 14px; }
+      #intro, #daireler, #ozellikler, #galeri, #viking, #yorumlar, #konum-section, footer { padding-left: 16px; padding-right: 16px; }
+      .viking-text { padding: 50px 16px; }
+      .hero-content { padding: 0 16px 60px; }
+      nav { padding: 0 16px; }
+      .section-title { font-size: 2.1rem; }
+      .rev-card { padding: 28px 20px; }
+      .platform-item { flex: 1 1 100%; }
     }
   </style>
 </head>
