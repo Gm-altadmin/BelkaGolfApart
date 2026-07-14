@@ -135,8 +135,8 @@
 
     /* Mobil Dil Seçici */
     .mobile-lang {
-      display: flex; gap: 10px; margin-top: auto;
-      padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex; gap: 10px;
+      padding-bottom: 28px; margin-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.1);
     }
     .mobile-lang .lang-btn {
       flex: 1; text-align: center; padding: 12px 0;
@@ -149,9 +149,10 @@
     nav.scrolled .hamburger span { background: #1a1a1a; }
     .mobile-nav {
       position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
-      background: #0f1a10; z-index: 1000; padding: 80px 40px;
-      display: flex; flex-direction: column; gap: 28px;
+      background: #0f1a10; z-index: 1000; padding: 80px 40px 40px;
+      display: flex; flex-direction: column; gap: 24px;
       transition: right 0.4s ease;
+      overflow-y: auto;
     }
     .mobile-nav.open { right: 0; }
     .mobile-nav a {
@@ -575,6 +576,14 @@
 
 <div class="mobile-nav" id="mobileNav">
   <button class="mobile-close" id="mobileClose">✕</button>
+
+  <div class="mobile-lang">
+    <button class="lang-btn" data-lang="tr" onclick="setLang('tr')">TR</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" data-lang="de" onclick="setLang('de')">DE</button>
+    <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
+  </div>
+
   <a href="#daireler" onclick="closeMob()" data-i18n="nav_rooms">Daireler</a>
   <a href="#ozellikler" onclick="closeMob()" data-i18n="nav_amenities">Özellikler</a>
   <a href="#galeri" onclick="closeMob()" data-i18n="nav_gallery">Galeri</a>
@@ -582,13 +591,6 @@
   <a href="#yorumlar" onclick="closeMob()" data-i18n="nav_reviews">Yorumlar</a>
   <a href="#konum" onclick="closeMob()" data-i18n="nav_location">Konum</a>
   <a href="#rezervasyon" onclick="closeMob()" data-i18n="nav_book">Rezervasyon</a>
-  
-  <div class="mobile-lang">
-    <button class="lang-btn" data-lang="tr" onclick="setLang('tr')">TR</button>
-    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
-    <button class="lang-btn" data-lang="de" onclick="setLang('de')">DE</button>
-    <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
-  </div>
 </div>
 
 <!-- ══ HERO ══ -->
