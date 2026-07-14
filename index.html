@@ -368,23 +368,73 @@
     .feat-box h4 { font-size: 0.9rem; font-weight: 600; color: #1a1a1a; margin-bottom: 10px; }
     .feat-box p { font-size: 0.8rem; line-height: 1.6; color: #777; }
 
-    /* ══ GALERİ ══ */
+    /* ══ GALERİ / KAROSEL ══ */
     #galeri { padding: 120px 80px; background: #fff; }
-    .gal-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 250px; gap: 16px; margin-top: 60px; }
-    .gal-item { overflow: hidden; cursor: pointer; position: relative; }
-    .gal-item img { transition: transform 0.5s; }
-    .gal-item:hover img { transform: scale(1.1); }
-    .gal-item::after { content: '+'; position: absolute; inset: 0; background: rgba(184,146,58,0.4); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; opacity: 0; transition: opacity 0.3s; }
-    .gal-item:hover::after { opacity: 1; }
-    .gal-1 { grid-column: span 2; grid-row: span 2; }
-    .gal-2 { grid-column: span 2; }
+    .gc-wrap { margin-top: 60px; }
+    .gc-stage {
+      position: relative; width: 100%; aspect-ratio: 16/8.5; max-height: 620px;
+      overflow: hidden; background: #0f1a10; border-radius: 2px;
+    }
+    .gc-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease; }
+    .gc-slide.active { opacity: 1; z-index: 1; }
+    .gc-slide img { width: 100%; height: 100%; object-fit: cover; }
+    .gc-slide::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 35%);
+      z-index: 1;
+    }
+    .gc-caption {
+      position: absolute; bottom: 26px; left: 32px; z-index: 2; color: #fff;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+    .gc-counter {
+      position: absolute; bottom: 30px; right: 32px; z-index: 2; color: #fff;
+      font-family: 'Jost', sans-serif; font-size: 0.68rem; letter-spacing: 0.16em;
+      background: rgba(0,0,0,0.35); padding: 7px 16px; border-radius: 20px;
+      backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.2);
+    }
+    .gc-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+      width: 50px; height: 50px; border-radius: 50%; cursor: pointer;
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.4); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; transition: all 0.3s;
+    }
+    .gc-arrow:hover { background: #b8923a; border-color: #b8923a; }
+    .gc-prev { left: 24px; }
+    .gc-next { right: 24px; }
+    .gc-thumbs {
+      display: flex; gap: 12px; margin-top: 18px; overflow-x: auto; padding-bottom: 8px;
+    }
+    .gc-thumbs::-webkit-scrollbar { height: 5px; }
+    .gc-thumbs::-webkit-scrollbar-thumb { background: #d8cdb8; border-radius: 3px; }
+    .gc-thumb {
+      flex: 0 0 auto; width: 110px; height: 74px; overflow: hidden; cursor: pointer;
+      opacity: 0.5; border: 2px solid transparent; transition: all 0.3s;
+    }
+    .gc-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .gc-thumb.active, .gc-thumb:hover { opacity: 1; border-color: #b8923a; }
 
     /* ══ VIKING19 ══ */
-    #viking { padding: 120px 80px; background: #0f1a10; color: #fff; }
-    .viking-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; }
-    .viking-img { position: relative; padding-bottom: 70%; overflow: hidden; }
-    .viking-title { font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; color: #fff; margin-bottom: 24px; }
-    .viking-desc { font-size: 1rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 40px; }
+    #viking {
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 70vh;
+    }
+    .viking-img {
+      position: relative; overflow: hidden;
+      background: url('viking19-restaurant-belek-belka-golf.jpg') center / cover no-repeat;
+    }
+    .viking-text {
+      background: #1a2a1c;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 100px 80px;
+    }
+    .viking-text .section-eyebrow { color: rgba(255,255,255,0.4); }
+    .viking-text .section-title { color: #fff; }
+    .viking-text .section-body { color: rgba(255,255,255,0.55); max-width: 100%; font-size: 1rem; font-weight: 300; line-height: 1.9; margin-bottom: 40px; }
+    .viking-text .gold-line { background: #b8923a; }
 
     /* ══ PLATFORM PUANLARI BANDI ══ */
     .platform-bar {
@@ -456,7 +506,10 @@
       .feats-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 992px) {
-      .intro-grid, .loc-grid, .viking-grid { grid-template-columns: 1fr; gap: 40px; }
+      .intro-grid, .loc-grid { grid-template-columns: 1fr; gap: 40px; }
+      #viking { grid-template-columns: 1fr; }
+      .viking-img { height: 50vh; }
+      .viking-text { padding: 60px 40px; }
       .rooms-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -467,7 +520,11 @@
       .bb-bottom { flex-direction: column; align-items: stretch; }
       .bb-actions { min-width: 100%; }
       .rooms-grid { grid-template-columns: 1fr; }
-      .gal-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+      .gc-stage { aspect-ratio: 4/3.4; max-height: none; }
+      .gc-arrow { width: 40px; height: 40px; font-size: 0.85rem; }
+      .gc-caption { font-size: 1.15rem; left: 20px; bottom: 18px; }
+      .gc-counter { right: 20px; bottom: 22px; }
+      .gc-thumb { width: 84px; height: 58px; }
       .gal-1 { grid-column: span 2; grid-row: span 1; }
       .footer-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
@@ -858,33 +915,145 @@
   <div class="section-eyebrow reveal" data-i18n="gallery_eyebrow">Fotoğraflar</div>
   <h2 class="section-title reveal" data-i18n="gallery_title">Galeri</h2>
   
-  <div class="gal-grid">
-    <div class="gal-item gal-1 reveal"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt="Pool"/></div>
-    <div class="gal-item reveal"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt="Garden"/></div>
-    <div class="gal-item reveal"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt="Apartment"/></div>
-    <div class="gal-item gal-2 reveal"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt="Interior"/></div>
-    <div class="gal-item reveal"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt="Living Room"/></div>
-    <div class="gal-item reveal"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt="Balcony"/></div>
+  <div class="gc-wrap reveal">
+    <div class="gc-stage" id="gcStage">
+      <div class="gc-slide active" data-index="0">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt="Havuz Manzarası"/>
+        <div class="gc-caption">Havuz Manzarası</div>
+      </div>
+      <div class="gc-slide" data-index="1">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt="Bahçe"/>
+        <div class="gc-caption">Bahçe</div>
+      </div>
+      <div class="gc-slide" data-index="2">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt="Apartman Dış Cephe"/>
+        <div class="gc-caption">Apartman Dış Cephe</div>
+      </div>
+      <div class="gc-slide" data-index="3">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt="Oturma Odası"/>
+        <div class="gc-caption">Oturma Odası</div>
+      </div>
+      <div class="gc-slide" data-index="4">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt="Yatak Odası"/>
+        <div class="gc-caption">Yatak Odası</div>
+      </div>
+      <div class="gc-slide" data-index="5">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt="Mutfak"/>
+        <div class="gc-caption">Mutfak</div>
+      </div>
+      <div class="gc-slide" data-index="6">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt="Balkon"/>
+        <div class="gc-caption">Balkon</div>
+      </div>
+      <div class="gc-slide" data-index="7">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt="Teras"/>
+        <div class="gc-caption">Teras</div>
+      </div>
+      <div class="gc-slide" data-index="8">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt="Banyo"/>
+        <div class="gc-caption">Banyo</div>
+      </div>
+      <div class="gc-slide" data-index="9">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt="Gece Manzarası"/>
+        <div class="gc-caption">Gece Manzarası</div>
+      </div>
+      <div class="gc-slide" data-index="10">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt="Golf Sahası Manzarası"/>
+        <div class="gc-caption">Golf Sahası Manzarası</div>
+      </div>
+
+      <button class="gc-arrow gc-prev" onclick="gcPrev()" aria-label="Önceki fotoğraf"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="gc-arrow gc-next" onclick="gcNext()" aria-label="Sonraki fotoğraf"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="gc-counter"><span id="gcCurrent">01</span> / 11</div>
+    </div>
+
+    <div class="gc-thumbs" id="gcThumbs">
+      <div class="gc-thumb active" onclick="gcGoTo(0)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt=""/></div>
+      <div class="gc-thumb" onclick="gcGoTo(1)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt=""/></div>
+      <div class="gc-thumb" onclick="gcGoTo(2)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt=""/></div>
+      <div class="gc-thumb" onclick="gcGoTo(3)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt=""/></div>
+      <div class="gc-thumb" onclick="gcGoTo(4)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt=""/></div>
+      <div class="gc-thumb" onclick="gcGoTo(5)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt=""/></div>
+      <div class="gc-thumb" onclick="gcGoTo(6)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt=""/></div>
+      <div class="gc-thumb" onclick="gcGoTo(7)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt=""/></div>
+      <div class="gc-thumb" onclick="gcGoTo(8)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt=""/></div>
+      <div class="gc-thumb" onclick="gcGoTo(9)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt=""/></div>
+      <div class="gc-thumb" onclick="gcGoTo(10)"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=300,fit=crop/XjlgERNtbZurPaFl/havuz1-rarRaPIkjPZQEwnp.webp" alt=""/></div>
+    </div>
   </div>
 </section>
 
-<!-- ══ VIKING19 ══ -->
+<!-- ══ VİKİNG19 ═══════════════════════════════════ -->
 <section id="viking">
-  <div class="viking-grid">
-    <div class="viking-img reveal">
-      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/XjlgERNtbZurPaFl/belka-golf-residence-belek-havuz.jpg" alt="Viking19 Hole"/>
-    </div>
-    <div class="viking-content">
-      <div class="section-eyebrow reveal" data-i18n="viking_eyebrow">Tesis İçi</div>
-      <h2 class="viking-title reveal" data-i18n-html="viking_title">Viking19<br>Restaurant & Bar</h2>
-      <p class="viking-desc reveal" data-i18n="viking_desc">
-        Golf dersleri and akşam yemeğini birleştiren benzersiz paketimizle tatilinizi daha da özel kılın. Viking19 Hole Restaurant'ta dünya mutfağının en seçkin lezzetlerini keşfedin.
-      </p>
-      <div class="hero-actions reveal">
-        <a href="https://www.instagram.com/viking19hole/" target="_blank" class="btn-ghost">
-          <i class="fab fa-instagram"></i> @viking19hole
-        </a>
-      </div>
+  <div class="viking-img">
+    <!--
+    ╔══════════════════════════════════════╗
+    ║  GÖRSEL: viking19-restaurant-belek-belka-golf.jpg             ║
+    ╚══════════════════════════════════════╝
+    -->
+  </div>
+  <div class="viking-text">
+    <div class="section-eyebrow reveal" data-i18n="viking_eyebrow">Tesis İçi</div>
+    <div class="gold-line reveal"></div>
+    <h2 class="section-title reveal" style="margin-top:20px" data-i18n-html="viking_title">
+      Viking19<br>Restaurant & Bar
+    </h2>
+    <p class="section-body reveal" data-i18n="viking_desc">
+      Golf dersleri ve akşam yemeğini birleştiren benzersiz paketimizle tatilinizi daha da özel kılın. Viking19 Hole Restaurant'ta dünya mutfağının en seçkin lezzetlerini keşfedin.
+    </p>
+    <a href="https://wa.me/905322622773?text=Viking19 paketi hakkında bilgi almak istiyorum"
+       class="btn-primary reveal" target="_blank"
+       style="display:inline-flex;align-items:center;gap:10px;width:fit-content" data-i18n="btn_book">
+      Rezervasyon Yap
+    </a>
+
+    <!-- TripAdvisor + Instagram -->
+    <div class="reveal" style="display:flex;align-items:center;gap:16px;margin-top:24px;flex-wrap:wrap;">
+
+      <a href="https://www.tripadvisor.com.tr/Restaurant_Review-g297963-d28656234-Reviews-Viking19_Golf_Pub-Serik_Serik_District_Turkish_Mediterranean_Coast.html"
+         target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);padding:9px 16px;border-radius:3px;text-decoration:none;transition:background .2s;"
+         onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+        <!-- TripAdvisor owl logo SVG -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="12" fill="#34E0A1"/>
+          <path d="M6.5 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm11 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" fill="#000"/>
+          <circle cx="6.5" cy="12" r="1" fill="#fff"/>
+          <circle cx="17.5" cy="12" r="1" fill="#fff"/>
+          <path d="M8.5 16c.8 1.2 2 2 3.5 2s2.7-.8 3.5-2" stroke="#000" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+          <path d="M4 10.5C5 8 7.5 6.5 12 6.5s7 1.5 8 4" stroke="#000" stroke-width="1" stroke-linecap="round" fill="none"/>
+        </svg>
+        <div>
+          <div style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;color:rgba(255,255,255,.5);text-transform:uppercase;line-height:1;">Tripadvisor</div>
+          <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;color:#34E0A1;margin-top:1px;">★★★★★</div>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/viking19hole/"
+         target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);padding:9px 16px;border-radius:3px;text-decoration:none;transition:background .2s;"
+         onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+        <!-- Instagram gradient icon -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ig-g" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#f09433"/>
+              <stop offset="25%" stop-color="#e6683c"/>
+              <stop offset="50%" stop-color="#dc2743"/>
+              <stop offset="75%" stop-color="#cc2366"/>
+              <stop offset="100%" stop-color="#bc1888"/>
+            </linearGradient>
+          </defs>
+          <rect width="24" height="24" rx="6" fill="url(#ig-g)"/>
+          <circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="1.5" fill="none"/>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="#fff"/>
+        </svg>
+        <div>
+          <div style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;color:rgba(255,255,255,.5);text-transform:uppercase;line-height:1;">Instagram</div>
+          <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;color:#fff;margin-top:1px;">@viking19hole</div>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -1033,6 +1202,50 @@ const revObs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } });
 }, { threshold: 0.1 });
 revEls.forEach(el => revObs.observe(el));
+
+/* ══ GALERİ KAROSELİ ══ */
+const gcSlides = document.querySelectorAll('.gc-slide');
+const gcThumbs = document.querySelectorAll('.gc-thumb');
+const gcStage = document.getElementById('gcStage');
+const gcCurrentEl = document.getElementById('gcCurrent');
+let gcIndex = 0;
+let gcTimer = null;
+const gcTotal = gcSlides.length;
+
+function gcRender() {
+  gcSlides.forEach((s, i) => s.classList.toggle('active', i === gcIndex));
+  gcThumbs.forEach((t, i) => t.classList.toggle('active', i === gcIndex));
+  if (gcCurrentEl) gcCurrentEl.textContent = String(gcIndex + 1).padStart(2, '0');
+  const activeThumb = gcThumbs[gcIndex];
+  const thumbsContainer = document.getElementById('gcThumbs');
+  if (activeThumb && thumbsContainer) {
+    const targetLeft = activeThumb.offsetLeft - (thumbsContainer.clientWidth / 2) + (activeThumb.clientWidth / 2);
+    thumbsContainer.scrollTo({ left: targetLeft, behavior: 'smooth' });
+  }
+}
+function gcNext() { gcIndex = (gcIndex + 1) % gcTotal; gcRender(); gcResetAutoplay(); }
+function gcPrev() { gcIndex = (gcIndex - 1 + gcTotal) % gcTotal; gcRender(); gcResetAutoplay(); }
+function gcGoTo(i) { gcIndex = i; gcRender(); gcResetAutoplay(); }
+function gcAutoplay() { gcTimer = setInterval(() => { gcIndex = (gcIndex + 1) % gcTotal; gcRender(); }, 5000); }
+function gcResetAutoplay() { clearInterval(gcTimer); gcAutoplay(); }
+
+if (gcStage && gcTotal > 0) {
+  gcAutoplay();
+  gcStage.addEventListener('mouseenter', () => clearInterval(gcTimer));
+  gcStage.addEventListener('mouseleave', () => gcAutoplay());
+
+  let gcTouchStartX = 0;
+  gcStage.addEventListener('touchstart', e => { gcTouchStartX = e.touches[0].clientX; }, { passive: true });
+  gcStage.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - gcTouchStartX;
+    if (Math.abs(dx) > 50) { dx > 0 ? gcPrev() : gcNext(); }
+  }, { passive: true });
+
+  const gcVisibilityObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { e.isIntersecting ? gcAutoplay() : clearInterval(gcTimer); });
+  }, { threshold: 0.2 });
+  gcVisibilityObs.observe(gcStage);
+}
 
 /* ══ REZERVASYON SİSTEMİ ══ */
 const PRICES = { "85": 85, "99": 99, "120": 120 };
