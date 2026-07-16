@@ -1,451 +1,451 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belka Golf Website - GitHub Proje Г–zeti</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
-        }
-        .container { 
-            max-width: 1000px; 
-            margin: 0 auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            overflow: hidden;
-        }
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-        header h1 { font-size: 2.5em; margin-bottom: 10px; }
-        header p { font-size: 1.1em; opacity: 0.9; }
-        
-        .content { padding: 40px; }
-        section { margin-bottom: 40px; }
-        h2 { 
-            color: #667eea;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
-        
-        .check-item { 
-            display: flex; 
-            align-items: center;
-            margin: 10px 0;
-            padding: 10px;
-            background: #f5f5f5;
-            border-radius: 5px;
-        }
-        .check-mark { 
-            color: #28a745;
-            font-weight: bold;
-            margin-right: 15px;
-            font-size: 1.2em;
-        }
-        
-        .code-block {
-            background: #2d2d2d;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-            font-family: 'Courier New', monospace;
-            margin: 15px 0;
-            font-size: 0.9em;
-        }
-        
-        .button-group {
-            display: flex;
-            gap: 10px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        
-        .btn:hover { background: #764ba2; }
-        .btn-secondary { background: #6c757d; }
-        .btn-secondary:hover { background: #5a6268; }
-        .btn-success { background: #28a745; }
-        .btn-success:hover { background: #218838; }
-        
-        .file-tree {
-            background: #f5f5f5;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-            margin: 15px 0;
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .stat-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-        }
-        
-        .stat-number { font-size: 2em; font-weight: bold; }
-        .stat-label { font-size: 0.9em; opacity: 0.9; }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        th { background: #667eea; color: white; }
-        tr:hover { background: #f5f5f5; }
-        
-        footer {
-            background: #f5f5f5;
-            text-align: center;
-            padding: 20px;
-            color: #666;
-            border-top: 1px solid #ddd;
-        }
-        
-        .highlight { background: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 15px 0; border-radius: 5px; }
-        .success { background: #d4edda; padding: 15px; border-left: 4px solid #28a745; margin: 15px 0; border-radius: 5px; color: #155724; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>рџљЂ Belka Golf Website</h1>
-            <p>Profesyonel GitHub Projesi - HazД±r!</p>
-        </header>
-        
-        <div class="content">
-            <div class="success">
-                <strong>вњ… Tebrikler!</strong> Belka Golf Website projesi baЕџarД±yla GitHub'a hazД±r hale getirildi!
-            </div>
-            
-            <!-- Д°statistikler -->
-            <section>
-                <h2>рџ“Љ Proje Д°statistikleri</h2>
-                <div class="stats">
-                    <div class="stat-card">
-                        <div class="stat-number">17</div>
-                        <div class="stat-label">Dosya OluЕџturuldu</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">7</div>
-                        <div class="stat-label">KlasГ¶r</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">90 KB</div>
-                        <div class="stat-label">HTML Boyutu</div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- OluЕџturulan Dosyalar -->
-            <section>
-                <h2>вњ… OluЕџturulan Dosyalar</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Dosya/KlasГ¶r</th>
-                            <th>AГ§Д±klama</th>
-                            <th>Durum</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>рџ“„ index.html</td>
-                            <td>Ana sayfa (90 KB)</td>
-                            <td>вњ…</td>
-                        </tr>
-                        <tr>
-                            <td>рџ“„ README.md</td>
-                            <td>KapsamlД± proje dokumentasyonu</td>
-                            <td>вњ…</td>
-                        </tr>
-                        <tr>
-                            <td>рџ“„ GITHUB-SETUP.md</td>
-                            <td>AdД±m adД±m GitHub kurulum rehberi</td>
-                            <td>вњ…</td>
-                        </tr>
-                        <tr>
-                            <td>рџ“„ KURULUM-REHBERI.txt</td>
-                            <td>TГјrkГ§e baЕџlangД±Г§ rehberi</td>
-                            <td>вњ…</td>
-                        </tr>
-                        <tr>
-                            <td>рџ“„ package.json</td>
-                            <td>NPM konfigГјrasyonu</td>
-                            <td>вњ…</td>
-                        </tr>
-                        <tr>
-                            <td>рџ“„ LICENSE</td>
-                            <td>MIT LisansД±</td>
-                            <td>вњ…</td>
-                        </tr>
-                        <tr>
-                            <td>рџ“„ .gitignore</td>
-                            <td>Git ignore dosyasД±</td>
-                            <td>вњ…</td>
-                        </tr>
-                        <tr>
-                            <td>рџ“Ѓ .github/</td>
-                            <td>GitHub konfigГјrasyonu</td>
-                            <td>вњ…</td>
-                        </tr>
-                        <tr>
-                            <td>рџ“Ѓ .vscode/</td>
-                            <td>VS Code ayarlarД±</td>
-                            <td>вњ…</td>
-                        </tr>
-                        <tr>
-                            <td>рџ“Ѓ assets/</td>
-                            <td>CSS, JS, GГ¶rseller</td>
-                            <td>вњ… (HazД±r)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            
-            <!-- KlasГ¶r YapД±sД± -->
-            <section>
-                <h2>рџ“Ѓ Proje KlasГ¶r YapД±sД±</h2>
-                <div class="file-tree">
-belka-golf-website/
-в”њв”Ђв”Ђ index.html
-в”њв”Ђв”Ђ README.md
-в”њв”Ђв”Ђ GITHUB-SETUP.md
-в”њв”Ђв”Ђ KURULUM-REHBERI.txt
-в”њв”Ђв”Ђ package.json
-в”њв”Ђв”Ђ LICENSE
-в”њв”Ђв”Ђ .gitignore
-в”њв”Ђв”Ђ setup-github.bat
-в”њв”Ђв”Ђ setup-github.sh
-в”‚
-в”њв”Ђв”Ђ .github/
-в”‚   в”њв”Ђв”Ђ CONTRIBUTING.md
-в”‚   в””в”Ђв”Ђ workflows/
-в”‚       в”њв”Ђв”Ђ deploy.yml
-в”‚       в””в”Ђв”Ђ README.md
-в”‚
-в”њв”Ђв”Ђ .vscode/
-в”‚   в”њв”Ђв”Ђ extensions.json
-в”‚   в”њв”Ђв”Ђ settings.json
-в”‚   в””в”Ђв”Ђ tasks.json
-в”‚
-в””в”Ђв”Ђ assets/
-    в”њв”Ђв”Ђ css/
-    в”њв”Ђв”Ђ js/
-    в””в”Ђв”Ђ images/
-                </div>
-            </section>
-            
-            <!-- HД±zlД± BaЕџlangД±Г§ -->
-            <section>
-                <h2>рџљЂ HД±zlД± BaЕџlangД±Г§</h2>
-                
-                <h3 style="margin-top: 20px; color: #667eea;">1пёЏвѓЈ GitHub Repository OluЕџtur</h3>
-                <p>GitHub.com adresine git в†’ New Repository</p>
-                <ul style="margin: 10px 0 20px 20px;">
-                    <li>Name: <strong>belka-golf-website</strong></li>
-                    <li>Public seГ§</li>
-                    <li>Create repository</li>
-                </ul>
-                
-                <h3 style="color: #667eea;">2пёЏвѓЈ Terminal'de Г‡alД±ЕџtД±r</h3>
-                <p><strong>Windows PowerShell:</strong></p>
-                <div class="code-block">
-cd c:\Users\PC\Downloads\belka-golf-website
-git init
-git branch -M main
-git add .
-git commit -m "Initial commit: Belka Golf Website"
-git remote add origin https://github.com/KULLANICI-ADIN/belka-golf-website.git
-git push -u origin main
-                </div>
-                
-                <h3 style="color: #667eea;">3пёЏвѓЈ GitHub Pages AktifleЕџtir</h3>
-                <ul style="margin: 10px 0 20px 20px;">
-                    <li>GitHub'da Repository Settings aГ§</li>
-                    <li>Pages seГ§eneДџini aГ§</li>
-                    <li>Source: GitHub Actions seГ§</li>
-                    <li>Bekle... SayfanД±z yayД±nda! рџЋ‰</li>
-                </ul>
-            </section>
-            
-            <!-- DokГјmantasyon -->
-            <section>
-                <h2>рџ“љ DokГјmantasyon</h2>
-                <div class="highlight">
-                    <strong>LГјtfen oku:</strong>
-                    <ul style="margin: 10px 0 0 20px;">
-                        <li><strong>GITHUB-SETUP.md</strong> - Tam kurulum rehberi</li>
-                        <li><strong>README.md</strong> - Proje hakkД±nda her Еџey</li>
-                        <li><strong>.github/CONTRIBUTING.md</strong> - KatkД±da bulunma rehberi</li>
-                        <li><strong>KURULUM-REHBERI.txt</strong> - TГјrkГ§e baЕџlangД±Г§</li>
-                    </ul>
-                </div>
-            </section>
-            
-            <!-- GitHub Actions -->
-            <section>
-                <h2>вљЎ Otomatik Deployment</h2>
-                <p>GitHub Actions otomatik olarak:</p>
-                <ul style="margin: 15px 0 20px 20px;">
-                    <li>вњ… Her push'ta kodu GitHub'a yГјkler</li>
-                    <li>вњ… SayfayД± otomatik GitHub Pages'a yayД±nlar</li>
-                    <li>вњ… Custom domain desteДџine hazД±rlanmД±Еџ</li>
-                </ul>
-                <p><strong>Dosya:</strong> <code>.github/workflows/deploy.yml</code></p>
-            </section>
-            
-            <!-- VS Code AyarlarД± -->
-            <section>
-                <h2>рџ’» VS Code Entegrasyonu</h2>
-                <p>Г–nerilen VS Code Extensions:</p>
-                <ul style="margin: 15px 0 20px 20px;">
-                    <li>рџ”ґ Live Server - CanlД± localhost server</li>
-                    <li>рџ’… Prettier - Kod formatlama</li>
-                    <li>рџЋЁ HTML/CSS Intellisense</li>
-                    <li>рџ”Ќ ESLint - JavaScript linting</li>
-                </ul>
-                <p><strong>Otomatik YГјkleme:</strong> VS Code aГ§Д±ldД±ДџД±nda Г¶nerisi gelecek</p>
-            </section>
-            
-            <!-- Д°puГ§larД± -->
-            <section>
-                <h2>рџ’Ў Г–nemli Д°puГ§larД±</h2>
-                <div class="check-item">
-                    <div class="check-mark">1</div>
-                    <div>KULLANICI-ADIN yazan yerleri kendi GitHub username'inle deДџiЕџtir</div>
-                </div>
-                <div class="check-item">
-                    <div class="check-mark">2</div>
-                    <div>assets/images klasГ¶rГјne gГ¶rselleri ekle</div>
-                </div>
-                <div class="check-item">
-                    <div class="check-mark">3</div>
-                    <div>CSS ve JS'i ayrД± dosyalara taЕџД±yabilirsin</div>
-                </div>
-                <div class="check-item">
-                    <div class="check-mark">4</div>
-                    <div>README.md'yi kiЕџiselleЕџtir</div>
-                </div>
-                <div class="check-item">
-                    <div class="check-mark">5</div>
-                    <div>DГјzenli olarak commit ve push et</div>
-                </div>
-            </section>
-            
-            <!-- FaydalД± Linkler -->
-            <section>
-                <h2>рџ”— FaydalД± Kaynaklar</h2>
-                <div class="button-group">
-                    <a href="https://github.com" class="btn" target="_blank">GitHub</a>
-                    <a href="https://pages.github.com" class="btn btn-secondary" target="_blank">GitHub Pages</a>
-                    <a href="https://git-scm.com/book/tr/v2" class="btn btn-secondary" target="_blank">Git Rehberi</a>
-                    <a href="https://docs.github.com" class="btn btn-secondary" target="_blank">GitHub Docs</a>
-                </div>
-            </section>
-            
-            <!-- Git KomutlarД± -->
-            <section>
-                <h2>вЊЁпёЏ SД±k KullanД±lan Git KomutlarД±</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Komut</th>
-                            <th>AГ§Д±klama</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>git status</code></td>
-                            <td>DeДџiЕџtirilen dosyalarД± gГ¶ster</td>
-                        </tr>
-                        <tr>
-                            <td><code>git add .</code></td>
-                            <td>TГјm dosyalarД± staging'e ekle</td>
-                        </tr>
-                        <tr>
-                            <td><code>git commit -m "mesaj"</code></td>
-                            <td>DeДџiЕџiklikleri kaydet</td>
-                        </tr>
-                        <tr>
-                            <td><code>git push</code></td>
-                            <td>Kodu GitHub'a gГ¶nder</td>
-                        </tr>
-                        <tr>
-                            <td><code>git pull</code></td>
-                            <td>GitHub'dan gГјncellemeleri Г§ek</td>
-                        </tr>
-                        <tr>
-                            <td><code>git log</code></td>
-                            <td>Commit geГ§miЕџini gГ¶ster</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            
-            <!-- Son AdД±m -->
-            <section>
-                <h2>вњЁ Son AdД±m - HazД±rlandД±!</h2>
-                <div class="success" style="text-align: center; padding: 30px;">
-                    <h3 style="margin-bottom: 15px;">рџЋ‰ Proje BaЕџarД±yla HazД±rlandД±!</h3>
-                    <p style="margin-bottom: 20px;">TГјm dosyalar ve dokГјmantasyonlar oluЕџturuldu.</p>
-                    <p><strong>Ећimdi yapman gereken:</strong></p>
-                    <ol style="text-align: left; display: inline-block; margin: 15px 0;">
-                        <li>GitHub'da yeni repository oluЕџtur</li>
-                        <li>Terminal'de git komutlarД±nД± Г§alД±ЕџtД±r</li>
-                        <li>GitHub Pages'Д± aktifleЕџtir</li>
-                        <li>Projeni canlД±ya al! рџљЂ</li>
-                    </ol>
-                </div>
-            </section>
-        </div>
-        
-        <footer>
-            <p><strong>Belka Golf Website</strong> - GitHub Proje Г–zeti</p>
-            <p>Made with вќ¤пёЏ | MIT License</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">рџ“Ќ Proje Yolu: <code>c:\Users\PC\Downloads\belka-golf-website</code></p>
-        </footer>
-    </div>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belka Golf Website - GitHub Proje Р“вЂ“zeti</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        header p { font-size: 1.1em; opacity: 0.9; }
+        
+        .content { padding: 40px; }
+        section { margin-bottom: 40px; }
+        h2 { 
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .check-item { 
+            display: flex; 
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+        .check-mark { 
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        
+        .btn:hover { background: #764ba2; }
+        .btn-secondary { background: #6c757d; }
+        .btn-secondary:hover { background: #5a6268; }
+        .btn-success { background: #28a745; }
+        .btn-success:hover { background: #218838; }
+        
+        .file-tree {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            margin: 15px 0;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .stat-number { font-size: 2em; font-weight: bold; }
+        .stat-label { font-size: 0.9em; opacity: 0.9; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th { background: #667eea; color: white; }
+        tr:hover { background: #f5f5f5; }
+        
+        footer {
+            background: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        
+        .highlight { background: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 15px 0; border-radius: 5px; }
+        .success { background: #d4edda; padding: 15px; border-left: 4px solid #28a745; margin: 15px 0; border-radius: 5px; color: #155724; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>СЂСџС™Р‚ Belka Golf Website</h1>
+            <p>Profesyonel GitHub Projesi - HazР”В±r!</p>
+        </header>
+        
+        <div class="content">
+            <div class="success">
+                <strong>РІСљвЂ¦ Tebrikler!</strong> Belka Golf Website projesi baР•СџarР”В±yla GitHub'a hazР”В±r hale getirildi!
+            </div>
+            
+            <!-- Р”В°statistikler -->
+            <section>
+                <h2>СЂСџвЂњР‰ Proje Р”В°statistikleri</h2>
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">17</div>
+                        <div class="stat-label">Dosya OluР•Сџturuldu</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">KlasР“В¶r</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">90 KB</div>
+                        <div class="stat-label">HTML Boyutu</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- OluР•Сџturulan Dosyalar -->
+            <section>
+                <h2>РІСљвЂ¦ OluР•Сџturulan Dosyalar</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dosya/KlasР“В¶r</th>
+                            <th>AР“В§Р”В±klama</th>
+                            <th>Durum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>СЂСџвЂњвЂћ index.html</td>
+                            <td>Ana sayfa (90 KB)</td>
+                            <td>РІСљвЂ¦</td>
+                        </tr>
+                        <tr>
+                            <td>СЂСџвЂњвЂћ README.md</td>
+                            <td>KapsamlР”В± proje dokumentasyonu</td>
+                            <td>РІСљвЂ¦</td>
+                        </tr>
+                        <tr>
+                            <td>СЂСџвЂњвЂћ GITHUB-SETUP.md</td>
+                            <td>AdР”В±m adР”В±m GitHub kurulum rehberi</td>
+                            <td>РІСљвЂ¦</td>
+                        </tr>
+                        <tr>
+                            <td>СЂСџвЂњвЂћ KURULUM-REHBERI.txt</td>
+                            <td>TР“С�rkР“В§e baР•СџlangР”В±Р“В§ rehberi</td>
+                            <td>РІСљвЂ¦</td>
+                        </tr>
+                        <tr>
+                            <td>СЂСџвЂњвЂћ package.json</td>
+                            <td>NPM konfigР“С�rasyonu</td>
+                            <td>РІСљвЂ¦</td>
+                        </tr>
+                        <tr>
+                            <td>СЂСџвЂњвЂћ LICENSE</td>
+                            <td>MIT LisansР”В±</td>
+                            <td>РІСљвЂ¦</td>
+                        </tr>
+                        <tr>
+                            <td>СЂСџвЂњвЂћ .gitignore</td>
+                            <td>Git ignore dosyasР”В±</td>
+                            <td>РІСљвЂ¦</td>
+                        </tr>
+                        <tr>
+                            <td>СЂСџвЂњРѓ .github/</td>
+                            <td>GitHub konfigР“С�rasyonu</td>
+                            <td>РІСљвЂ¦</td>
+                        </tr>
+                        <tr>
+                            <td>СЂСџвЂњРѓ .vscode/</td>
+                            <td>VS Code ayarlarР”В±</td>
+                            <td>РІСљвЂ¦</td>
+                        </tr>
+                        <tr>
+                            <td>СЂСџвЂњРѓ assets/</td>
+                            <td>CSS, JS, GР“В¶rseller</td>
+                            <td>РІСљвЂ¦ (HazР”В±r)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- KlasР“В¶r YapР”В±sР”В± -->
+            <section>
+                <h2>СЂСџвЂњРѓ Proje KlasР“В¶r YapР”В±sР”В±</h2>
+                <div class="file-tree">
+belka-golf-website/
+РІвЂќСљРІвЂќР‚РІвЂќР‚ index.html
+РІвЂќСљРІвЂќР‚РІвЂќР‚ README.md
+РІвЂќСљРІвЂќР‚РІвЂќР‚ GITHUB-SETUP.md
+РІвЂќСљРІвЂќР‚РІвЂќР‚ KURULUM-REHBERI.txt
+РІвЂќСљРІвЂќР‚РІвЂќР‚ package.json
+РІвЂќСљРІвЂќР‚РІвЂќР‚ LICENSE
+РІвЂќСљРІвЂќР‚РІвЂќР‚ .gitignore
+РІвЂќСљРІвЂќР‚РІвЂќР‚ setup-github.bat
+РІвЂќСљРІвЂќР‚РІвЂќР‚ setup-github.sh
+РІвЂќвЂљ
+РІвЂќСљРІвЂќР‚РІвЂќР‚ .github/
+РІвЂќвЂљ   РІвЂќСљРІвЂќР‚РІвЂќР‚ CONTRIBUTING.md
+РІвЂќвЂљ   РІвЂќвЂќРІвЂќР‚РІвЂќР‚ workflows/
+РІвЂќвЂљ       РІвЂќСљРІвЂќР‚РІвЂќР‚ deploy.yml
+РІвЂќвЂљ       РІвЂќвЂќРІвЂќР‚РІвЂќР‚ README.md
+РІвЂќвЂљ
+РІвЂќСљРІвЂќР‚РІвЂќР‚ .vscode/
+РІвЂќвЂљ   РІвЂќСљРІвЂќР‚РІвЂќР‚ extensions.json
+РІвЂќвЂљ   РІвЂќСљРІвЂќР‚РІвЂќР‚ settings.json
+РІвЂќвЂљ   РІвЂќвЂќРІвЂќР‚РІвЂќР‚ tasks.json
+РІвЂќвЂљ
+РІвЂќвЂќРІвЂќР‚РІвЂќР‚ assets/
+    РІвЂќСљРІвЂќР‚РІвЂќР‚ css/
+    РІвЂќСљРІвЂќР‚РІвЂќР‚ js/
+    РІвЂќвЂќРІвЂќР‚РІвЂќР‚ images/
+                </div>
+            </section>
+            
+            <!-- HР”В±zlР”В± BaР•СџlangР”В±Р“В§ -->
+            <section>
+                <h2>СЂСџС™Р‚ HР”В±zlР”В± BaР•СџlangР”В±Р“В§</h2>
+                
+                <h3 style="margin-top: 20px; color: #667eea;">1РїС‘РЏРІС“Р€ GitHub Repository OluР•Сџtur</h3>
+                <p>GitHub.com adresine git РІвЂ вЂ™ New Repository</p>
+                <ul style="margin: 10px 0 20px 20px;">
+                    <li>Name: <strong>belka-golf-website</strong></li>
+                    <li>Public seР“В§</li>
+                    <li>Create repository</li>
+                </ul>
+                
+                <h3 style="color: #667eea;">2РїС‘РЏРІС“Р€ Terminal'de Р“вЂЎalР”В±Р•СџtР”В±r</h3>
+                <p><strong>Windows PowerShell:</strong></p>
+                <div class="code-block">
+cd c:\Users\PC\Downloads\belka-golf-website
+git init
+git branch -M main
+git add .
+git commit -m "Initial commit: Belka Golf Website"
+git remote add origin https://github.com/KULLANICI-ADIN/belka-golf-website.git
+git push -u origin main
+                </div>
+                
+                <h3 style="color: #667eea;">3РїС‘РЏРІС“Р€ GitHub Pages AktifleР•Сџtir</h3>
+                <ul style="margin: 10px 0 20px 20px;">
+                    <li>GitHub'da Repository Settings aР“В§</li>
+                    <li>Pages seР“В§eneР”Сџini aР“В§</li>
+                    <li>Source: GitHub Actions seР“В§</li>
+                    <li>Bekle... SayfanР”В±z yayР”В±nda! СЂСџР‹вЂ°</li>
+                </ul>
+            </section>
+            
+            <!-- DokР“С�mantasyon -->
+            <section>
+                <h2>СЂСџвЂњС™ DokР“С�mantasyon</h2>
+                <div class="highlight">
+                    <strong>LР“С�tfen oku:</strong>
+                    <ul style="margin: 10px 0 0 20px;">
+                        <li><strong>GITHUB-SETUP.md</strong> - Tam kurulum rehberi</li>
+                        <li><strong>README.md</strong> - Proje hakkР”В±nda her Р•Сџey</li>
+                        <li><strong>.github/CONTRIBUTING.md</strong> - KatkР”В±da bulunma rehberi</li>
+                        <li><strong>KURULUM-REHBERI.txt</strong> - TР“С�rkР“В§e baР•СџlangР”В±Р“В§</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- GitHub Actions -->
+            <section>
+                <h2>РІС™РЋ Otomatik Deployment</h2>
+                <p>GitHub Actions otomatik olarak:</p>
+                <ul style="margin: 15px 0 20px 20px;">
+                    <li>РІСљвЂ¦ Her push'ta kodu GitHub'a yР“С�kler</li>
+                    <li>РІСљвЂ¦ SayfayР”В± otomatik GitHub Pages'a yayР”В±nlar</li>
+                    <li>РІСљвЂ¦ Custom domain desteР”Сџine hazР”В±rlanmР”В±Р•Сџ</li>
+                </ul>
+                <p><strong>Dosya:</strong> <code>.github/workflows/deploy.yml</code></p>
+            </section>
+            
+            <!-- VS Code AyarlarР”В± -->
+            <section>
+                <h2>СЂСџвЂ™В» VS Code Entegrasyonu</h2>
+                <p>Р“вЂ“nerilen VS Code Extensions:</p>
+                <ul style="margin: 15px 0 20px 20px;">
+                    <li>СЂСџвЂќТ‘ Live Server - CanlР”В± localhost server</li>
+                    <li>СЂСџвЂ™вЂ¦ Prettier - Kod formatlama</li>
+                    <li>СЂСџР‹РЃ HTML/CSS Intellisense</li>
+                    <li>СЂСџвЂќРЊ ESLint - JavaScript linting</li>
+                </ul>
+                <p><strong>Otomatik YР“С�kleme:</strong> VS Code aР“В§Р”В±ldР”В±Р”СџР”В±nda Р“В¶nerisi gelecek</p>
+            </section>
+            
+            <!-- Р”В°puР“В§larР”В± -->
+            <section>
+                <h2>СЂСџвЂ™РЋ Р“вЂ“nemli Р”В°puР“В§larР”В±</h2>
+                <div class="check-item">
+                    <div class="check-mark">1</div>
+                    <div>KULLANICI-ADIN yazan yerleri kendi GitHub username'inle deР”СџiР•Сџtir</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-mark">2</div>
+                    <div>assets/images klasР“В¶rР“С�ne gР“В¶rselleri ekle</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-mark">3</div>
+                    <div>CSS ve JS'i ayrР”В± dosyalara taР•СџР”В±yabilirsin</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-mark">4</div>
+                    <div>README.md'yi kiР•СџiselleР•Сџtir</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-mark">5</div>
+                    <div>DР“С�zenli olarak commit ve push et</div>
+                </div>
+            </section>
+            
+            <!-- FaydalР”В± Linkler -->
+            <section>
+                <h2>СЂСџвЂќвЂ” FaydalР”В± Kaynaklar</h2>
+                <div class="button-group">
+                    <a href="https://github.com" class="btn" target="_blank">GitHub</a>
+                    <a href="https://pages.github.com" class="btn btn-secondary" target="_blank">GitHub Pages</a>
+                    <a href="https://git-scm.com/book/tr/v2" class="btn btn-secondary" target="_blank">Git Rehberi</a>
+                    <a href="https://docs.github.com" class="btn btn-secondary" target="_blank">GitHub Docs</a>
+                </div>
+            </section>
+            
+            <!-- Git KomutlarР”В± -->
+            <section>
+                <h2>РІРЉРЃРїС‘РЏ SР”В±k KullanР”В±lan Git KomutlarР”В±</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Komut</th>
+                            <th>AР“В§Р”В±klama</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>git status</code></td>
+                            <td>DeР”СџiР•Сџtirilen dosyalarР”В± gР“В¶ster</td>
+                        </tr>
+                        <tr>
+                            <td><code>git add .</code></td>
+                            <td>TР“С�m dosyalarР”В± staging'e ekle</td>
+                        </tr>
+                        <tr>
+                            <td><code>git commit -m "mesaj"</code></td>
+                            <td>DeР”СџiР•Сџiklikleri kaydet</td>
+                        </tr>
+                        <tr>
+                            <td><code>git push</code></td>
+                            <td>Kodu GitHub'a gР“В¶nder</td>
+                        </tr>
+                        <tr>
+                            <td><code>git pull</code></td>
+                            <td>GitHub'dan gР“С�ncellemeleri Р“В§ek</td>
+                        </tr>
+                        <tr>
+                            <td><code>git log</code></td>
+                            <td>Commit geР“В§miР•Сџini gР“В¶ster</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Son AdР”В±m -->
+            <section>
+                <h2>РІСљРЃ Son AdР”В±m - HazР”В±rlandР”В±!</h2>
+                <div class="success" style="text-align: center; padding: 30px;">
+                    <h3 style="margin-bottom: 15px;">СЂСџР‹вЂ° Proje BaР•СџarР”В±yla HazР”В±rlandР”В±!</h3>
+                    <p style="margin-bottom: 20px;">TР“С�m dosyalar ve dokР“С�mantasyonlar oluР•Сџturuldu.</p>
+                    <p><strong>Р•С›imdi yapman gereken:</strong></p>
+                    <ol style="text-align: left; display: inline-block; margin: 15px 0;">
+                        <li>GitHub'da yeni repository oluР•Сџtur</li>
+                        <li>Terminal'de git komutlarР”В±nР”В± Р“В§alР”В±Р•СџtР”В±r</li>
+                        <li>GitHub Pages'Р”В± aktifleР•Сџtir</li>
+                        <li>Projeni canlР”В±ya al! СЂСџС™Р‚</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p><strong>Belka Golf Website</strong> - GitHub Proje Р“вЂ“zeti</p>
+            <p>Made with РІСњВ¤РїС‘РЏ | MIT License</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">СЂСџвЂњРЊ Proje Yolu: <code>c:\Users\PC\Downloads\belka-golf-website</code></p>
+        </footer>
+    </div>
+</body>
+</html>

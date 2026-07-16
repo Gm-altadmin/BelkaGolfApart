@@ -1,143 +1,143 @@
-рџ“љ BELKA GOLF WEBSITE - GITHUB PROJESД° BAЕћLAMIS! рџљЂ
-
-Tebrikler! Projeniz GitHub'a hazД±r! Д°Еџte yapД±lan iЕџlemler:
-
-в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
-
-вњ… TAMAMLANAN Д°ЕћLER:
-
-1. рџ“Ѓ Profesyonel Proje YapД±sД± OluЕџturuldu:
-   в”њв”Ђв”Ђ index.html (Ana sayfa)
-   в”њв”Ђв”Ђ assets/
-   в”‚   в”њв”Ђв”Ђ css/ (Stiller)
-   в”‚   в”њв”Ђв”Ђ js/ (JavaScript)
-   в”‚   в””в”Ђв”Ђ images/ (GГ¶rseller)
-   в”њв”Ђв”Ђ .github/
-   в”‚   в”њв”Ђв”Ђ workflows/ (GitHub Actions)
-   в”‚   в””в”Ђв”Ђ CONTRIBUTING.md
-   в”њв”Ђв”Ђ package.json (NPM konfigГјrasyonu)
-   в”њв”Ђв”Ђ LICENSE (MIT)
-   в”њв”Ђв”Ђ README.md (DokГјmantasyon)
-   в””в”Ђв”Ђ .gitignore (Git ignore)
-
-2. рџ“„ DokГјmantasyon DosyalarД±:
-   вњ… README.md - KapsamlД± proje dokumentasyonu
-   вњ… GITHUB-SETUP.md - GitHub kurulum adД±m adД±m rehberi
-   вњ… .github/CONTRIBUTING.md - KatkД±da bulunma rehberi
-   вњ… .github/workflows/README.md - GitHub Actions aГ§Д±klamasД±
-
-3. рџ¤– GitHub Automation:
-   вњ… GitHub Actions Workflow (deploy.yml)
-   вњ… Otomatik GitHub Pages deployment
-   вњ… Custom domain desteДџi
-
-4. рџ”§ Setup Scriptleri:
-   вњ… setup-github.bat (Windows)
-   вњ… setup-github.sh (Linux/Mac)
-
-в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
-
-рџљЂ HEMEN BAЕћLAYIN:
-
-1пёЏвѓЈ  GitHub KURULUM:
-   a) GitHub'a git: https://github.com/new
-   b) Repository adД±: belka-golf-website
-   c) Public seГ§
-   d) Create repository butonuna tД±kla
-
-2пёЏвѓЈ  Terminal'de ЕћunlarД± Г‡alД±ЕџtД±r:
-   
-   Windows (PowerShell):
-   в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
-   cd "c:\Users\PC\Downloads\belka-golf-website"
-   .\setup-github.bat
-
-   VEYA Manual:
-   в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
-   git init
-   git branch -M main
-   git add .
-   git commit -m "Initial commit: Belka Golf Website"
-   git remote add origin https://github.com/KULLANICI-ADIN/belka-golf-website.git
-   git push -u origin main
-
-3пёЏвѓЈ  GitHub Pages AktifleЕџtir:
-   a) GitHub'da Settings в†’ Pages
-   b) Source: GitHub Actions seГ§
-   c) Bekle, sayfanД±z otomatik yayД±nlanacak
-
-4пёЏвѓЈ  Kendi Domaini BaДџla (Opsiyonel):
-   GITHUB-SETUP.md dosyasД±nda adД±m 6'yД± takip et
-
-в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
-
-рџ“‹ Д°Г‡ERД°K:
-
-README.md'de bulunacaklar:
-в”њв”Ђв”Ђ Proje Г¶zeti
-в”њв”Ђв”Ђ Г–zellikler listesi
-в”њв”Ђв”Ђ TasarД±m detaylarД±
-в”њв”Ђв”Ђ Sayfa bГ¶lГјmlerinin aГ§Д±klamasД±
-в”њв”Ђв”Ђ SEO optimizasyonu
-в”њв”Ђв”Ђ KlasГ¶r yapД±sД±
-в”њв”Ђв”Ђ Kurulum talimatlarД±
-в””в”Ђв”Ђ Lisans bilgisi
-
-GITHUB-SETUP.md'de:
-в”њв”Ђв”Ђ AdД±m adД±m GitHub kurulumu
-в”њв”Ђв”Ђ Git komutlarД±
-в”њв”Ђв”Ђ GitHub Pages etkinleЕџtirme
-в”њв”Ђв”Ђ Custom domain baДџlama
-в”њв”Ђв”Ђ Sorun giderme
-в””в”Ђв”Ђ FaydalД± kaynaklar
-
-в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
-
-рџЋЇ Г–NERД°LER:
-
-1. вњЏпёЏ  README.md'yi dГјzenle:
-   - GitHub kullanД±cД± adД±nД± gГјncelle
-   - Proje aГ§Д±klamasД±nД± kiЕџiselleЕџtir
-   - Д°letiЕџim bilgilerini kontrol et
-
-2. рџ–јпёЏ  GГ¶rselleri Ekle:
-   - assets/images/ klasГ¶rГјne resimler koy
-   - index.html'de image yollarД±nД± gГјncelle
-
-3. рџ’»  Stil DosyalarД±nД± AyД±r (Д°steДџe BaДџlД±):
-   - assets/css/styles.css dosyasД±nД± oluЕџtur
-   - index.html'deki CSS'i buraya taЕџД±
-
-4. рџ”—  JavaScript'i ModГјle Et (Д°steДџe BaДџlД±):
-   - assets/js/main.js
-   - assets/js/i18n.js (Г‡ok dil)
-   - assets/js/scroll.js (Scroll efektleri)
-
-5. рџЊЌ  KГ¶prГјyГј Д°Г§er DeДџiЕџtir:
-   - GitHub-SETUP.md'de KULLANICI-ADIN yazan yerleri kendi username'inle deДџiЕџtir
-
-в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
-
-рџ“љ KAYNAKLAR:
-
-Git KomutlarД±: https://git-scm.com/book/tr/v2
-GitHub Docs: https://docs.github.com
-GitHub Actions: https://docs.github.com/en/actions
-GitHub Pages: https://pages.github.com
-
-в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
-
-вќ“ SORULAR?
-
-1. GITHUB-SETUP.md dosyasД±nД± oku
-2. README.md'de ayrД±ntД±lД± bilgi var
-3. .github/CONTRIBUTING.md'de katkД±da bulunma rehberi
-4. GitHub Community Forum: https://github.com/orgs/community/discussions
-
-в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
-
-вњЁ BAЕћARI! Projeniz GitHub'a hazД±r! рџЋ‰
-
-Sonraki AdД±m в†’ GitHub'da repository oluЕџtur ve kodu push et! рџљЂ
-
-в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
+СЂСџвЂњС™ BELKA GOLF WEBSITE - GITHUB PROJESР”В° BAР•С›LAMIS! СЂСџС™Р‚
+
+Tebrikler! Projeniz GitHub'a hazР”В±r! Р”В°Р•Сџte yapР”В±lan iР•Сџlemler:
+
+РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’
+
+РІСљвЂ¦ TAMAMLANAN Р”В°Р•С›LER:
+
+1. СЂСџвЂњРѓ Profesyonel Proje YapР”В±sР”В± OluР•Сџturuldu:
+   РІвЂќСљРІвЂќР‚РІвЂќР‚ index.html (Ana sayfa)
+   РІвЂќСљРІвЂќР‚РІвЂќР‚ assets/
+   РІвЂќвЂљ   РІвЂќСљРІвЂќР‚РІвЂќР‚ css/ (Stiller)
+   РІвЂќвЂљ   РІвЂќСљРІвЂќР‚РІвЂќР‚ js/ (JavaScript)
+   РІвЂќвЂљ   РІвЂќвЂќРІвЂќР‚РІвЂќР‚ images/ (GР“В¶rseller)
+   РІвЂќСљРІвЂќР‚РІвЂќР‚ .github/
+   РІвЂќвЂљ   РІвЂќСљРІвЂќР‚РІвЂќР‚ workflows/ (GitHub Actions)
+   РІвЂќвЂљ   РІвЂќвЂќРІвЂќР‚РІвЂќР‚ CONTRIBUTING.md
+   РІвЂќСљРІвЂќР‚РІвЂќР‚ package.json (NPM konfigР“С�rasyonu)
+   РІвЂќСљРІвЂќР‚РІвЂќР‚ LICENSE (MIT)
+   РІвЂќСљРІвЂќР‚РІвЂќР‚ README.md (DokР“С�mantasyon)
+   РІвЂќвЂќРІвЂќР‚РІвЂќР‚ .gitignore (Git ignore)
+
+2. СЂСџвЂњвЂћ DokР“С�mantasyon DosyalarР”В±:
+   РІСљвЂ¦ README.md - KapsamlР”В± proje dokumentasyonu
+   РІСљвЂ¦ GITHUB-SETUP.md - GitHub kurulum adР”В±m adР”В±m rehberi
+   РІСљвЂ¦ .github/CONTRIBUTING.md - KatkР”В±da bulunma rehberi
+   РІСљвЂ¦ .github/workflows/README.md - GitHub Actions aР“В§Р”В±klamasР”В±
+
+3. СЂСџВ¤вЂ“ GitHub Automation:
+   РІСљвЂ¦ GitHub Actions Workflow (deploy.yml)
+   РІСљвЂ¦ Otomatik GitHub Pages deployment
+   РІСљвЂ¦ Custom domain desteР”Сџi
+
+4. СЂСџвЂќВ§ Setup Scriptleri:
+   РІСљвЂ¦ setup-github.bat (Windows)
+   РІСљвЂ¦ setup-github.sh (Linux/Mac)
+
+РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’
+
+СЂСџС™Р‚ HEMEN BAР•С›LAYIN:
+
+1РїС‘РЏРІС“Р€  GitHub KURULUM:
+   a) GitHub'a git: https://github.com/new
+   b) Repository adР”В±: belka-golf-website
+   c) Public seР“В§
+   d) Create repository butonuna tР”В±kla
+
+2РїС‘РЏРІС“Р€  Terminal'de Р•С›unlarР”В± Р“вЂЎalР”В±Р•СџtР”В±r:
+   
+   Windows (PowerShell):
+   РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚
+   cd "c:\Users\PC\Downloads\belka-golf-website"
+   .\setup-github.bat
+
+   VEYA Manual:
+   РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚РІвЂќР‚
+   git init
+   git branch -M main
+   git add .
+   git commit -m "Initial commit: Belka Golf Website"
+   git remote add origin https://github.com/KULLANICI-ADIN/belka-golf-website.git
+   git push -u origin main
+
+3РїС‘РЏРІС“Р€  GitHub Pages AktifleР•Сџtir:
+   a) GitHub'da Settings РІвЂ вЂ™ Pages
+   b) Source: GitHub Actions seР“В§
+   c) Bekle, sayfanР”В±z otomatik yayР”В±nlanacak
+
+4РїС‘РЏРІС“Р€  Kendi Domaini BaР”Сџla (Opsiyonel):
+   GITHUB-SETUP.md dosyasР”В±nda adР”В±m 6'yР”В± takip et
+
+РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’
+
+СЂСџвЂњвЂ№ Р”В°Р“вЂЎERР”В°K:
+
+README.md'de bulunacaklar:
+РІвЂќСљРІвЂќР‚РІвЂќР‚ Proje Р“В¶zeti
+РІвЂќСљРІвЂќР‚РІвЂќР‚ Р“вЂ“zellikler listesi
+РІвЂќСљРІвЂќР‚РІвЂќР‚ TasarР”В±m detaylarР”В±
+РІвЂќСљРІвЂќР‚РІвЂќР‚ Sayfa bР“В¶lР“С�mlerinin aР“В§Р”В±klamasР”В±
+РІвЂќСљРІвЂќР‚РІвЂќР‚ SEO optimizasyonu
+РІвЂќСљРІвЂќР‚РІвЂќР‚ KlasР“В¶r yapР”В±sР”В±
+РІвЂќСљРІвЂќР‚РІвЂќР‚ Kurulum talimatlarР”В±
+РІвЂќвЂќРІвЂќР‚РІвЂќР‚ Lisans bilgisi
+
+GITHUB-SETUP.md'de:
+РІвЂќСљРІвЂќР‚РІвЂќР‚ AdР”В±m adР”В±m GitHub kurulumu
+РІвЂќСљРІвЂќР‚РІвЂќР‚ Git komutlarР”В±
+РІвЂќСљРІвЂќР‚РІвЂќР‚ GitHub Pages etkinleР•Сџtirme
+РІвЂќСљРІвЂќР‚РІвЂќР‚ Custom domain baР”Сџlama
+РІвЂќСљРІвЂќР‚РІвЂќР‚ Sorun giderme
+РІвЂќвЂќРІвЂќР‚РІвЂќР‚ FaydalР”В± kaynaklar
+
+РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’
+
+СЂСџР‹Р‡ Р“вЂ“NERР”В°LER:
+
+1. РІСљРЏРїС‘РЏ  README.md'yi dР“С�zenle:
+   - GitHub kullanР”В±cР”В± adР”В±nР”В± gР“С�ncelle
+   - Proje aР“В§Р”В±klamasР”В±nР”В± kiР•СџiselleР•Сџtir
+   - Р”В°letiР•Сџim bilgilerini kontrol et
+
+2. СЂСџвЂ“С�РїС‘РЏ  GР“В¶rselleri Ekle:
+   - assets/images/ klasР“В¶rР“С�ne resimler koy
+   - index.html'de image yollarР”В±nР”В± gР“С�ncelle
+
+3. СЂСџвЂ™В»  Stil DosyalarР”В±nР”В± AyР”В±r (Р”В°steР”Сџe BaР”СџlР”В±):
+   - assets/css/styles.css dosyasР”В±nР”В± oluР•Сџtur
+   - index.html'deki CSS'i buraya taР•СџР”В±
+
+4. СЂСџвЂќвЂ”  JavaScript'i ModР“С�le Et (Р”В°steР”Сџe BaР”СџlР”В±):
+   - assets/js/main.js
+   - assets/js/i18n.js (Р“вЂЎok dil)
+   - assets/js/scroll.js (Scroll efektleri)
+
+5. СЂСџРЉРЊ  KР“В¶prР“С�yР“С� Р”В°Р“В§er DeР”СџiР•Сџtir:
+   - GitHub-SETUP.md'de KULLANICI-ADIN yazan yerleri kendi username'inle deР”СџiР•Сџtir
+
+РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’
+
+СЂСџвЂњС™ KAYNAKLAR:
+
+Git KomutlarР”В±: https://git-scm.com/book/tr/v2
+GitHub Docs: https://docs.github.com
+GitHub Actions: https://docs.github.com/en/actions
+GitHub Pages: https://pages.github.com
+
+РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’
+
+РІСњвЂњ SORULAR?
+
+1. GITHUB-SETUP.md dosyasР”В±nР”В± oku
+2. README.md'de ayrР”В±ntР”В±lР”В± bilgi var
+3. .github/CONTRIBUTING.md'de katkР”В±da bulunma rehberi
+4. GitHub Community Forum: https://github.com/orgs/community/discussions
+
+РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’
+
+РІСљРЃ BAР•С›ARI! Projeniz GitHub'a hazР”В±r! СЂСџР‹вЂ°
+
+Sonraki AdР”В±m РІвЂ вЂ™ GitHub'da repository oluР•Сџtur ve kodu push et! СЂСџС™Р‚
+
+РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’РІвЂўС’
