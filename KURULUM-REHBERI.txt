@@ -1,59 +1,59 @@
-📚 BELKA GOLF WEBSITE - GITHUB PROJESİ BAŞLAMIS! 🚀
+рџ“љ BELKA GOLF WEBSITE - GITHUB PROJESД° BAЕћLAMIS! рџљЂ
 
-Tebrikler! Projeniz GitHub'a hazır! İşte yapılan işlemler:
+Tebrikler! Projeniz GitHub'a hazД±r! Д°Еџte yapД±lan iЕџlemler:
 
-═══════════════════════════════════════════════════════════════════════
+в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
 
-✅ TAMAMLANAN İŞLER:
+вњ… TAMAMLANAN Д°ЕћLER:
 
-1. 📁 Profesyonel Proje Yapısı Oluşturuldu:
-   ├── index.html (Ana sayfa)
-   ├── assets/
-   │   ├── css/ (Stiller)
-   │   ├── js/ (JavaScript)
-   │   └── images/ (Görseller)
-   ├── .github/
-   │   ├── workflows/ (GitHub Actions)
-   │   └── CONTRIBUTING.md
-   ├── package.json (NPM konfigürasyonu)
-   ├── LICENSE (MIT)
-   ├── README.md (Dokümantasyon)
-   └── .gitignore (Git ignore)
+1. рџ“Ѓ Profesyonel Proje YapД±sД± OluЕџturuldu:
+   в”њв”Ђв”Ђ index.html (Ana sayfa)
+   в”њв”Ђв”Ђ assets/
+   в”‚   в”њв”Ђв”Ђ css/ (Stiller)
+   в”‚   в”њв”Ђв”Ђ js/ (JavaScript)
+   в”‚   в””в”Ђв”Ђ images/ (GГ¶rseller)
+   в”њв”Ђв”Ђ .github/
+   в”‚   в”њв”Ђв”Ђ workflows/ (GitHub Actions)
+   в”‚   в””в”Ђв”Ђ CONTRIBUTING.md
+   в”њв”Ђв”Ђ package.json (NPM konfigГјrasyonu)
+   в”њв”Ђв”Ђ LICENSE (MIT)
+   в”њв”Ђв”Ђ README.md (DokГјmantasyon)
+   в””в”Ђв”Ђ .gitignore (Git ignore)
 
-2. 📄 Dokümantasyon Dosyaları:
-   ✅ README.md - Kapsamlı proje dokumentasyonu
-   ✅ GITHUB-SETUP.md - GitHub kurulum adım adım rehberi
-   ✅ .github/CONTRIBUTING.md - Katkıda bulunma rehberi
-   ✅ .github/workflows/README.md - GitHub Actions açıklaması
+2. рџ“„ DokГјmantasyon DosyalarД±:
+   вњ… README.md - KapsamlД± proje dokumentasyonu
+   вњ… GITHUB-SETUP.md - GitHub kurulum adД±m adД±m rehberi
+   вњ… .github/CONTRIBUTING.md - KatkД±da bulunma rehberi
+   вњ… .github/workflows/README.md - GitHub Actions aГ§Д±klamasД±
 
-3. 🤖 GitHub Automation:
-   ✅ GitHub Actions Workflow (deploy.yml)
-   ✅ Otomatik GitHub Pages deployment
-   ✅ Custom domain desteği
+3. рџ¤– GitHub Automation:
+   вњ… GitHub Actions Workflow (deploy.yml)
+   вњ… Otomatik GitHub Pages deployment
+   вњ… Custom domain desteДџi
 
-4. 🔧 Setup Scriptleri:
-   ✅ setup-github.bat (Windows)
-   ✅ setup-github.sh (Linux/Mac)
+4. рџ”§ Setup Scriptleri:
+   вњ… setup-github.bat (Windows)
+   вњ… setup-github.sh (Linux/Mac)
 
-═══════════════════════════════════════════════════════════════════════
+в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
 
-🚀 HEMEN BAŞLAYIN:
+рџљЂ HEMEN BAЕћLAYIN:
 
-1️⃣  GitHub KURULUM:
+1пёЏвѓЈ  GitHub KURULUM:
    a) GitHub'a git: https://github.com/new
-   b) Repository adı: belka-golf-website
-   c) Public seç
-   d) Create repository butonuna tıkla
+   b) Repository adД±: belka-golf-website
+   c) Public seГ§
+   d) Create repository butonuna tД±kla
 
-2️⃣  Terminal'de Şunları Çalıştır:
+2пёЏвѓЈ  Terminal'de ЕћunlarД± Г‡alД±ЕџtД±r:
    
    Windows (PowerShell):
-   ────────────────────
+   в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
    cd "c:\Users\PC\Downloads\belka-golf-website"
    .\setup-github.bat
 
    VEYA Manual:
-   ────────────
+   в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
    git init
    git branch -M main
    git add .
@@ -61,83 +61,83 @@ Tebrikler! Projeniz GitHub'a hazır! İşte yapılan işlemler:
    git remote add origin https://github.com/KULLANICI-ADIN/belka-golf-website.git
    git push -u origin main
 
-3️⃣  GitHub Pages Aktifleştir:
-   a) GitHub'da Settings → Pages
-   b) Source: GitHub Actions seç
-   c) Bekle, sayfanız otomatik yayınlanacak
+3пёЏвѓЈ  GitHub Pages AktifleЕџtir:
+   a) GitHub'da Settings в†’ Pages
+   b) Source: GitHub Actions seГ§
+   c) Bekle, sayfanД±z otomatik yayД±nlanacak
 
-4️⃣  Kendi Domaini Bağla (Opsiyonel):
-   GITHUB-SETUP.md dosyasında adım 6'yı takip et
+4пёЏвѓЈ  Kendi Domaini BaДџla (Opsiyonel):
+   GITHUB-SETUP.md dosyasД±nda adД±m 6'yД± takip et
 
-═══════════════════════════════════════════════════════════════════════
+в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
 
-📋 İÇERİK:
+рџ“‹ Д°Г‡ERД°K:
 
 README.md'de bulunacaklar:
-├── Proje özeti
-├── Özellikler listesi
-├── Tasarım detayları
-├── Sayfa bölümlerinin açıklaması
-├── SEO optimizasyonu
-├── Klasör yapısı
-├── Kurulum talimatları
-└── Lisans bilgisi
+в”њв”Ђв”Ђ Proje Г¶zeti
+в”њв”Ђв”Ђ Г–zellikler listesi
+в”њв”Ђв”Ђ TasarД±m detaylarД±
+в”њв”Ђв”Ђ Sayfa bГ¶lГјmlerinin aГ§Д±klamasД±
+в”њв”Ђв”Ђ SEO optimizasyonu
+в”њв”Ђв”Ђ KlasГ¶r yapД±sД±
+в”њв”Ђв”Ђ Kurulum talimatlarД±
+в””в”Ђв”Ђ Lisans bilgisi
 
 GITHUB-SETUP.md'de:
-├── Adım adım GitHub kurulumu
-├── Git komutları
-├── GitHub Pages etkinleştirme
-├── Custom domain bağlama
-├── Sorun giderme
-└── Faydalı kaynaklar
+в”њв”Ђв”Ђ AdД±m adД±m GitHub kurulumu
+в”њв”Ђв”Ђ Git komutlarД±
+в”њв”Ђв”Ђ GitHub Pages etkinleЕџtirme
+в”њв”Ђв”Ђ Custom domain baДџlama
+в”њв”Ђв”Ђ Sorun giderme
+в””в”Ђв”Ђ FaydalД± kaynaklar
 
-═══════════════════════════════════════════════════════════════════════
+в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
 
-🎯 ÖNERİLER:
+рџЋЇ Г–NERД°LER:
 
-1. ✏️  README.md'yi düzenle:
-   - GitHub kullanıcı adını güncelle
-   - Proje açıklamasını kişiselleştir
-   - İletişim bilgilerini kontrol et
+1. вњЏпёЏ  README.md'yi dГјzenle:
+   - GitHub kullanД±cД± adД±nД± gГјncelle
+   - Proje aГ§Д±klamasД±nД± kiЕџiselleЕџtir
+   - Д°letiЕџim bilgilerini kontrol et
 
-2. 🖼️  Görselleri Ekle:
-   - assets/images/ klasörüne resimler koy
-   - index.html'de image yollarını güncelle
+2. рџ–јпёЏ  GГ¶rselleri Ekle:
+   - assets/images/ klasГ¶rГјne resimler koy
+   - index.html'de image yollarД±nД± gГјncelle
 
-3. 💻  Stil Dosyalarını Ayır (İsteğe Bağlı):
-   - assets/css/styles.css dosyasını oluştur
-   - index.html'deki CSS'i buraya taşı
+3. рџ’»  Stil DosyalarД±nД± AyД±r (Д°steДџe BaДџlД±):
+   - assets/css/styles.css dosyasД±nД± oluЕџtur
+   - index.html'deki CSS'i buraya taЕџД±
 
-4. 🔗  JavaScript'i Modüle Et (İsteğe Bağlı):
+4. рџ”—  JavaScript'i ModГјle Et (Д°steДџe BaДџlД±):
    - assets/js/main.js
-   - assets/js/i18n.js (Çok dil)
+   - assets/js/i18n.js (Г‡ok dil)
    - assets/js/scroll.js (Scroll efektleri)
 
-5. 🌍  Köprüyü İçer Değiştir:
-   - GitHub-SETUP.md'de KULLANICI-ADIN yazan yerleri kendi username'inle değiştir
+5. рџЊЌ  KГ¶prГјyГј Д°Г§er DeДџiЕџtir:
+   - GitHub-SETUP.md'de KULLANICI-ADIN yazan yerleri kendi username'inle deДџiЕџtir
 
-═══════════════════════════════════════════════════════════════════════
+в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
 
-📚 KAYNAKLAR:
+рџ“љ KAYNAKLAR:
 
-Git Komutları: https://git-scm.com/book/tr/v2
+Git KomutlarД±: https://git-scm.com/book/tr/v2
 GitHub Docs: https://docs.github.com
 GitHub Actions: https://docs.github.com/en/actions
 GitHub Pages: https://pages.github.com
 
-═══════════════════════════════════════════════════════════════════════
+в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
 
-❓ SORULAR?
+вќ“ SORULAR?
 
-1. GITHUB-SETUP.md dosyasını oku
-2. README.md'de ayrıntılı bilgi var
-3. .github/CONTRIBUTING.md'de katkıda bulunma rehberi
+1. GITHUB-SETUP.md dosyasД±nД± oku
+2. README.md'de ayrД±ntД±lД± bilgi var
+3. .github/CONTRIBUTING.md'de katkД±da bulunma rehberi
 4. GitHub Community Forum: https://github.com/orgs/community/discussions
 
-═══════════════════════════════════════════════════════════════════════
+в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
 
-✨ BAŞARI! Projeniz GitHub'a hazır! 🎉
+вњЁ BAЕћARI! Projeniz GitHub'a hazД±r! рџЋ‰
 
-Sonraki Adım → GitHub'da repository oluştur ve kodu push et! 🚀
+Sonraki AdД±m в†’ GitHub'da repository oluЕџtur ve kodu push et! рџљЂ
 
-═══════════════════════════════════════════════════════════════════════
+в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ

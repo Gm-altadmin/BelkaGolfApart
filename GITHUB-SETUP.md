@@ -1,40 +1,40 @@
-# 🚀 GitHub'a Proje Yükleme Rehberi
+# рџљЂ GitHub'a Proje YГјkleme Rehberi
 
-Bu rehber, Belka Golf Website projesini GitHub'a nasıl yükleyeceğinizi adım adım anlatır.
+Bu rehber, Belka Golf Website projesini GitHub'a nasД±l yГјkleyeceДџinizi adД±m adД±m anlatД±r.
 
-## 📋 Ön Gereklilikler
+## рџ“‹ Г–n Gereklilikler
 
-- GitHub hesabı (https://github.com adresinden kaydolun)
+- GitHub hesabД± (https://github.com adresinden kaydolun)
 - Git kurulu (https://git-scm.com adresinden indirin)
 - Terminal/PowerShell bilgisi
 
-## 🔧 1. Adım: GitHub Deposu Oluştur
+## рџ”§ 1. AdД±m: GitHub Deposu OluЕџtur
 
-1. GitHub'da oturum aç
-2. Sağ üst köşede "+" butonuna tıkla → "New repository"
-3. Repository adını yaz: `belka-golf-website`
-4. Açıklama yaz: `Belka Golf Residence - Responsive Website`
-5. Public seç (diğerleri tarafından görülebilsin)
-6. ✅ **Create repository** butonuna tıkla
+1. GitHub'da oturum aГ§
+2. SaДџ Гјst kГ¶Еџede "+" butonuna tД±kla в†’ "New repository"
+3. Repository adД±nД± yaz: `belka-golf-website`
+4. AГ§Д±klama yaz: `Belka Golf Residence - Responsive Website`
+5. Public seГ§ (diДџerleri tarafД±ndan gГ¶rГјlebilsin)
+6. вњ… **Create repository** butonuna tД±kla
 
-## 💻 2. Adım: Projeyi Initialize Et
+## рџ’» 2. AdД±m: Projeyi Initialize Et
 
-Proje klasöründe Terminal açın ve şunları yazın:
+Proje klasГ¶rГјnde Terminal aГ§Д±n ve ЕџunlarД± yazД±n:
 
 ```bash
-# Proje klasörine git
+# Proje klasГ¶rine git
 cd c:\Users\PC\Downloads\belka-golf-website
 
 # Git'i initialize et
 git init
 
-# Varsayılan branch'i main yapın
+# VarsayД±lan branch'i main yapД±n
 git branch -M main
 
-# Tüm dosyaları staging alanına ekle
+# TГјm dosyalarД± staging alanД±na ekle
 git add .
 
-# İlk commit oluştur
+# Д°lk commit oluЕџtur
 git commit -m "Initial commit: Belka Golf Website"
 
 # GitHub reposunu uzaktan ekle
@@ -44,59 +44,59 @@ git remote add origin https://github.com/KULLANICI-ADIN/belka-golf-website.git
 git push -u origin main
 ```
 
-## 🔑 3. Adım: GitHub Credentials Ayarla (İlk Kez)
+## рџ”‘ 3. AdД±m: GitHub Credentials Ayarla (Д°lk Kez)
 
-Windows'ta token kullanmanız gerekebilir:
+Windows'ta token kullanmanД±z gerekebilir:
 
 ```bash
 # Git config ayarla
-git config --global user.name "Adın Soyadın"
+git config --global user.name "AdД±n SoyadД±n"
 git config --global user.email "email@example.com"
 ```
 
-### GitHub Personal Access Token (PAT) Oluştur:
+### GitHub Personal Access Token (PAT) OluЕџtur:
 
-1. GitHub'da sağ üst profil → Settings → Developer settings → Personal access tokens → Tokens (classic)
-2. "Generate new token (classic)" tıkla
-3. Token adını yaz: "belka-golf-website"
-4. Scopes seç: `repo`, `workflow`
-5. Token oluştur ve **kopyala** (bir kez görüntülenir!)
-6. Terminal'e sorduğunda bu token'ı yapıştır
+1. GitHub'da saДџ Гјst profil в†’ Settings в†’ Developer settings в†’ Personal access tokens в†’ Tokens (classic)
+2. "Generate new token (classic)" tД±kla
+3. Token adД±nД± yaz: "belka-golf-website"
+4. Scopes seГ§: `repo`, `workflow`
+5. Token oluЕџtur ve **kopyala** (bir kez gГ¶rГјntГјlenir!)
+6. Terminal'e sorduДџunda bu token'Д± yapД±ЕџtД±r
 
-## 📤 4. Adım: Kod Yükle
+## рџ“¤ 4. AdД±m: Kod YГјkle
 
 ```bash
-# Tüm dosyaları ekle
+# TГјm dosyalarД± ekle
 git add .
 
-# Commit oluştur
+# Commit oluЕџtur
 git commit -m "Add project structure and documentation"
 
-# GitHub'a gönder
+# GitHub'a gГ¶nder
 git push origin main
 ```
 
-## ✨ 5. Adım: GitHub Pages Etkinleştir
+## вњЁ 5. AdД±m: GitHub Pages EtkinleЕџtir
 
-1. GitHub'daki proje sayfasına git
-2. **Settings** butonuna tıkla
-3. Sol taraftan **Pages** seç
-4. Source: "GitHub Actions" seç
-5. Biraz bekle, sayfanız otomatik yayınlanacak
-6. `https://kullanici-adin.github.io/belka-golf-website` adresinde açılacak
+1. GitHub'daki proje sayfasД±na git
+2. **Settings** butonuna tД±kla
+3. Sol taraftan **Pages** seГ§
+4. Source: "GitHub Actions" seГ§
+5. Biraz bekle, sayfanД±z otomatik yayД±nlanacak
+6. `https://kullanici-adin.github.io/belka-golf-website` adresinde aГ§Д±lacak
 
-## 🌐 6. Adım: Custom Domain Bağla (Opsiyonel)
+## рџЊђ 6. AdД±m: Custom Domain BaДџla (Opsiyonel)
 
-Eğer belkagolfapart.com'u bağlamak istiyorsanız:
+EДџer belkagolfapart.com'u baДџlamak istiyorsanД±z:
 
-1. Domenin DNS ayarlarına git (domain sağlayıcısı panelinde)
-2. GitHub'ın DNS kayıtlarını ekle (GitHub Settings → Pages'ta belirtilir)
+1. Domenin DNS ayarlarД±na git (domain saДџlayД±cД±sД± panelinde)
+2. GitHub'Д±n DNS kayД±tlarД±nД± ekle (GitHub Settings в†’ Pages'ta belirtilir)
 3. GitHub'da domain adresini ekle
-4. CNAME dosyası otomatik oluşturulacak
+4. CNAME dosyasД± otomatik oluЕџturulacak
 
-## 📝 7. Adım: README Dosyasını Özelleştir
+## рџ“ќ 7. AdД±m: README DosyasД±nД± Г–zelleЕџtir
 
-1. `README.md` dosyasını düzenle
+1. `README.md` dosyasД±nД± dГјzenle
 2. Kendi bilgilerinizi ekle
 3. Commit ve push et
 
@@ -106,34 +106,34 @@ git commit -m "Update README with project details"
 git push origin main
 ```
 
-## 🔄 8. Adım: İlerideki Güncellemeler
+## рџ”„ 8. AdД±m: Д°lerideki GГјncellemeler
 
-Her seferinde aynı adımları takip edin:
+Her seferinde aynД± adД±mlarД± takip edin:
 
 ```bash
-# 1. Dosyaları düzenle
+# 1. DosyalarД± dГјzenle
 
-# 2. Değişiklikleri add et
+# 2. DeДџiЕџiklikleri add et
 git add .
 
-# 3. Commit oluştur
-git commit -m "Açıklamalı commit mesajı"
+# 3. Commit oluЕџtur
+git commit -m "AГ§Д±klamalД± commit mesajД±"
 
 # 4. Push et
 git push origin main
 ```
 
-## 📊 Faydalı Git Komutları
+## рџ“Љ FaydalД± Git KomutlarД±
 
 ```bash
 # Durumu kontrol et
 git status
 
-# Son commitlari göster
+# Son commitlari gГ¶ster
 git log
 
-# Dosya değişikliklerini geri al
-git restore <dosya-adı>
+# Dosya deДџiЕџikliklerini geri al
+git restore <dosya-adД±>
 
 # Son commiti geri al
 git reset --soft HEAD~1
@@ -145,15 +145,15 @@ git remote -v
 git branch -a
 ```
 
-## 🐛 Sorun Giderme
+## рџђ› Sorun Giderme
 
 ### "fatal: invalid username/password"
-- Token'ı doğru yazıp yazmadığınızı kontrol edin
-- Token'ı GitHub'da yenile
+- Token'Д± doДџru yazД±p yazmadД±ДџД±nД±zД± kontrol edin
+- Token'Д± GitHub'da yenile
 
 ### "Please tell me who you are"
 ```bash
-git config --global user.name "Adın"
+git config --global user.name "AdД±n"
 git config --global user.email "email@example.com"
 ```
 
@@ -162,11 +162,11 @@ git config --global user.email "email@example.com"
 # Durumu kontrol et
 git status
 
-# Hangi dosyalar değişti göster
+# Hangi dosyalar deДџiЕџti gГ¶ster
 git diff
 ```
 
-## 📞 Daha Fazla Yardım
+## рџ“ћ Daha Fazla YardД±m
 
 - GitHub Docs: https://docs.github.com
 - Git Rehberi: https://git-scm.com/book/tr/v2
@@ -174,4 +174,4 @@ git diff
 
 ---
 
-Başarıyla tamamladınız! 🎉 Projeniz şimdi GitHub'da ve GitHub Pages'ta yayında! 🚀
+BaЕџarД±yla tamamladД±nД±z! рџЋ‰ Projeniz Еџimdi GitHub'da ve GitHub Pages'ta yayД±nda! рџљЂ
