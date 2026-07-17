@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8"/>
@@ -32,7 +32,7 @@
     "url": "https://belkagolfapart.com",
     "telephone": "+90-532-262-27-73",
     "email": "info@belkagolf.com",
-    "priceRange": "109â‚¬-155â‚¬",
+    "priceRange": "109€-155€",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Belek Mah. Mehmet Akif Ersoy Cad. 25",
@@ -57,7 +57,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
-    /* â•â• RESET & BASE â•â• */
+    /* ══ RESET & BASE ══ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
     body { font-family: 'Jost', sans-serif; background: #f8f5f0; color: #1a1a1a; overflow-x: hidden; }
@@ -65,7 +65,7 @@
     img { display: block; width: 100%; height: 100%; object-fit: cover; }
     a { text-decoration: none; color: inherit; }
 
-    /* â•â• NAV â•â• */
+    /* ══ NAV ══ */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 999;
       display: flex; align-items: center; justify-content: space-between;
@@ -166,7 +166,7 @@
       background: none; border: none;
     }
 
-    /* â•â• HERO â•â• */
+    /* ══ HERO ══ */
     #hero {
       height: 100vh; min-height: 640px; position: relative;
       display: flex; flex-direction: column; align-items: center; justify-content: flex-end; overflow: hidden;
@@ -242,7 +242,7 @@
     .rating-text { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* â•â• REZERVASYON BARI â•â• */
+    /* ══ REZERVASYON BARI ══ */
     #booking-bar { background: #1a2a1c; padding: 40px 80px; }
     .bb-title {
       font-family: 'Cormorant Garamond', serif;
@@ -282,7 +282,7 @@
     }
     .bb-check input:checked + .bb-check-box { background: #b8923a; border-color: #b8923a; }
     .bb-check input:checked + .bb-check-box::after {
-      content: 'âœ“'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      content: '✓'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
       color: #fff; font-size: 0.6rem;
     }
     .bb-check-label { font-size: 0.85rem; color: rgba(255,255,255,0.85); }
@@ -314,7 +314,7 @@
     .bb-btn:hover { background: #a07c2e; transform: translateY(-2px); }
     .bb-rate-info { margin-top: 12px; font-size: 0.65rem; color: rgba(255,255,255,0.3); letter-spacing: 0.05em; }
 
-    /* â•â• INTRO â•â• */
+    /* ══ INTRO ══ */
     #intro { padding: 120px 80px; background: #fff; }
     .intro-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 80px; align-items: center; }
     .section-eyebrow { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.35em; text-transform: uppercase; color: #b8923a; margin-bottom: 16px; }
@@ -328,7 +328,7 @@
     .intro-image img { position: absolute; inset: 0; transition: transform 0.8s ease; }
     .intro-image:hover img { transform: scale(1.05); }
 
-    /* â•â• KONUM â•â• */
+    /* ══ KONUM ══ */
     #konum-section { padding: 100px 80px; background: #faf8f4; }
     .loc-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.5fr); gap: 60px; }
     .loc-list { display: flex; flex-direction: column; gap: 24px; }
@@ -338,7 +338,7 @@
     .loc-text p { font-size: 0.85rem; color: #777; }
     .map-container { height: 450px; background: #eee; border-radius: 2px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
 
-    /* â•â• DAÄ°RELER â•â• */
+    /* ══ DAİRELER ══ */
     #daireler { padding: 120px 80px; background: #fff; }
     .rooms-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 32px; margin-top: 60px; }
     .room-card { background: #fff; border: 1px solid #f0ece5; transition: all 0.4s; }
@@ -355,14 +355,14 @@
     .room-price sub { font-family: 'Jost', sans-serif; font-size: 0.6rem; letter-spacing: 0.1em; bottom: 0; color: #aaa; }
     .room-link { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #b8923a; }
 
-    /* â•â• POOL SECTION â•â• */
+    /* ══ POOL SECTION ══ */
     #pool-section { height: 80vh; min-height: 500px; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; overflow: hidden; }
     .pool-bg { position: absolute; inset: 0; background: url('images/havuzhero.webp') center center / cover no-repeat; z-index: 1; transition: transform 0.5s; }
     #pool-section:hover .pool-bg { transform: scale(1.05); }
     .pool-overlay { position: absolute; inset: 0; background: rgba(8,18,10,0.5); z-index: 2; }
     .pool-content { position: relative; z-index: 3; max-width: 700px; padding: 0 40px; }
 
-    /* â•â• ÖZELLÄ°KLER â•â• */
+    /* ══ ÖZELLİKLER ══ */
     #ozellikler { padding: 120px 80px; background: #faf8f4; }
     .feats-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 40px; margin-top: 60px; }
     .feat-box { text-align: center; }
@@ -370,7 +370,7 @@
     .feat-box h4 { font-size: 0.9rem; font-weight: 600; color: #1a1a1a; margin-bottom: 10px; }
     .feat-box p { font-size: 0.8rem; line-height: 1.6; color: #777; }
 
-    /* â•â• GALERÄ° / KAROSEL â•â• */
+    /* ══ GALERİ / KAROSEL ══ */
     #galeri { padding: 120px 80px; background: #fff; }
     .gc-wrap { margin-top: 60px; }
     .gc-stage {
@@ -408,7 +408,7 @@
     .gc-prev { left: 24px; }
     .gc-next { right: 24px; }
 
-    /* â•â• VIKING19 â•â• */
+    /* ══ VIKING19 ══ */
     #viking {
       display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr);
       min-height: 70vh;
@@ -427,7 +427,7 @@
     .viking-text .section-body { color: rgba(255,255,255,0.55); max-width: 100%; font-size: 1rem; font-weight: 300; line-height: 1.9; margin-bottom: 40px; }
     .viking-text .gold-line { background: #b8923a; }
 
-    /* â•â• PLATFORM PUANLARI BANDI â•â• */
+    /* ══ PLATFORM PUANLARI BANDI ══ */
     .platform-bar {
       background: #fff;
       display: flex; align-items: stretch; flex-wrap: wrap;
@@ -453,7 +453,7 @@
     }
     .platform-link:hover { border-color: #b8923a; }
 
-    /* â•â• YORUMLAR â•â• */
+    /* ══ YORUMLAR ══ */
     #yorumlar { padding: 120px 80px; background: #fff; }
     .rev-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 32px; margin-top: 60px; }
     .rev-card { padding: 40px; border: 1px solid #f0ece5; text-align: center; }
@@ -461,7 +461,7 @@
     .rev-text { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; color: #1a1a1a; line-height: 1.5; margin-bottom: 24px; }
     .rev-author { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #aaa; }
 
-    /* â•â• FOOTER â•â• */
+    /* ══ FOOTER ══ */
     footer { background: #08120a; color: #fff; padding: 100px 80px 40px; }
     .footer-grid { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.2fr); gap: 60px; margin-bottom: 80px; }
     .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #fff; margin-bottom: 20px; }
@@ -479,15 +479,15 @@
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; }
     .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
 
-    /* â•â• WHATSAPP FAB â•â• */
+    /* ══ WHATSAPP FAB ══ */
     .wa-fab { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.8rem; z-index: 998; box-shadow: 0 10px 25px rgba(37,211,102,0.3); transition: transform 0.3s; }
     .wa-fab:hover { transform: scale(1.1); }
 
-    /* â•â• REVEAL ANIMATION â•â• */
+    /* ══ REVEAL ANIMATION ══ */
     .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* â•â• RESPONSIVE â•â• */
+    /* ══ RESPONSIVE ══ */
     @media (max-width: 1200px) {
       nav { padding: 0 32px; }
       .hero-content { padding: 0 40px 80px; }
@@ -548,11 +548,11 @@
 </head>
 <body>
 
-<!-- â•â• NAV â•â• -->
+<!-- ══ NAV ══ -->
 <nav id="navbar">
   <a href="#" class="nav-logo">
     Belka Golf Residence
-    <span data-i18n="hero_label">Belek â€¢ Antalya</span>
+    <span data-i18n="hero_label">Belek • Antalya</span>
   </a>
   <div class="nav-links">
     <a href="#daireler" data-i18n="nav_rooms">Daireler</a>
@@ -575,7 +575,7 @@
 </nav>
 
 <div class="mobile-nav" id="mobileNav">
-  <button class="mobile-close" id="mobileClose">âœ•</button>
+  <button class="mobile-close" id="mobileClose">✕</button>
 
   <div class="mobile-lang">
     <button class="lang-btn" data-lang="tr" onclick="setLang('tr'); closeMob();">TR</button>
@@ -593,12 +593,12 @@
   <a href="#rezervasyon" onclick="closeMob()" data-i18n="nav_book">Rezervasyon</a>
 </div>
 
-<!-- â•â• HERO â•â• -->
+<!-- ══ HERO ══ -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-label" data-i18n="hero_label">Belek, Antalya â€¢ Golf Sahası Yanı</div>
+    <div class="hero-label" data-i18n="hero_label">Belek, Antalya • Golf Sahası Yanı</div>
     <h1 class="hero-title" data-i18n-html="hero_title">
       Lüks apart tatil,<br><em>ev konforu ile</em>
     </h1>
@@ -614,21 +614,21 @@
     
     <div class="hero-rating">
       <div class="rating-score">4.8</div>
-      <div class="rating-stars">â˜…â˜…â˜…â˜…â˜…</div>
+      <div class="rating-stars">★★★★★</div>
       <div class="rating-text" data-i18n="rating_text">500+ Misafir Puanı</div>
     </div>
   </div>
 </section>
 
-<!-- â•â• REZERVASYON BARI â•â• -->
+<!-- ══ REZERVASYON BARI ══ -->
 <section id="rezervasyon">
 <div id="booking-bar">
   <div class="bb-title" data-i18n="bb_main_title">Rezervasyon Yap</div>
-  <div class="bb-subtitle" data-i18n="bb_main_sub">En iyi fiyat garantisi â€¢ Direkt rezervasyon</div>
+  <div class="bb-subtitle" data-i18n="bb_main_sub">En iyi fiyat garantisi • Direkt rezervasyon</div>
 
   <div class="bb-form">
     <div class="bb-field">
-      <label class="bb-label" data-i18n="bb_room">ODA TÄ°PÄ°</label>
+      <label class="bb-label" data-i18n="bb_room">ODA TİPİ</label>
       <select id="bb-room" class="bb-select">
         <option value="148">1+1 Exclusive Poolside</option>
         <option value="184" selected>2+1 Deluxe Poolside</option>
@@ -636,15 +636,15 @@
       </select>
     </div>
     <div class="bb-field">
-      <label class="bb-label" data-i18n="bb_checkin">GÄ°RÄ°Å</label>
+      <label class="bb-label" data-i18n="bb_checkin">GİRİŞ</label>
       <input type="date" id="bb-checkin" class="bb-input"/>
     </div>
     <div class="bb-field">
-      <label class="bb-label" data-i18n="bb_checkout">ÇIKIÅ</label>
+      <label class="bb-label" data-i18n="bb_checkout">ÇIKIŞ</label>
       <input type="date" id="bb-checkout" class="bb-input"/>
     </div>
     <div class="bb-field">
-      <label class="bb-label" data-i18n="bb_adults">YETÄ°ÅKÄ°N</label>
+      <label class="bb-label" data-i18n="bb_adults">YETİŞKİN</label>
       <select id="bb-adults" class="bb-select">
         <option value="1">1 Kişi</option>
         <option value="2" selected>2 Kişi</option>
@@ -665,14 +665,14 @@
   </div>
 
   <div class="bb-extras-row">
-    <div class="bb-extras-label" data-i18n="bb_extras">EKSTRA HÄ°ZMETLER</div>
+    <div class="bb-extras-label" data-i18n="bb_extras">EKSTRA HİZMETLER</div>
     <div class="bb-extras">
       <label class="bb-check">
         <input type="checkbox" id="bb-breakfast"/>
         <span class="bb-check-box"></span>
         <span class="bb-check-label">
           <span data-i18n="bb_breakfast">Kahvaltı</span>
-          <em data-i18n="bb_breakfast_price">+15â‚¬ / kişi / gece</em>
+          <em data-i18n="bb_breakfast_price">+15€ / kişi / gece</em>
         </span>
       </label>
       <label class="bb-check">
@@ -680,7 +680,7 @@
         <span class="bb-check-box"></span>
         <span class="bb-check-label">
           <span data-i18n="bb_transfer">Havalimanı Transferi</span>
-          <em data-i18n="bb_transfer_price">45â‚¬ (â‰¤5 kişi) / 85â‚¬ (6+)</em>
+          <em data-i18n="bb_transfer_price">45€ (≤5 kişi) / 85€ (6+)</em>
         </span>
       </label>
     </div>
@@ -688,7 +688,7 @@
 
   <div class="bb-bottom">
     <div class="bb-summary-box">
-      <div class="bb-summary-title" data-i18n="bb_summary_title">FÄ°YAT ÖZETÄ°</div>
+      <div class="bb-summary-title" data-i18n="bb_summary_title">FİYAT ÖZETİ</div>
       <div id="bb-summary"><div style="text-align:center;padding:10px;opacity:0.5;font-size:0.8rem;">Yükleniyor...</div></div>
     </div>
     <div class="bb-actions">
@@ -709,12 +709,12 @@
   </div>
 
   <div class="bb-rate-info">
-    <span id="bb-rate-display"><strong>Sabit Kur:</strong> 1 â‚¬ = <strong style="color:#b8923a;">53.00 â‚º</strong></span>
+    <span id="bb-rate-display"><strong>Sabit Kur:</strong> 1 € = <strong style="color:#b8923a;">53.00 ₺</strong></span>
   </div>
 </div>
 </section>
 
-<!-- â•â• INTRO â•â• -->
+<!-- ══ INTRO ══ -->
 <section id="intro">
   <div class="intro-grid">
     <div class="intro-text">
@@ -745,7 +745,7 @@
   </div>
 </section>
 
-<!-- â•â• KONUM â•â• -->
+<!-- ══ KONUM ══ -->
 <section id="konum">
 <div id="konum-section">
   <div class="section-eyebrow reveal" data-i18n="location_eyebrow">Konum</div>
@@ -806,7 +806,7 @@
 </div>
 </section>
 
-<!-- â•â• DAÄ°RELER â•â• -->
+<!-- ══ DAİRELER ══ -->
 <section id="daireler">
   <div class="section-eyebrow reveal" data-i18n="rooms_eyebrow">Konaklama Seçenekleri</div>
   <h2 class="section-title reveal" data-i18n="rooms_title">Dairelerimiz</h2>
@@ -823,10 +823,10 @@
       <div class="room-info">
         <div class="room-type" data-i18n="room1_type">Apart Daire</div>
         <h3 class="room-name" data-i18n="room1_name">1+1 Exclusive Poolside</h3>
-        <p class="room-desc" data-i18n="room1_desc">Havuz başında, modern dekorasyonu and sunduÄŸu özel imkÃ¢nlarla çiftler için ideal, şık and konforlu bir kaçış noktası.</p>
+        <p class="room-desc" data-i18n="room1_desc">Havuz başında, modern dekorasyonu and sunduğu özel imkânlarla çiftler için ideal, şık and konforlu bir kaçış noktası.</p>
         <div class="room-footer">
-          <div class="room-price">109 <sub>â‚¬</sub> <sub data-i18n="room_from">Gecelik</sub></div>
-          <a href="https://wa.me/905322622773?text=1%2B1%20Exclusive%20Poolside%20dairesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="room-link" data-i18n="room_inquire">Bilgi Al â†’</a>
+          <div class="room-price">109 <sub>€</sub> <sub data-i18n="room_from">Gecelik</sub></div>
+          <a href="https://wa.me/905322622773?text=1%2B1%20Exclusive%20Poolside%20dairesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="room-link" data-i18n="room_inquire">Bilgi Al →</a>
         </div>
       </div>
     </div>
@@ -838,10 +838,10 @@
       <div class="room-info">
         <div class="room-type" data-i18n="room2_type">Lüks Apart Daire</div>
         <h3 class="room-name" data-i18n="room2_name">2+1 Deluxe Poolside</h3>
-        <p class="room-desc" data-i18n="room2_desc">Lüksü and fonksiyonelliÄŸi bir araya getiren, geniş balkonlu and tam donanımlı mutfaÄŸıyla uzun süreli konaklamalar için kusursuz bir tercih.</p>
+        <p class="room-desc" data-i18n="room2_desc">Lüksü and fonksiyonelliği bir araya getiren, geniş balkonlu and tam donanımlı mutfaÄŸıyla uzun süreli konaklamalar için kusursuz bir tercih.</p>
         <div class="room-footer">
-          <div class="room-price">135 <sub>â‚¬</sub> <sub data-i18n="room_from">Gecelik</sub></div>
-          <a href="https://wa.me/905322622773?text=2%2B1%20Deluxe%20Poolside%20dairesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="room-link" data-i18n="room_inquire">Bilgi Al â†’</a>
+          <div class="room-price">135 <sub>€</sub> <sub data-i18n="room_from">Gecelik</sub></div>
+          <a href="https://wa.me/905322622773?text=2%2B1%20Deluxe%20Poolside%20dairesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="room-link" data-i18n="room_inquire">Bilgi Al →</a>
         </div>
       </div>
     </div>
@@ -855,15 +855,15 @@
         <h3 class="room-name" data-i18n="room3_name">3+1 Dublex Apt.</h3>
         <p class="room-desc" data-i18n="room3_desc">Geniş aileler için tasarlanmış, havuz manzarası eşliÄŸinde ferah yaşam alanları and modern mimarinin en seçkin örnekleri.</p>
         <div class="room-footer">
-          <div class="room-price">155 <sub>â‚¬</sub> <sub data-i18n="room_from">Gecelik</sub></div>
-          <a href="https://wa.me/905322622773?text=3%2B1%20Dublex%20dairesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="room-link" data-i18n="room_inquire">Bilgi Al â†’</a>
+          <div class="room-price">155 <sub>€</sub> <sub data-i18n="room_from">Gecelik</sub></div>
+          <a href="https://wa.me/905322622773?text=3%2B1%20Dublex%20dairesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="room-link" data-i18n="room_inquire">Bilgi Al →</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â•â• POOL â•â• -->
+<!-- ══ POOL ══ -->
 <section id="pool-section">
   <div class="pool-bg"></div>
   <div class="pool-overlay"></div>
@@ -877,16 +877,16 @@
   </div>
 </section>
 
-<!-- â•â• ÖZELLÄ°KLER â•â• -->
+<!-- ══ ÖZELLİKLER ══ -->
 <section id="ozellikler">
-  <div class="section-eyebrow reveal" data-i18n="amenities_eyebrow">Tesis Ä°mkÃ¢nları</div>
+  <div class="section-eyebrow reveal" data-i18n="amenities_eyebrow">Tesis İmkânları</div>
   <h2 class="section-title reveal" data-i18n="amenities_title">Neler Sunuyoruz?</h2>
   
   <div class="feats-grid">
     <div class="feat-box reveal">
       <div class="feat-icon"><i class="fas fa-swimmer"></i></div>
       <h4 data-i18n="f1_name">Yüzme Havuzu</h4>
-      <p data-i18n="f1_desc">Yıl boyu açık, geniş açık havuz. Åezlong and güneş yatakları mevcut.</p>
+      <p data-i18n="f1_desc">Yıl boyu açık, geniş açık havuz. Şezlong and güneş yatakları mevcut.</p>
     </div>
     <div class="feat-box reveal">
       <div class="feat-icon"><i class="fas fa-wifi"></i></div>
@@ -921,14 +921,14 @@
     <div class="feat-box reveal">
       <div class="feat-icon"><i class="fas fa-globe"></i></div>
       <h4 data-i18n="f8_name">4 Dilde Hizmet</h4>
-      <p data-i18n="f8_desc">Türkçe, Ä°ngilizce, Almanca and Rusça konuşan ekip.</p>
+      <p data-i18n="f8_desc">Türkçe, İngilizce, Almanca and Rusça konuşan ekip.</p>
     </div>
   </div>
 </section>
 
-<!-- â•â• GALERÄ° â•â• -->
+<!-- ══ GALERİ ══ -->
 <section id="galeri">
-  <div class="section-eyebrow reveal" data-i18n="gallery_eyebrow">FotoÄŸraflar</div>
+  <div class="section-eyebrow reveal" data-i18n="gallery_eyebrow">Fotoğraflar</div>
   <h2 class="section-title reveal" data-i18n="gallery_title">Galeri</h2>
   
   <div class="gc-wrap reveal">
@@ -978,31 +978,31 @@
         <div class="gc-caption">Golf Sahası Manzarası</div>
       </div>
 
-      <button class="gc-arrow gc-prev" onclick="gcPrev()" aria-label="Önceki fotoÄŸraf"><i class="fa-solid fa-chevron-left"></i></button>
-      <button class="gc-arrow gc-next" onclick="gcNext()" aria-label="Sonraki fotoÄŸraf"><i class="fa-solid fa-chevron-right"></i></button>
+      <button class="gc-arrow gc-prev" onclick="gcPrev()" aria-label="Önceki fotoğraf"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="gc-arrow gc-next" onclick="gcNext()" aria-label="Sonraki fotoğraf"><i class="fa-solid fa-chevron-right"></i></button>
       <div class="gc-counter"><span id="gcCurrent">01</span> / 11</div>
     </div>
 
   </div>
 </section>
 
-<!-- â•â• VÄ°KÄ°NG19 â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ══ VİKİNG19 ══ -->
 <section id="viking">
   <div class="viking-img">
     <!--
-    â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—
-    â•‘  GÖRSEL: viking19-restaurant-belek-belka-golf.jpg             â•‘
-    â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  GÖRSEL: viking19-restaurant-belek-belka-golf.jpg             ║
+    ╚══════════════════════════════════════════════════════════════╝
     -->
   </div>
   <div class="viking-text">
-    <div class="section-eyebrow reveal" data-i18n="viking_eyebrow">Tesis Ä°çi</div>
+    <div class="section-eyebrow reveal" data-i18n="viking_eyebrow">Tesis İçi</div>
     <div class="gold-line reveal"></div>
     <h2 class="section-title reveal" style="margin-top:20px" data-i18n-html="viking_title">
       Viking19<br>Restaurant & Bar
     </h2>
     <p class="section-body reveal" data-i18n="viking_desc">
-      Golf dersleri ve akşam yemeÄŸini birleştiren benzersiz paketimizle tatilinizi daha da özel kılın. Viking19 Hole Restaurant'ta dünya mutfaÄŸının en seçkin lezzetlerini keşfedin.
+      Golf dersleri ve akşam yemeğini birleştiren benzersiz paketimizle tatilinizi daha da özel kılın. Viking19 Hole Restaurant'ta dünya mutfaÄŸının en seçkin lezzetlerini keşfedin.
     </p>
     <a href="https://wa.me/905322622773?text=Viking19 paketi hakkında bilgi almak istiyorum"
        class="btn-primary reveal" target="_blank"
@@ -1028,7 +1028,7 @@
         </svg>
         <div>
           <div style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;color:rgba(255,255,255,.5);text-transform:uppercase;line-height:1;">Tripadvisor</div>
-          <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;color:#34E0A1;margin-top:1px;">â˜…â˜…â˜…â˜…â˜…</div>
+          <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;color:#34E0A1;margin-top:1px;">★★★★★</div>
         </div>
       </a>
 
@@ -1061,63 +1061,63 @@
   </div>
 </section>
 
-<!-- â•â• PLATFORM PUANLARI BANDI â•â• -->
+<!-- ══ PLATFORM PUANLARI BANDI ══ -->
 <div class="platform-bar">
   <div class="platform-item">
     <div class="platform-name">Hotels.com</div>
     <div class="platform-score">8.0</div>
-    <div class="platform-stars">â˜…â˜…â˜…â˜…</div>
-    <div class="platform-count" data-i18n="reviews_count_31">31 DeÄŸerlendirme</div>
-    <a href="https://tr.hotels.com/ho1330101952/?pwaDialog=product-reviews" target="_blank" class="platform-link" data-i18n="see_all_reviews">Tüm Yorumlar â†’</a>
+    <div class="platform-stars">★★★★</div>
+    <div class="platform-count" data-i18n="reviews_count_31">31 Değerlendirme</div>
+    <a href="https://tr.hotels.com/ho1330101952/?pwaDialog=product-reviews" target="_blank" class="platform-link" data-i18n="see_all_reviews">Tüm Yorumlar →</a>
   </div>
   <div class="platform-item">
     <div class="platform-name">Trivago</div>
     <div class="platform-score">8.2</div>
-    <div class="platform-stars">â˜…â˜…â˜…â˜…</div>
-    <div class="platform-count" data-i18n="reviews_very_good">Çok Ä°yi</div>
-    <a href="https://www.trivago.com/share/RpuXG3wGsZ" target="_blank" class="platform-link" data-i18n="see_all_reviews">Tüm Yorumlar â†’</a>
+    <div class="platform-stars">★★★★</div>
+    <div class="platform-count" data-i18n="reviews_very_good">Çok İyi</div>
+    <a href="https://www.trivago.com/share/RpuXG3wGsZ" target="_blank" class="platform-link" data-i18n="see_all_reviews">Tüm Yorumlar →</a>
   </div>
   <div class="platform-item">
     <div class="platform-name">Booking.com</div>
     <div class="platform-score">8.8</div>
-    <div class="platform-stars">â˜…â˜…â˜…â˜…â˜…</div>
+    <div class="platform-stars">★★★★★</div>
     <div class="platform-count" data-i18n="reviews_couples">Çiftler: 8.8 / 10</div>
-    <a href="https://www.booking.com/hotel/tr/belka-golf-residence-apt8-belek.tr.html" target="_blank" class="platform-link" data-i18n="see_all_reviews">Tüm Yorumlar â†’</a>
+    <a href="https://www.booking.com/hotel/tr/belka-golf-residence-apt8-belek.tr.html" target="_blank" class="platform-link" data-i18n="see_all_reviews">Tüm Yorumlar →</a>
   </div>
   <div class="platform-item">
     <div class="platform-name">TripAdvisor</div>
     <div class="platform-score">5.0</div>
-    <div class="platform-stars">â˜…â˜…â˜…â˜…â˜…</div>
-    <div class="platform-count" data-i18n="reviews_count_5">5 DeÄŸerlendirme</div>
-    <a href="https://www.tripadvisor.com/Attraction_Review-g312725-d3611750-Reviews-Belka_Golf" target="_blank" class="platform-link" data-i18n="see_all_reviews">Tüm Yorumlar â†’</a>
+    <div class="platform-stars">★★★★★</div>
+    <div class="platform-count" data-i18n="reviews_count_5">5 Değerlendirme</div>
+    <a href="https://www.tripadvisor.com/Attraction_Review-g312725-d3611750-Reviews-Belka_Golf" target="_blank" class="platform-link" data-i18n="see_all_reviews">Tüm Yorumlar →</a>
   </div>
 </div>
 
-<!-- â•â• YORUMLAR â•â• -->
+<!-- ══ YORUMLAR ══ -->
 <section id="yorumlar">
   <div class="section-eyebrow reveal" data-i18n="reviews_eyebrow">Misafirlerimiz</div>
   <h2 class="section-title reveal" data-i18n="reviews_title">Neler Dediler?</h2>
   
   <div class="rev-grid">
     <div class="rev-card reveal">
-      <div class="rev-stars">â˜…â˜…â˜…â˜…â˜…</div>
-      <p class="rev-text" data-i18n="rev1_text">"Belek'te çok güzel and temiz bir konaklama yeri. Kesinlikle tavsiye ediyoruz. Gelecek yıl tekrar geleceÄŸiz, çok teşekkürler!"</p>
-      <div class="rev-author" data-i18n="rev1_author">Onaylı Misafir â€¢ Hotels.com</div>
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-text" data-i18n="rev1_text">"Belek'te çok güzel and temiz bir konaklama yeri. Kesinlikle tavsiye ediyoruz. Gelecek yıl tekrar geleceğiz, çok teşekkürler!"</p>
+      <div class="rev-author" data-i18n="rev1_author">Onaylı Misafir • Hotels.com</div>
     </div>
     <div class="rev-card reveal">
-      <div class="rev-stars">â˜…â˜…â˜…â˜…â˜…</div>
+      <div class="rev-stars">★★★★★</div>
       <p class="rev-text">"Harika bir konum, golf sahalarına çok yakın. Daireler geniş and mutfak ekipmanları tam. Aileler için mükemmel."</p>
-      <div class="rev-author" data-i18n="rev2_author">Almanya'dan Misafir â€¢ Booking.com</div>
+      <div class="rev-author" data-i18n="rev2_author">Almanya'dan Misafir • Booking.com</div>
     </div>
     <div class="rev-card reveal">
-      <div class="rev-stars">â˜…â˜…â˜…â˜…â˜…</div>
+      <div class="rev-stars">★★★★★</div>
       <p class="rev-text">"Havuz başında kahvaltı keyfi paha biçilemez. Personel çok ilgili and yardımsever. 10/10 deneyim."</p>
-      <div class="rev-author" data-i18n="rev3_author">Onaylı Misafir â€¢ TripAdvisor</div>
+      <div class="rev-author" data-i18n="rev3_author">Onaylı Misafir • TripAdvisor</div>
     </div>
   </div>
 </section>
 
-<!-- â•â• FOOTER â•â• -->
+<!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-grid">
     <div class="footer-col">
@@ -1147,7 +1147,7 @@
       </div>
     </div>
     <div class="footer-col">
-      <h4 data-i18n="footer_contact">Ä°letişim</h4>
+      <h4 data-i18n="footer_contact">İletişim</h4>
       <div class="footer-links">
         <div class="footer-contact-item">
           <i class="fas fa-map-marker-alt"></i>
@@ -1184,7 +1184,7 @@
 </a>
 
 <script>
-/* â•â• NAV & SCROLL â•â• */
+/* ══ NAV & SCROLL ══ */
 const nav = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) nav.classList.add('scrolled');
@@ -1199,14 +1199,14 @@ ham.addEventListener('click', () => mobNav.classList.add('open'));
 mobClose.addEventListener('click', () => mobNav.classList.remove('open'));
 function closeMob() { mobNav.classList.remove('open'); }
 
-/* â•â• REVEAL â•â• */
+/* ══ REVEAL ══ */
 const revEls = document.querySelectorAll('.reveal');
 const revObs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } });
 }, { threshold: 0.1 });
 revEls.forEach(el => revObs.observe(el));
 
-/* â•â• GALERÄ° KAROSELÄ° â•â• */
+/* ══ GALERİ KAROSELİ ══ */
 const gcSlides = document.querySelectorAll('.gc-slide');
 const gcStage = document.getElementById('gcStage');
 const gcCurrentEl = document.getElementById('gcCurrent');
@@ -1242,7 +1242,7 @@ if (gcStage && gcTotal > 0) {
   gcVisibilityObs.observe(gcStage);
 }
 
-/* â•â• REZERVASYON SÄ°STEMÄ° â•â• */
+/* ══ REZERVASYON SİSTEMİ ══ */
 const PRICES = { "85": 85, "99": 99, "120": 120 };
 const EXCHANGE_RATE = 53.00;
 const WA_NUM = "905322622773";
@@ -1281,7 +1281,7 @@ function bbUpdate() {
     let baseRoomPrice = parseFloat(roomVal);
     const checkInMonth = ciDate.getMonth();
     const isSummer = checkInMonth >= 5 && checkInMonth <= 8;
-    // Yaz sezonunda %30 indirim uygulanıyor (isteÄŸe göre revize edildi)
+    // Yaz sezonunda %30 indirim uygulanıyor (isteğe göre revize edildi)
     if (isSummer) baseRoomPrice = baseRoomPrice * 0.70;
 
     const totalRoomPrice = baseRoomPrice * dayDiff;
@@ -1294,26 +1294,26 @@ function bbUpdate() {
     const allL = {
       tr: { room:'Oda', nights:'gece', breakfast:'Kahvaltı', transfer:'Transfer', total:'Toplam', person:'kişi', summer:'-30% yaz sezonu fiyatı uygulanmıştır' },
       en: { room:'Room', nights:'nights', breakfast:'Breakfast', transfer:'Transfer', total:'Total', person:'pers', summer:'-30% summer season price applied' },
-      de: { room:'Zimmer', nights:'NÃ¤chte', breakfast:'Frühstück', transfer:'Transfer', total:'Gesamt', person:'Pers', summer:'-30% Sommerpreis angewendet' },
-      ru: { room:'ĞĞ¾Ğ¼ĞµÑ€', nights:'Ğ½Ğ¾Ñ‡ĞµĞ¹', breakfast:'Ğ—Ğ°Ğ²Ñ‚Ñ€Ğ°Ğº', transfer:'Ğ¢Ñ€Ğ°Ğ½ÑÑ„ĞµÑ€', total:'Ğ˜Ñ‚Ğ¾Ğ³Ğ¾', person:'Ñ‡ĞµĞ»', summer:'ĞŸÑ€Ğ¸Ğ¼ĞµĞ½ĞµĞ½Ğ° ÑĞµĞ·Ğ¾Ğ½Ğ½Ğ°Ñ ÑĞºĞ¸Ğ´ĞºĞ° 30%' }
+      de: { room:'Zimmer', nights:'Nächte', breakfast:'Frühstück', transfer:'Transfer', total:'Gesamt', person:'Pers', summer:'-30% Sommerpreis angewendet' },
+      ru: { room:'Номер', nights:'ночей', breakfast:'Завтрак', transfer:'Трансфер', total:'Итого', person:'чел', summer:'Применена сезонная скидка 30%' }
     };
     const L = allL[lang] || allL.tr;
     
     let html = `<div style="display:flex;justify-content:space-between;font-size:.82rem;padding:3px 0;color:rgba(255,255,255,.65)">
-                  <span>${L.room} Ã— ${dayDiff} ${L.nights}</span>
-                  <span style="color:#fff;font-weight:500;">${Math.round(totalRoomPrice)} â‚¬</span>
+                  <span>${L.room} × ${dayDiff} ${L.nights}</span>
+                  <span style="color:#fff;font-weight:500;">${Math.round(totalRoomPrice)} €</span>
                 </div>`;
     
-    if (isSummer) html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">âœ¦ ${L.summer}</div>`;
-    if (breakfast) html += `<div style="display:flex;justify-content:space-between;font-size:.82rem;padding:3px 0;color:rgba(255,255,255,.65)"><span>${L.breakfast} (${totalPeople} ${L.person})</span><span style="color:#fff;font-weight:500;">${Math.round(breakfastPrice)} â‚¬</span></div>`;
-    if (transfer) html += `<div style="display:flex;justify-content:space-between;font-size:.82rem;padding:3px 0;color:rgba(255,255,255,.65)"><span>${L.transfer}</span><span style="color:#fff;font-weight:500;">${Math.round(transferPrice)} â‚¬</span></div>`;
+    if (isSummer) html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.summer}</div>`;
+    if (breakfast) html += `<div style="display:flex;justify-content:space-between;font-size:.82rem;padding:3px 0;color:rgba(255,255,255,.65)"><span>${L.breakfast} (${totalPeople} ${L.person})</span><span style="color:#fff;font-weight:500;">${Math.round(breakfastPrice)} €</span></div>`;
+    if (transfer) html += `<div style="display:flex;justify-content:space-between;font-size:.82rem;padding:3px 0;color:rgba(255,255,255,.65)"><span>${L.transfer}</span><span style="color:#fff;font-weight:500;">${Math.round(transferPrice)} €</span></div>`;
     
     html += `<div style="height:1px;background:rgba(255,255,255,.1);margin:8px 0;"></div>
       <div style="display:flex;justify-content:space-between;align-items:center;">
         <span style="font-size:.82rem;font-weight:600;color:rgba(255,255,255,.9);text-transform:uppercase;letter-spacing:.06em;">${L.total}</span>
         <div style="text-align:right;">
-          <span style="display:block;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:#fff;line-height:1;">${Math.round(totalEur)} â‚¬</span>
-          <span style="display:block;font-size:.85rem;font-weight:700;color:#f5dfa0;margin-top:4px;text-shadow:0 0 10px rgba(184,146,58,0.3);">â‰ˆ ${Math.round(totalTry).toLocaleString('tr-TR')} â‚º</span>
+          <span style="display:block;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:#fff;line-height:1;">${Math.round(totalEur)} €</span>
+          <span style="display:block;font-size:.85rem;font-weight:700;color:#f5dfa0;margin-top:4px;text-shadow:0 0 10px rgba(184,146,58,0.3);">≈ ${Math.round(totalTry).toLocaleString('tr-TR')} ₺</span>
         </div>
       </div>`;
 
@@ -1352,24 +1352,24 @@ function bbReserve() {
   const totalEur = totalRoomPrice + breakfastPrice + transferPrice;
   const totalTry = totalEur * EXCHANGE_RATE;
 
-  const headers = { tr:'Merhaba, yeni bir rezervasyon talebi var:', en:'Hello, there is a new reservation request:', de:'Hallo, es gibt eine neue Reservierungsanfrage:', ru:'Ğ—Ğ´Ñ€Ğ°Ğ²ÑÑ‚Ğ²ÑƒĞ¹Ñ‚Ğµ, Ğ¿Ğ¾ÑÑ‚ÑƒĞ¿Ğ¸Ğ» Ğ½Ğ¾Ğ²Ñ‹Ğ¹ Ğ·Ğ°Ğ¿Ñ€Ğ¾Ñ Ğ½Ğ° Ğ±Ñ€Ğ¾Ğ½Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ:' };
+  const headers = { tr:'Merhaba, yeni bir rezervasyon talebi var:', en:'Hello, there is a new reservation request:', de:'Hallo, es gibt eine neue Reservierungsanfrage:', ru:'Здравствуйте, поступил новый запрос на бронирование:' };
   const labels = {
     tr: { r:'Oda Tipi', i:'Giriş', o:'Çıkış', n:'Konaklama', g:'Misafirler', b:'Kahvaltı', t:'Transfer', tot:'Toplam Tutar' },
     en: { r:'Room Type', i:'Check-in', o:'Check-out', n:'Stay', g:'Guests', b:'Breakfast', t:'Transfer', tot:'Total Amount' },
-    de: { r:'Zimmertyp', i:'Anreise', o:'Abreise', n:'Aufenthalt', g:'GÃ¤ste', b:'Frühstück', t:'Transfer', tot:'Gesamtbetrag' },
-    ru: { r:'Ğ¢Ğ¸Ğ¿ Ğ½Ğ¾Ğ¼ĞµÑ€Ğ°', i:'Ğ—Ğ°ĞµĞ·Ğ´', o:'Ğ’Ñ‹ĞµĞ·Ğ´', n:'ĞŸÑ€Ğ¾Ğ¶Ğ¸Ğ²Ğ°Ğ½Ğ¸Ğµ', g:'Ğ“Ğ¾ÑÑ‚Ğ¸', b:'Ğ—Ğ°Ğ²Ñ‚Ñ€Ğ°Ğº', t:'Ğ¢Ñ€Ğ°Ğ½ÑÑ„ĞµÑ€', tot:'Ğ˜Ñ‚Ğ¾Ğ³Ğ¾Ğ²Ğ°Ñ ÑÑƒĞ¼Ğ¼Ğ°' }
+    de: { r:'Zimmertyp', i:'Anreise', o:'Abreise', n:'Aufenthalt', g:'Gäste', b:'Frühstück', t:'Transfer', tot:'Gesamtbetrag' },
+    ru: { r:'Тип номера', i:'Заезд', o:'Выезд', n:'Проживание', g:'Гости', b:'Завтрак', t:'Трансфер', tot:'Итоговая сумма' }
   };
   const L = labels[lang] || labels.tr;
 
   let msg = `${headers[lang] || headers.tr}\n\n`;
-  msg += `ğŸ  ${L.r}: ${roomText}\n`;
-  msg += `ğŸ“… ${L.i}: ${formatDate(ci)}\n`;
-  msg += `ğŸ“… ${L.o}: ${formatDate(co)}\n`;
-  msg += `ğŸŒ™ ${L.n}: ${dayDiff} Gece\n`;
-  msg += `ğŸ‘¤ ${L.g}: ${adults} Yetişkin, ${children} Çocuk\n`;
-  msg += `â˜• ${L.b}: ${breakfast ? 'Evet (' + Math.round(breakfastPrice) + 'â‚¬)' : 'Hayır'}\n`;
-  msg += `ğŸš˜ ${L.t}: ${transfer ? 'Evet (' + Math.round(transferPrice) + 'â‚¬)' : 'Hayır'}\n\n`;
-  msg += `ğŸ’° ${L.tot}: ${Math.round(totalEur)} â‚¬ (~${Math.round(totalTry).toLocaleString('tr-TR')} â‚º)`;
+  msg += `🏠 ${L.r}: ${roomText}\n`;
+  msg += `📅 ${L.i}: ${formatDate(ci)}\n`;
+  msg += `📅 ${L.o}: ${formatDate(co)}\n`;
+  msg += `🌙 ${L.n}: ${dayDiff} Gece\n`;
+  msg += `👤 ${L.g}: ${adults} Yetişkin, ${children} Çocuk\n`;
+  msg += `☕ ${L.b}: ${breakfast ? 'Evet (' + Math.round(breakfastPrice) + '€)' : 'Hayır'}\n`;
+  msg += `🚘 ${L.t}: ${transfer ? 'Evet (' + Math.round(transferPrice) + '€)' : 'Hayır'}\n\n`;
+  msg += `💰 ${L.tot}: ${Math.round(totalEur)} € (~${Math.round(totalTry).toLocaleString('tr-TR')} ₺)`;
 
   window.open(`https://wa.me/${WA_NUM}?text=${encodeURIComponent(msg)}`, '_blank');
 }
@@ -1430,23 +1430,23 @@ function initBooking() {
   bbUpdate();
 }
 
-/* â•â• ÇOK DÄ°LLÄ° â•â• */
+/* ══ ÇOK DİLLİ ══ */
 const translations = {
   tr: {
     nav_rooms:'Daireler', nav_amenities:'Özellikler', nav_gallery:'Galeri',
     nav_restaurant:'Restaurant', nav_reviews:'Yorumlar', nav_location:'Konum', nav_book:'Rezervasyon',
-    hero_label:'Belek, Antalya â€¢ Golf Sahası Yanı',
+    hero_label:'Belek, Antalya • Golf Sahası Yanı',
     hero_title:'Lüks apart tatil,<br><em>ev konforu ile</em>',
     hero_desc:'Belek\'in kalbinde, golf sahaları hemen yanı başında, özel havuzlu and tam donanımlı apart daireler. Her konaklamada ev gibi hissedin.',
     btn_book:'<i class="fab fa-whatsapp"></i> Rezervasyon Yap',
     viking_book_btn:'Rezervasyon Yap',
     btn_view_rooms:'Daireleri Gör',
     rating_text:'500+ Misafir Puanı',
-    bb_main_title:'Rezervasyon Yap', bb_main_sub:'En iyi fiyat garantisi â€¢ Direkt rezervasyon',
-    bb_room:'ODA TÄ°PÄ°', bb_checkin:'GÄ°RÄ°Å', bb_checkout:'ÇIKIÅ', bb_adults:'YETÄ°ÅKÄ°N', bb_children:'ÇOCUK',
-    bb_extras:'EKSTRA HÄ°ZMETLER', bb_breakfast:'Kahvaltı', bb_breakfast_price:'+15â‚¬ / kişi / gece',
-    bb_transfer:'Havalimanı Transferi', bb_transfer_price:'45â‚¬ (â‰¤5 kişi) / 85â‚¬ (6+)',
-    bb_summary_title:'FÄ°YAT ÖZETÄ°', bb_wire:'Havale/EFT', bb_card:'Kredi Kartı', bb_reserve:'REZERVASYON YAP',
+    bb_main_title:'Rezervasyon Yap', bb_main_sub:'En iyi fiyat garantisi • Direkt rezervasyon',
+    bb_room:'ODA TİPİ', bb_checkin:'GİRİŞ', bb_checkout:'ÇIKIŞ', bb_adults:'YETİŞKİN', bb_children:'ÇOCUK',
+    bb_extras:'EKSTRA HİZMETLER', bb_breakfast:'Kahvaltı', bb_breakfast_price:'+15€ / kişi / gece',
+    bb_transfer:'Havalimanı Transferi', bb_transfer_price:'45€ (≤5 kişi) / 85€ (6+)',
+    bb_summary_title:'FİYAT ÖZETİ', bb_wire:'Havale/EFT', bb_card:'Kredi Kartı', bb_reserve:'REZERVASYON YAP',
     intro_eyebrow:'Belka Golf Residence', intro_title:'Ayrıcalıklı Konaklama Seçenekleri',
     intro_desc:'Belek\'in kalbinde, huzur and konforun buluştuÄŸu noktada; her detayı özenle tasarlanmış dairelerimizde evinizdeki sıcaklıÄŸı lüks hizmet kalitesiyle keşfedin.',
     feat1_title:'Yıl Boyu Açık Havuz', feat1_desc:'Geniş and bakımlı açık yüzme havuzu, çocuk oyun alanı and yemyeşil bahçe.',
@@ -1463,53 +1463,53 @@ const translations = {
     rooms_eyebrow:'Konaklama Seçenekleri', rooms_title:'Dairelerimiz',
     rooms_desc:'Her ihtiyaca uygun, havuz manzaralı and tam donanımlı daire seçenekleri.',
     room1_type:'Apart Daire', room1_name:'1+1 Exclusive Poolside',
-    room1_desc:'Havuz başında, modern dekorasyonu and sunduÄŸu özel imkÃ¢nlarla çiftler için ideal, şık and konforlu bir kaçış noktası.',
+    room1_desc:'Havuz başında, modern dekorasyonu and sunduğu özel imkânlarla çiftler için ideal, şık and konforlu bir kaçış noktası.',
     room2_type:'Lüks Apart Daire', room2_name:'2+1 Deluxe Poolside',
-    room2_desc:'Lüksü and fonksiyonelliÄŸi bir araya getiren, geniş balkonlu and tam donanımlı mutfaÄŸıyla uzun süreli konaklamalar için kusursuz bir tercih.',
+    room2_desc:'Lüksü and fonksiyonelliği bir araya getiren, geniş balkonlu and tam donanımlı mutfaÄŸıyla uzun süreli konaklamalar için kusursuz bir tercih.',
     room3_type:'Geniş Aile Dairesi', room3_name:'3+1 Dublex Apt.',
     room3_desc:'Geniş aileler için tasarlanmış, havuz manzarası eşliÄŸinde ferah yaşam alanları and modern mimarinin en seçkin örnekleri.',
-    room_from:'Gecelik', room_inquire:'Bilgi Al â†’',
+    room_from:'Gecelik', room_inquire:'Bilgi Al →',
     pool_eyebrow:'Tesis', pool_title:'Yıl Boyu Açık Havuz',
     pool_desc:'Gün boyu güneşlenebileceÄŸiniz geniş and bakımlı açık yüzme havuzu, çocuk oyun alanı and yemyeşil bahçe.',
-    amenities_eyebrow:'Tesis Ä°mkÃ¢nları', amenities_title:'Neler Sunuyoruz?',
-    f1_name:'Yüzme Havuzu', f1_desc:'Yıl boyu açık, geniş açık havuz. Åezlong and güneş yatakları mevcut.',
+    amenities_eyebrow:'Tesis İmkânları', amenities_title:'Neler Sunuyoruz?',
+    f1_name:'Yüzme Havuzu', f1_desc:'Yıl boyu açık, geniş açık havuz. Şezlong and güneş yatakları mevcut.',
     f2_name:'Ücretsiz Wi-Fi', f2_desc:'Tüm alanlarda yüksek hızlı, kesintisiz internet baÄŸlantısı.',
     f3_name:'Ücretsiz Otopark', f3_desc:'Tesis bünyesinde güvenlikli, ücretsiz kapalı and açık otopark.',
     f4_name:'Klima', f4_desc:'Tüm dairelerde bireysel kontrollü klima sistemi mevcuttur.',
     f5_name:'Sauna', f5_desc:'Ek ücrete tabi özel sauna hizmeti. Önceden rezervasyon gereklidir.',
     f6_name:'BBQ & Bahçe', f6_desc:'Mangal alanı and geniş yeşil bahçe. Piknik masaları mevcut.',
     f7_name:'Havalimanı Transferi', f7_desc:'Antalya Havalimanı 30 dakika. Talep üzerine düzenlenir.',
-    f8_name:'4 Dilde Hizmet', f8_desc:'Türkçe, Ä°ngilizce, Almanca and Rusça konuşan ekip.',
-    gallery_eyebrow:'FotoÄŸraflar', gallery_title:'Galeri',
-    viking_eyebrow:'Tesis Ä°çi', viking_title:'Viking19<br>Restaurant & Bar',
-    viking_desc:'Golf dersleri and akşam yemeÄŸini birleştiren benzersiz paketimizle tatilinizi daha da özel kılın. Viking19 Hole Restaurant\'ta dünya mutfaÄŸının en seçkin lezzetlerini keşfedin.',
+    f8_name:'4 Dilde Hizmet', f8_desc:'Türkçe, İngilizce, Almanca and Rusça konuşan ekip.',
+    gallery_eyebrow:'Fotoğraflar', gallery_title:'Galeri',
+    viking_eyebrow:'Tesis İçi', viking_title:'Viking19<br>Restaurant & Bar',
+    viking_desc:'Golf dersleri and akşam yemeğini birleştiren benzersiz paketimizle tatilinizi daha da özel kılın. Viking19 Hole Restaurant\'ta dünya mutfaÄŸının en seçkin lezzetlerini keşfedin.',
     reviews_eyebrow:'Misafirlerimiz', reviews_title:'Neler Dediler?',
-    reviews_count_31:'31 DeÄŸerlendirme', reviews_very_good:'Çok Ä°yi',
-    reviews_couples:'Çiftler: 8.8 / 10', reviews_count_5:'5 DeÄŸerlendirme',
-    see_all_reviews:'Tüm Yorumlar â†’',
-    rev1_text:'"Belek\'te çok güzel and temiz bir konaklama yeri. Kesinlikle tavsiye ediyoruz. Gelecek yıl tekrar geleceÄŸiz, çok teşekkürler!"',
-    rev1_author:'Onaylı Misafir â€¢ Hotels.com',
-    rev2_author:'Almanya\'dan Misafir â€¢ Booking.com',
-    rev3_author:'Onaylı Misafir â€¢ TripAdvisor',
+    reviews_count_31:'31 Değerlendirme', reviews_very_good:'Çok İyi',
+    reviews_couples:'Çiftler: 8.8 / 10', reviews_count_5:'5 Değerlendirme',
+    see_all_reviews:'Tüm Yorumlar →',
+    rev1_text:'"Belek\'te çok güzel and temiz bir konaklama yeri. Kesinlikle tavsiye ediyoruz. Gelecek yıl tekrar geleceğiz, çok teşekkürler!"',
+    rev1_author:'Onaylı Misafir • Hotels.com',
+    rev2_author:'Almanya\'dan Misafir • Booking.com',
+    rev3_author:'Onaylı Misafir • TripAdvisor',
     footer_desc:'Belek\'in kalbinde golf sahası yanı, havuzlu, tam donanımlı lüks apart daireler.',
     footer_rooms:'Apartlar', footer_room1:'1+1 Exclusive Poolside', footer_room2:'2+1 Deluxe Poolside', footer_room3:'3+1 Dublex Apt.',
     footer_info:'Bilgi', footer_amenities:'Özellikler', footer_gallery:'Galeri', footer_restaurant:'Restaurant', footer_reviews:'Yorumlar',
-    footer_contact:'Ä°letişim', footer_privacy:'Gizlilik Politikası', footer_terms:'Kullanım Koşulları'
+    footer_contact:'İletişim', footer_privacy:'Gizlilik Politikası', footer_terms:'Kullanım Koşulları'
   },
   en: {
     nav_rooms:'Rooms', nav_amenities:'Features', nav_gallery:'Gallery',
     nav_restaurant:'Restaurant', nav_reviews:'Reviews', nav_location:'Location', nav_book:'Book Now',
-    hero_label:'Belek, Antalya â€¢ Next to Golf Course',
+    hero_label:'Belek, Antalya • Next to Golf Course',
     hero_title:'Luxury apart holiday,<br><em>with home comfort</em>',
     hero_desc:'Luxury apartments with private pool and fully equipped in the heart of Belek, right next to golf courses. Feel like home in every stay.',
     btn_book: '<i class="fab fa-whatsapp"></i> BOOK NOW',
     viking_book_btn: 'Book Now',
     btn_view_rooms:'View Rooms',
     rating_text:'500+ Guest Points',
-    bb_main_title:'Make a Reservation', bb_main_sub:'Best price guarantee â€¢ Direct booking',
+    bb_main_title:'Make a Reservation', bb_main_sub:'Best price guarantee • Direct booking',
     bb_room:'ROOM TYPE', bb_checkin:'CHECK-IN', bb_checkout:'CHECK-OUT', bb_adults:'ADULTS', bb_children:'CHILDREN',
-    bb_extras:'EXTRA SERVICES', bb_breakfast:'Breakfast', bb_breakfast_price:'+15â‚¬ / pers / night',
-    bb_transfer:'Airport Transfer', bb_transfer_price:'45â‚¬ (â‰¤5 pers) / 85â‚¬ (6+)',
+    bb_extras:'EXTRA SERVICES', bb_breakfast:'Breakfast', bb_breakfast_price:'+15€ / pers / night',
+    bb_transfer:'Airport Transfer', bb_transfer_price:'45€ (≤5 pers) / 85€ (6+)',
     bb_summary_title:'PRICE SUMMARY', bb_wire:'Wire/EFT', bb_card:'Credit Card', bb_reserve:'BOOK NOW',
     intro_eyebrow:'Belka Golf Residence', intro_title:'Exclusive Accommodation Options',
     intro_desc:'Discover the warmth of your home with luxury service quality in our carefully designed apartments in the heart of Belek, where peace and comfort meet.',
@@ -1532,7 +1532,7 @@ const translations = {
     room2_desc:'A perfect choice for long-term stays with its large balcony and fully equipped kitchen, combining luxury and functionality.',
     room3_type:'Large Family Apartment', room3_name:'3+1 Dublex Apt.',
     room3_desc:'Designed for large families, spacious living areas with pool view and the most distinguished examples of modern architecture.',
-    room_from:'Per Night', room_inquire:'Inquire â†’',
+    room_from:'Per Night', room_inquire:'Inquire →',
     pool_eyebrow:'Facility', pool_title:'Year-Round Open Pool',
     pool_desc:'Large and well-maintained outdoor swimming pool where you can sunbathe all day, children\'s playground and lush green garden.',
     amenities_eyebrow:'Facilities', amenities_title:'What We Offer',
@@ -1550,11 +1550,11 @@ const translations = {
     reviews_eyebrow:'Our Guests', reviews_title:'What They Said?',
     reviews_count_31:'31 Reviews', reviews_very_good:'Very Good',
     reviews_couples:'Couples: 8.8 / 10', reviews_count_5:'5 Reviews',
-    see_all_reviews:'All Reviews â†’',
+    see_all_reviews:'All Reviews →',
     rev1_text:'"A very nice and clean place to stay in Belek. We definitely recommend it. We will come again next year, thanks a lot!"',
-    rev1_author:'Verified Guest â€¢ Hotels.com',
-    rev2_author:'Guest from Germany â€¢ Booking.com',
-    rev3_author:'Verified Guest â€¢ TripAdvisor',
+    rev1_author:'Verified Guest • Hotels.com',
+    rev2_author:'Guest from Germany • Booking.com',
+    rev3_author:'Verified Guest • TripAdvisor',
     footer_desc:'Luxury apartments with private pool and fully equipped in the heart of Belek, right next to golf courses.',
     footer_rooms:'Apartments', footer_room1:'1+1 Exclusive Poolside', footer_room2:'2+1 Deluxe Poolside', footer_room3:'3+1 Dublex Apt.',
     footer_info:'Info', footer_amenities:'Features', footer_gallery:'Gallery', footer_restaurant:'Restaurant', footer_reviews:'Reviews',
@@ -1563,27 +1563,27 @@ const translations = {
   de: {
     nav_rooms:'Zimmer', nav_amenities:'Ausstattung', nav_gallery:'Galerie',
     nav_restaurant:'Restaurant', nav_reviews:'Bewertungen', nav_location:'Lage', nav_book:'Buchen',
-    hero_label:'Belek, Antalya â€¢ Neben dem Golfplatz',
+    hero_label:'Belek, Antalya • Neben dem Golfplatz',
     hero_title:'Luxus-Apart-Urlaub,<br><em>mit Wohnkomfort</em>',
-    hero_desc:'Luxusapartments mit privatem Pool und voll ausgestattet im Herzen von Belek, direkt neben GolfplÃ¤tzen. Fühlen Sie sich bei jedem Aufenthalt wie zu Hause.',
+    hero_desc:'Luxusapartments mit privatem Pool und voll ausgestattet im Herzen von Belek, direkt neben Golfplätzen. Fühlen Sie sich bei jedem Aufenthalt wie zu Hause.',
     btn_book:'<i class="fab fa-whatsapp"></i> Jetzt Buchen',
     viking_book_btn:'Jetzt Buchen',
     btn_view_rooms:'Zimmer ansehen',
-    rating_text:'500+ GÃ¤stepunkte',
-    bb_main_title:'Reservierung vornehmen', bb_main_sub:'Bestpreisgarantie â€¢ Direktbuchung',
+    rating_text:'500+ Gästepunkte',
+    bb_main_title:'Reservierung vornehmen', bb_main_sub:'Bestpreisgarantie • Direktbuchung',
     bb_room:'ZIMMERTYP', bb_checkin:'ANREISE', bb_checkout:'ABREISE', bb_adults:'ERWACHSENE', bb_children:'KINDER',
-    bb_extras:'ZUSATZLEISTUNGEN', bb_breakfast:'Frühstück', bb_breakfast_price:'+15â‚¬ / Pers / Nacht',
-    bb_transfer:'Flughafentransfer', bb_transfer_price:'45â‚¬ (â‰¤5 Pers) / 85â‚¬ (6+)',
+    bb_extras:'ZUSATZLEISTUNGEN', bb_breakfast:'Frühstück', bb_breakfast_price:'+15€ / Pers / Nacht',
+    bb_transfer:'Flughafentransfer', bb_transfer_price:'45€ (≤5 Pers) / 85€ (6+)',
     bb_summary_title:'PREISÜBERSICHT', bb_wire:'Überweisung', bb_card:'Kreditkarte', bb_reserve:'JETZT BUCHEN',
     intro_eyebrow:'Belka Golf Residence', intro_title:'Exklusive Unterkunftsmöglichkeiten',
-    intro_desc:'Entdecken Sie die WÃ¤rme Ihres Zuhauses mit Luxus-ServicequalitÃ¤t in unseren sorgfÃ¤ltig gestalteten Apartments im Herzen von Belek, wo Ruhe und Komfort aufeinandertreffen.',
-    feat1_title:'GanzjÃ¤hrig geöffneter Pool', feat1_desc:'GroÃŸer und gepflegter AuÃŸenpool, Kinderspielplatz und üppiger grüner Garten.',
+    intro_desc:'Entdecken Sie die Wärme Ihres Zuhauses mit Luxus-Servicequalität in unseren sorgfältig gestalteten Apartments im Herzen von Belek, wo Ruhe und Komfort aufeinandertreffen.',
+    feat1_title:'Ganzjährig geöffneter Pool', feat1_desc:'Großer und gepflegter Außenpool, Kinderspielplatz und üppiger grüner Garten.',
     feat2_title:'Voll ausgestattete Küche', feat2_desc:'Backofen, Geschirrspüler, Waschmaschine und alle Küchenutensilien sind vorhanden.',
-    feat3_title:'Neben dem Golfplatz', feat3_desc:'Die GolfplÃ¤tze Montgomerie & Cornelia sind nur 3 Minuten entfernt.',
+    feat3_title:'Neben dem Golfplatz', feat3_desc:'Die Golfplätze Montgomerie & Cornelia sind nur 3 Minuten entfernt.',
     location_eyebrow:'Lage', location_title:'Tolle Lage & Umgebung',
-    location_desc:'Alles, was Sie wÃ¤hrend Ihres Urlaubs benötigen, ist zu FuÃŸ oder in kurzer Fahrzeit erreichbar!',
-    loc1:'Belek Zentralmoschee / Uhrturm:', loc1_dist:'5 Minuten (zu FuÃŸ)',
-    loc2:'MM Migros & Shopping:', loc2_dist:'10 Minuten (zu FuÃŸ)',
+    location_desc:'Alles, was Sie während Ihres Urlaubs benötigen, ist zu Fuß oder in kurzer Fahrzeit erreichbar!',
+    loc1:'Belek Zentralmoschee / Uhrturm:', loc1_dist:'5 Minuten (zu Fuß)',
+    loc2:'MM Migros & Shopping:', loc2_dist:'10 Minuten (zu Fuß)',
     loc3:'Belek Öffentlicher Strand:', loc3_dist:'5 Minuten (mit dem Auto)',
     loc4:'The Land of Legends:', loc4_dist:'7 Minuten (mit dem Auto)',
     loc5:'Montgomerie & Cornelia Golf:', loc5_dist:'3 Minuten (mit dem Auto)',
@@ -1593,100 +1593,100 @@ const translations = {
     room1_type:'Apartment', room1_name:'1+1 Exclusive Poolside',
     room1_desc:'Ein idealer, stilvoller und komfortabler Rückzugsort für Paare am Pool mit moderner Dekoration und speziellen Einrichtungen.',
     room2_type:'Luxus-Apartment', room2_name:'2+1 Deluxe Poolside',
-    room2_desc:'Eine perfekte Wahl für Langzeitaufenthalte mit groÃŸem Balkon und voll ausgestatteter Küche, die Luxus und FunktionalitÃ¤t vereint.',
-    room3_type:'GroÃŸes Familienapartment', room3_name:'3+1 Dublex Apt.',
-    room3_desc:'Entworfen für groÃŸe Familien, gerÃ¤umige Wohnbereiche mit Poolblick und die vornehmsten Beispiele moderner Architektur.',
-    room_from:'Pro Nacht', room_inquire:'Anfragen â†’',
-    pool_eyebrow:'Einrichtung', pool_title:'GanzjÃ¤hrig geöffneter Pool',
-    pool_desc:'GroÃŸer und gepflegter AuÃŸenpool, in dem Sie den ganzen Tag sonnenbaden können, Kinderspielplatz und üppiger grüner Garten.',
+    room2_desc:'Eine perfekte Wahl für Langzeitaufenthalte mit großem Balkon und voll ausgestatteter Küche, die Luxus und Funktionalität vereint.',
+    room3_type:'Großes Familienapartment', room3_name:'3+1 Dublex Apt.',
+    room3_desc:'Entworfen für große Familien, geräumige Wohnbereiche mit Poolblick und die vornehmsten Beispiele moderner Architektur.',
+    room_from:'Pro Nacht', room_inquire:'Anfragen →',
+    pool_eyebrow:'Einrichtung', pool_title:'Ganzjährig geöffneter Pool',
+    pool_desc:'Großer und gepflegter Außenpool, in dem Sie den ganzen Tag sonnenbaden können, Kinderspielplatz und üppiger grüner Garten.',
     amenities_eyebrow:'Einrichtungen', amenities_title:'Was wir bieten',
-    f1_name:'Schwimmbad', f1_desc:'GanzjÃ¤hrig geöffneter, groÃŸer AuÃŸenpool. Liegestühle und Sonnenliegen vorhanden.',
+    f1_name:'Schwimmbad', f1_desc:'Ganzjährig geöffneter, großer Außenpool. Liegestühle und Sonnenliegen vorhanden.',
     f2_name:'Kostenloses WLAN', f2_desc:'Hochgeschwindigkeits-Internetverbindung in allen Bereichen.',
-    f3_name:'Kostenlose ParkplÃ¤tze', f3_desc:'Sichere, kostenlose Innen- und AuÃŸenparkplÃ¤tze innerhalb der Anlage.',
+    f3_name:'Kostenlose Parkplätze', f3_desc:'Sichere, kostenlose Innen- und Außenparkplätze innerhalb der Anlage.',
     f4_name:'Klimaanlage', f4_desc:'Individuell regulierbare Klimaanlage in allen Apartments vorhanden.',
     f5_name:'Sauna', f5_desc:'Privater Saunaservice gegen Aufpreis. Voranmeldung erforderlich.',
-    f6_name:'Grill & Garten', f6_desc:'Grillplatz und groÃŸer grüner Garten. Picknicktische vorhanden.',
+    f6_name:'Grill & Garten', f6_desc:'Grillplatz und großer grüner Garten. Picknicktische vorhanden.',
     f7_name:'Flughafentransfer', f7_desc:'Flughafen Antalya 30 Minuten. Auf Anfrage arrangiert.',
     f8_name:'Service in 4 Sprachen', f8_desc:'Team spricht Türkisch, Englisch, Deutsch und Russisch.',
     gallery_eyebrow:'Fotos', gallery_title:'Galerie',
     viking_eyebrow:'Vor Ort', viking_title:'Viking19<br>Restaurant & Bar',
     viking_desc:'Machen Sie Ihren Urlaub noch spezieller mit unserem einzigartigen Paket, das Golfstunden und Abendessen kombiniert. Entdecken Sie die vornehmsten Aromen der Weltküche im Viking19 Hole Restaurant.',
-    reviews_eyebrow:'Unsere GÃ¤ste', reviews_title:'Was sie sagten?',
+    reviews_eyebrow:'Unsere Gäste', reviews_title:'Was sie sagten?',
     reviews_count_31:'31 Bewertungen', reviews_very_good:'Sehr gut',
     reviews_couples:'Paare: 8.8 / 10', reviews_count_5:'5 Bewertungen',
-    see_all_reviews:'Alle Bewertungen â†’',
-    rev1_text:'"Eine sehr schöne und saubere Unterkunft in Belek. Wir empfehlen es auf jeden Fall. Wir kommen nÃ¤chstes Jahr wieder, vielen Dank!"',
-    rev1_author:'Verifizierter Gast â€¢ Hotels.com',
-    rev2_author:'Gast aus Deutschland â€¢ Booking.com',
-    rev3_author:'Verifizierter Gast â€¢ TripAdvisor',
-    footer_desc:'Luxusapartments mit privatem Pool und voll ausgestattet im Herzen von Belek, direkt neben GolfplÃ¤tzen.',
+    see_all_reviews:'Alle Bewertungen →',
+    rev1_text:'"Eine sehr schöne und saubere Unterkunft in Belek. Wir empfehlen es auf jeden Fall. Wir kommen nächstes Jahr wieder, vielen Dank!"',
+    rev1_author:'Verifizierter Gast • Hotels.com',
+    rev2_author:'Gast aus Deutschland • Booking.com',
+    rev3_author:'Verifizierter Gast • TripAdvisor',
+    footer_desc:'Luxusapartments mit privatem Pool und voll ausgestattet im Herzen von Belek, direkt neben Golfplätzen.',
     footer_rooms:'Apartments', footer_room1:'1+1 Exclusive Poolside', footer_room2:'2+1 Deluxe Poolside', footer_room3:'3+1 Dublex Apt.',
     footer_info:'Info', footer_amenities:'Ausstattung', footer_gallery:'Galerie', footer_restaurant:'Restaurant', footer_reviews:'Bewertungen',
     footer_contact:'Kontakt', footer_privacy:'Datenschutz', footer_terms:'Nutzungsbedingungen'
   },
   ru: {
-    nav_rooms:'ĞĞ¾Ğ¼ĞµÑ€Ğ°', nav_amenities:'ĞÑĞ¾Ğ±ĞµĞ½Ğ½Ğ¾ÑÑ‚Ğ¸', nav_gallery:'Ğ“Ğ°Ğ»ĞµÑ€ĞµÑ',
-    nav_restaurant:'Ğ ĞµÑÑ‚Ğ¾Ñ€Ğ°Ğ½', nav_reviews:'ĞÑ‚Ğ·Ñ‹Ğ²Ñ‹', nav_location:'Ğ Ğ°ÑĞ¿Ğ¾Ğ»Ğ¾Ğ¶ĞµĞ½Ğ¸Ğµ', nav_book:'Ğ—Ğ°Ğ±Ñ€Ğ¾Ğ½Ğ¸Ñ€Ğ¾Ğ²Ğ°Ñ‚ÑŒ',
-    hero_label:'Ğ‘ĞµĞ»ĞµĞº, ĞĞ½Ñ‚Ğ°Ğ»ÑŒÑ â€¢ Ğ ÑĞ´Ğ¾Ğ¼ Ñ Ğ¿Ğ¾Ğ»ĞµĞ¼ Ğ´Ğ»Ñ Ğ³Ğ¾Ğ»ÑŒÑ„Ğ°',
-    hero_title:'Ğ Ğ¾ÑĞºĞ¾ÑˆĞ½Ñ‹Ğ¹ Ğ°Ğ¿Ğ°Ñ€Ñ‚-Ğ¾Ñ‚Ğ´Ñ‹Ñ…,<br><em>Ñ Ğ´Ğ¾Ğ¼Ğ°ÑˆĞ½Ğ¸Ğ¼ ĞºĞ¾Ğ¼Ñ„Ğ¾Ñ€Ñ‚Ğ¾Ğ¼</em>',
-    hero_desc:'Ğ Ğ¾ÑĞºĞ¾ÑˆĞ½Ñ‹Ğµ Ğ°Ğ¿Ğ°Ñ€Ñ‚Ğ°Ğ¼ĞµĞ½Ñ‚Ñ‹ Ñ Ñ‡Ğ°ÑÑ‚Ğ½Ñ‹Ğ¼ Ğ±Ğ°ÑÑĞµĞ¹Ğ½Ğ¾Ğ¼ Ğ¸ Ğ¿Ğ¾Ğ»Ğ½Ñ‹Ğ¼ Ğ¾Ğ±Ğ¾Ñ€ÑƒĞ´Ğ¾Ğ²Ğ°Ğ½Ğ¸ĞµĞ¼ Ğ² ÑĞ°Ğ¼Ğ¾Ğ¼ ÑĞµÑ€Ğ´Ñ†Ğµ Ğ‘ĞµĞ»ĞµĞºĞ°, Ğ¿Ñ€ÑĞ¼Ğ¾ Ñ€ÑĞ´Ğ¾Ğ¼ Ñ Ğ¿Ğ¾Ğ»ÑĞ¼Ğ¸ Ğ´Ğ»Ñ Ğ³Ğ¾Ğ»ÑŒÑ„Ğ°. Ğ§ÑƒĞ²ÑÑ‚Ğ²ÑƒĞ¹Ñ‚Ğµ ÑĞµĞ±Ñ ĞºĞ°Ğº Ğ´Ğ¾Ğ¼Ğ° Ğ² ĞºĞ°Ğ¶Ğ´Ğ¾Ğ¹ Ğ¿Ğ¾ĞµĞ·Ğ´ĞºĞµ.',
-    btn_book:'<i class="fab fa-whatsapp"></i> Ğ—Ğ°Ğ±Ñ€Ğ¾Ğ½Ğ¸Ñ€Ğ¾Ğ²Ğ°Ñ‚ÑŒ',
-    viking_book_btn:'Ğ—Ğ°Ğ±Ñ€Ğ¾Ğ½Ğ¸Ñ€Ğ¾Ğ²Ğ°Ñ‚ÑŒ',
-    btn_view_rooms:'ĞŸĞ¾ÑĞ¼Ğ¾Ñ‚Ñ€ĞµÑ‚ÑŒ Ğ½Ğ¾Ğ¼ĞµÑ€Ğ°',
-    rating_text:'500+ Ğ±Ğ°Ğ»Ğ»Ğ¾Ğ² Ğ³Ğ¾ÑÑ‚ĞµĞ¹',
-    bb_main_title:'Ğ¡Ğ´ĞµĞ»Ğ°Ñ‚ÑŒ Ğ±Ñ€Ğ¾Ğ½Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ', bb_main_sub:'Ğ“Ğ°Ñ€Ğ°Ğ½Ñ‚Ğ¸Ñ Ğ»ÑƒÑ‡ÑˆĞµĞ¹ Ñ†ĞµĞ½Ñ‹ â€¢ ĞŸÑ€ÑĞ¼Ğ¾Ğµ Ğ±Ñ€Ğ¾Ğ½Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ',
-    bb_room:'Ğ¢Ğ˜ĞŸ ĞĞĞœĞ•Ğ Ğ', bb_checkin:'Ğ—ĞĞ•Ğ—Ğ”', bb_checkout:'Ğ’Ğ«Ğ•Ğ—Ğ”', bb_adults:'Ğ’Ğ—Ğ ĞĞ¡Ğ›Ğ«Ğ•', bb_children:'Ğ”Ğ•Ğ¢Ğ˜',
-    bb_extras:'Ğ”ĞĞŸ. Ğ£Ğ¡Ğ›Ğ£Ğ“Ğ˜', bb_breakfast:'Ğ—Ğ°Ğ²Ñ‚Ñ€Ğ°Ğº', bb_breakfast_price:'+15â‚¬ / Ñ‡ĞµĞ» / Ğ½Ğ¾Ñ‡ÑŒ',
-    bb_transfer:'Ğ¢Ñ€Ğ°Ğ½ÑÑ„ĞµÑ€ Ğ¸Ğ· Ğ°ÑÑ€Ğ¾Ğ¿Ğ¾Ñ€Ñ‚Ğ°', bb_transfer_price:'45â‚¬ (â‰¤5 Ñ‡ĞµĞ») / 85â‚¬ (6+)',
-    bb_summary_title:'Ğ˜Ğ¢ĞĞ“Ğ', bb_wire:'ĞŸĞµÑ€ĞµĞ²Ğ¾Ğ´', bb_card:'ĞšÑ€ĞµĞ´Ğ¸Ñ‚Ğ½Ğ°Ñ ĞºĞ°Ñ€Ñ‚Ğ°', bb_reserve:'Ğ—ĞĞ‘Ğ ĞĞĞ˜Ğ ĞĞ’ĞĞ¢Ğ¬',
-    intro_eyebrow:'Belka Golf Residence', intro_title:'Ğ­ĞºÑĞºĞ»ÑĞ·Ğ¸Ğ²Ğ½Ñ‹Ğµ Ğ²Ğ°Ñ€Ğ¸Ğ°Ğ½Ñ‚Ñ‹ Ğ¿Ñ€Ğ¾Ğ¶Ğ¸Ğ²Ğ°Ğ½Ğ¸Ñ',
-    intro_desc:'ĞÑ‚ĞºÑ€Ğ¾Ğ¹Ñ‚Ğµ Ğ´Ğ»Ñ ÑĞµĞ±Ñ Ñ‚ĞµĞ¿Ğ»Ğ¾ Ğ²Ğ°ÑˆĞµĞ³Ğ¾ Ğ´Ğ¾Ğ¼Ğ° Ñ ĞºĞ°Ñ‡ĞµÑÑ‚Ğ²Ğ¾Ğ¼ Ğ¾Ğ±ÑĞ»ÑƒĞ¶Ğ¸Ğ²Ğ°Ğ½Ğ¸Ñ Ğ»ÑĞºÑ Ğ² Ğ½Ğ°ÑˆĞ¸Ñ… Ñ‚Ñ‰Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ğ¾ ÑĞ¿Ñ€Ğ¾ĞµĞºÑ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ñ‹Ñ… Ğ°Ğ¿Ğ°Ñ€Ñ‚Ğ°Ğ¼ĞµĞ½Ñ‚Ğ°Ñ… Ğ² ÑĞ°Ğ¼Ğ¾Ğ¼ ÑĞµÑ€Ğ´Ñ†Ğµ Ğ‘ĞµĞ»ĞµĞºĞ°, Ğ³Ğ´Ğµ Ğ²ÑÑ‚Ñ€ĞµÑ‡Ğ°ÑÑ‚ÑÑ Ğ¿Ğ¾ĞºĞ¾Ğ¹ Ğ¸ ĞºĞ¾Ğ¼Ñ„Ğ¾Ñ€Ñ‚.',
-    feat1_title:'ĞšÑ€ÑƒĞ³Ğ»Ğ¾Ğ³Ğ¾Ğ´Ğ¸Ñ‡Ğ½Ñ‹Ğ¹ Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚Ñ‹Ğ¹ Ğ±Ğ°ÑÑĞµĞ¹Ğ½', feat1_desc:'Ğ‘Ğ¾Ğ»ÑŒÑˆĞ¾Ğ¹ Ğ¸ ÑƒÑ…Ğ¾Ğ¶ĞµĞ½Ğ½Ñ‹Ğ¹ Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚Ñ‹Ğ¹ Ğ±Ğ°ÑÑĞµĞ¹Ğ½, Ğ´ĞµÑ‚ÑĞºĞ°Ñ Ğ¿Ğ»Ğ¾Ñ‰Ğ°Ğ´ĞºĞ° Ğ¸ Ğ¿Ñ‹ÑˆĞ½Ñ‹Ğ¹ Ğ·ĞµĞ»ĞµĞ½Ñ‹Ğ¹ ÑĞ°Ğ´.',
-    feat2_title:'ĞŸĞ¾Ğ»Ğ½Ğ¾ÑÑ‚ÑŒÑ Ğ¾Ğ±Ğ¾Ñ€ÑƒĞ´Ğ¾Ğ²Ğ°Ğ½Ğ½Ğ°Ñ ĞºÑƒÑ…Ğ½Ñ', feat2_desc:'Ğ”ÑƒÑ…Ğ¾Ğ²ĞºĞ°, Ğ¿Ğ¾ÑÑƒĞ´Ğ¾Ğ¼Ğ¾ĞµÑ‡Ğ½Ğ°Ñ Ğ¼Ğ°ÑˆĞ¸Ğ½Ğ°, ÑÑ‚Ğ¸Ñ€Ğ°Ğ»ÑŒĞ½Ğ°Ñ Ğ¼Ğ°ÑˆĞ¸Ğ½Ğ° Ğ¸ Ğ²ÑĞµ ĞºÑƒÑ…Ğ¾Ğ½Ğ½Ñ‹Ğµ Ğ¿Ñ€Ğ¸Ğ½Ğ°Ğ´Ğ»ĞµĞ¶Ğ½Ğ¾ÑÑ‚Ğ¸ Ğ² ĞºĞ¾Ğ¼Ğ¿Ğ»ĞµĞºÑ‚Ğµ.',
-    feat3_title:'Ğ ÑĞ´Ğ¾Ğ¼ Ñ Ğ¿Ğ¾Ğ»ĞµĞ¼ Ğ´Ğ»Ñ Ğ³Ğ¾Ğ»ÑŒÑ„Ğ°', feat3_desc:'ĞŸĞ¾Ğ»Ñ Ğ´Ğ»Ñ Ğ³Ğ¾Ğ»ÑŒÑ„Ğ° Montgomerie Ğ¸ Cornelia Ğ½Ğ°Ñ…Ğ¾Ğ´ÑÑ‚ÑÑ Ğ²ÑĞµĞ³Ğ¾ Ğ² 3 Ğ¼Ğ¸Ğ½ÑƒÑ‚Ğ°Ñ… ĞµĞ·Ğ´Ñ‹.',
-    location_eyebrow:'Ğ Ğ°ÑĞ¿Ğ¾Ğ»Ğ¾Ğ¶ĞµĞ½Ğ¸Ğµ', location_title:'ĞÑ‚Ğ»Ğ¸Ñ‡Ğ½Ğ¾Ğµ Ñ€Ğ°ÑĞ¿Ğ¾Ğ»Ğ¾Ğ¶ĞµĞ½Ğ¸Ğµ Ğ¸ Ğ¾ĞºÑ€ĞµÑÑ‚Ğ½Ğ¾ÑÑ‚Ğ¸',
-    location_desc:'Ğ’ÑĞµ, Ñ‡Ñ‚Ğ¾ Ğ²Ğ°Ğ¼ Ğ½ÑƒĞ¶Ğ½Ğ¾ Ğ²Ğ¾ Ğ²Ñ€ĞµĞ¼Ñ Ğ¾Ñ‚Ğ¿ÑƒÑĞºĞ°, Ğ½Ğ°Ñ…Ğ¾Ğ´Ğ¸Ñ‚ÑÑ Ğ² ÑˆĞ°Ğ³Ğ¾Ğ²Ğ¾Ğ¹ Ğ´Ğ¾ÑÑ‚ÑƒĞ¿Ğ½Ğ¾ÑÑ‚Ğ¸ Ğ¸Ğ»Ğ¸ Ğ² Ğ½ĞµÑĞºĞ¾Ğ»ÑŒĞºĞ¸Ñ… Ğ¼Ğ¸Ğ½ÑƒÑ‚Ğ°Ñ… ĞµĞ·Ğ´Ñ‹!',
-    loc1:'Ğ¦ĞµĞ½Ñ‚Ñ€Ğ°Ğ»ÑŒĞ½Ğ°Ñ Ğ¼ĞµÑ‡ĞµÑ‚ÑŒ Ğ‘ĞµĞ»ĞµĞºĞ° / Ğ§Ğ°ÑĞ¾Ğ²Ğ°Ñ Ğ±Ğ°ÑˆĞ½Ñ:', loc1_dist:'5 Ğ¼Ğ¸Ğ½ÑƒÑ‚ (Ğ¿ĞµÑˆĞºĞ¾Ğ¼)',
-    loc2:'MM Migros Ğ¸ Ğ¼Ğ°Ğ³Ğ°Ğ·Ğ¸Ğ½Ñ‹:', loc2_dist:'10 Ğ¼Ğ¸Ğ½ÑƒÑ‚ (Ğ¿ĞµÑˆĞºĞ¾Ğ¼)',
-    loc3:'ĞĞ±Ñ‰ĞµÑÑ‚Ğ²ĞµĞ½Ğ½Ñ‹Ğ¹ Ğ¿Ğ»ÑĞ¶ Ğ‘ĞµĞ»ĞµĞºĞ°:', loc3_dist:'5 Ğ¼Ğ¸Ğ½ÑƒÑ‚ (Ğ½Ğ° Ğ¼Ğ°ÑˆĞ¸Ğ½Ğµ)',
-    loc4:'The Land of Legends:', loc4_dist:'7 Ğ¼Ğ¸Ğ½ÑƒÑ‚ (Ğ½Ğ° Ğ¼Ğ°ÑˆĞ¸Ğ½Ğµ)',
-    loc5:'Montgomerie Ğ¸ Cornelia Golf:', loc5_dist:'3 Ğ¼Ğ¸Ğ½ÑƒÑ‚Ñ‹ (Ğ½Ğ° Ğ¼Ğ°ÑˆĞ¸Ğ½Ğµ)',
-    loc6:'ĞÑÑ€Ğ¾Ğ¿Ğ¾Ñ€Ñ‚ ĞĞ½Ñ‚Ğ°Ğ»ÑŒĞ¸:', loc6_dist:'30 Ğ¼Ğ¸Ğ½ÑƒÑ‚ (Ğ½Ğ° Ğ¼Ğ°ÑˆĞ¸Ğ½Ğµ)',
-    rooms_eyebrow:'Ğ’Ğ°Ñ€Ğ¸Ğ°Ğ½Ñ‚Ñ‹ Ğ¿Ñ€Ğ¾Ğ¶Ğ¸Ğ²Ğ°Ğ½Ğ¸Ñ', rooms_title:'ĞĞ°ÑˆĞ¸ Ğ°Ğ¿Ğ°Ñ€Ñ‚Ğ°Ğ¼ĞµĞ½Ñ‚Ñ‹',
-    rooms_desc:'Ğ’Ğ°Ñ€Ğ¸antÑ‹ Ğ°Ğ¿Ğ°Ñ€Ñ‚Ğ°Ğ¼ĞµĞ½Ñ‚Ğ¾Ğ², Ğ¿Ğ¾Ğ´Ñ…Ğ¾Ğ´ÑÑ‰Ğ¸Ğµ Ğ´Ğ»Ñ Ğ»ÑĞ±Ñ‹Ñ… Ğ½ÑƒĞ¶Ğ´, Ñ Ğ²Ğ¸Ğ´Ğ¾Ğ¼ Ğ½Ğ° Ğ±Ğ°ÑÑĞµĞ¹Ğ½ Ğ¸ Ğ¿Ğ¾Ğ»Ğ½Ñ‹Ğ¼ Ğ¾Ğ±Ğ¾Ñ€ÑƒĞ´Ğ¾Ğ²Ğ°Ğ½Ğ¸ĞµĞ¼.',
-    room1_type:'ĞĞ¿Ğ°Ñ€Ñ‚Ğ°Ğ¼ĞµĞ½Ñ‚Ñ‹', room1_name:'1+1 Exclusive Poolside',
-    room1_desc:'Ğ˜Ğ´ĞµĞ°Ğ»ÑŒĞ½Ñ‹Ğ¹, ÑÑ‚Ğ¸Ğ»ÑŒĞ½Ñ‹Ğ¹ Ğ¸ ĞºĞ¾Ğ¼Ñ„Ğ¾Ñ€Ñ‚Ğ½Ñ‹Ğ¹ Ğ¾Ñ‚Ğ´Ñ‹Ñ… Ğ´Ğ»Ñ Ğ¿Ğ°Ñ€ Ñƒ Ğ±Ğ°ÑÑĞµĞ¹Ğ½Ğ° Ñ ÑĞ¾Ğ²Ñ€ĞµĞ¼ĞµĞ½Ğ½Ñ‹Ğ¼ Ğ´ĞµĞºĞ¾Ñ€Ğ¾Ğ¼ Ğ¸ ÑĞ¿ĞµÑ†Ğ¸Ğ°Ğ»ÑŒĞ½Ñ‹Ğ¼Ğ¸ ÑƒĞ´Ğ¾Ğ±ÑÑ‚Ğ²Ğ°Ğ¼Ğ¸.',
-    room2_type:'Ğ Ğ¾ÑĞºĞ¾ÑˆĞ½Ñ‹Ğµ Ğ°Ğ¿Ğ°Ñ€Ñ‚Ğ°Ğ¼ĞµĞ½Ñ‚Ñ‹', room2_name:'2+1 Deluxe Poolside',
-    room2_desc:'Ğ˜Ğ´ĞµĞ°Ğ»ÑŒĞ½Ñ‹Ğ¹ Ğ²Ñ‹Ğ±Ğ¾Ñ€ Ğ´Ğ»Ñ Ğ´Ğ»Ğ¸Ñ‚ĞµĞ»ÑŒĞ½Ğ¾Ğ³Ğ¾ Ğ¿Ñ€Ğ¾Ğ¶Ğ¸Ğ²Ğ°Ğ½Ğ¸Ñ Ñ Ğ±Ğ¾Ğ»ÑŒÑˆĞ¸Ğ¼ Ğ±Ğ°Ğ»ĞºĞ¾Ğ½Ğ¾Ğ¼ Ğ¸ Ğ¿Ğ¾Ğ»Ğ½Ğ¾ÑÑ‚ÑŒÑ Ğ¾Ğ±Ğ¾Ñ€ÑƒĞ´Ğ¾Ğ²Ğ°Ğ½Ğ½Ğ¾Ğ¹ ĞºÑƒÑ…Ğ½ĞµĞ¹, ÑĞ¾Ñ‡ĞµÑ‚Ğ°ÑÑ‰Ğ¸Ğ¹ Ñ€Ğ¾ÑĞºĞ¾ÑˆÑŒ Ğ¸ Ñ„ÑƒĞ½ĞºÑ†Ğ¸Ğ¾Ğ½Ğ°Ğ»ÑŒĞ½Ğ¾ÑÑ‚ÑŒ.',
-    room3_type:'Ğ‘Ğ¾Ğ»ÑŒÑˆĞ¸Ğµ ÑĞµĞ¼ĞµĞ¹Ğ½Ñ‹Ğµ Ğ°Ğ¿Ğ°Ñ€Ñ‚Ğ°Ğ¼ĞµĞ½Ñ‚Ñ‹', room3_name:'3+1 Dublex Apt.',
-    room3_desc:'Ğ¡Ğ¾Ğ·Ğ´Ğ°Ğ½Ñ‹ Ğ´Ğ»Ñ Ğ±Ğ¾Ğ»ÑŒÑˆĞ¸Ñ… ÑĞµĞ¼ĞµĞ¹, Ğ¿Ñ€Ğ¾ÑÑ‚Ğ¾Ñ€Ğ½Ñ‹Ğµ Ğ¶Ğ¸Ğ»Ñ‹Ğµ Ğ·Ğ¾Ğ½Ñ‹ Ñ Ğ²Ğ¸Ğ´Ğ¾Ğ¼ Ğ½Ğ° Ğ±Ğ°ÑÑĞµĞ¹Ğ½ Ğ¸ ÑĞ°Ğ¼Ñ‹Ğµ Ğ²Ñ‹Ğ´Ğ°ÑÑ‰Ğ¸ĞµÑÑ Ğ¾Ğ±Ñ€Ğ°Ğ·Ñ†Ñ‹ ÑĞ¾Ğ²Ñ€ĞµĞ¼ĞµĞ½Ğ½Ğ¾Ğ¹ Ğ°Ñ€Ñ…Ğ¸Ñ‚ĞµĞºÑ‚ÑƒÑ€Ñ‹.',
-    room_from:'Ğ—Ğ° Ğ½Ğ¾Ñ‡ÑŒ', room_inquire:'Ğ£Ğ·Ğ½Ğ°Ñ‚ÑŒ â†’',
-    pool_eyebrow:'ĞĞ±ÑŠĞµĞºÑ‚', pool_title:'ĞšÑ€ÑƒĞ³Ğ»Ğ¾Ğ³Ğ¾Ğ´Ğ¸Ñ‡Ğ½Ñ‹Ğ¹ Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚Ñ‹Ğ¹ Ğ±Ğ°ÑÑĞµĞ¹Ğ½',
-    pool_desc:'Ğ‘Ğ¾Ğ»ÑŒÑˆĞ¾Ğ¹ Ğ¸ ÑƒÑ…Ğ¾Ğ¶ĞµĞ½Ğ½Ñ‹Ğ¹ Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚Ñ‹Ğ¹ Ğ±Ğ°ÑÑĞµĞ¹Ğ½, Ğ³Ğ´Ğµ Ğ¼Ğ¾Ğ¶Ğ½Ğ¾ Ğ·Ğ°Ğ³Ğ¾Ñ€Ğ°Ñ‚ÑŒ Ğ²ĞµÑÑŒ Ğ´ĞµĞ½ÑŒ, Ğ´ĞµÑ‚ÑĞºĞ°Ñ Ğ¿Ğ»Ğ¾Ñ‰Ğ°Ğ´ĞºĞ° Ğ¸ Ğ¿Ñ‹ÑˆĞ½Ñ‹Ğ¹ Ğ·ĞµĞ»ĞµĞ½Ñ‹Ğ¹ ÑĞ°Ğ´.',
-    amenities_eyebrow:'Ğ£Ğ´Ğ¾Ğ±ÑÑ‚Ğ²Ğ°', amenities_title:'Ğ§Ñ‚Ğ¾ Ğ¼Ñ‹ Ğ¿Ñ€ĞµĞ´Ğ»Ğ°Ğ³Ğ°ĞµĞ¼',
-    f1_name:'Ğ‘Ğ°ÑÑĞµĞ¹Ğ½', f1_desc:'ĞÑ‚ĞºÑ€Ñ‹Ñ‚Ñ‹Ğ¹ ĞºÑ€ÑƒĞ³Ğ»Ñ‹Ğ¹ Ğ³Ğ¾Ğ´, Ğ±Ğ¾Ğ»ÑŒÑˆĞ¾Ğ¹ Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚Ñ‹Ğ¹ Ğ±Ğ°ÑÑĞµĞ¹Ğ½. Ğ¨ĞµĞ·Ğ»Ğ¾Ğ½Ğ³Ğ¸ Ğ¸ Ğ»ĞµĞ¶Ğ°ĞºĞ¸ Ğ² Ğ½Ğ°Ğ»Ğ¸Ñ‡Ğ¸Ğ¸.',
-    f2_name:'Ğ‘ĞµÑĞ¿Ğ»Ğ°Ñ‚Ğ½Ñ‹Ğ¹ Wi-Fi', f2_desc:'Ğ’Ñ‹ÑĞ¾ĞºĞ¾ÑĞºĞ¾Ñ€Ğ¾ÑÑ‚Ğ½Ğ¾Ğ¹ Ğ±ĞµÑĞ¿ĞµÑ€ĞµĞ±Ğ¾Ğ¹Ğ½Ñ‹Ğ¹ Ğ¸Ğ½Ñ‚ĞµÑ€Ğ½ĞµÑ‚ Ğ²Ğ¾ Ğ²ÑĞµÑ… Ğ·Ğ¾Ğ½Ğ°Ñ….',
-    f3_name:'Ğ‘ĞµÑĞ¿Ğ»Ğ°Ñ‚Ğ½Ğ°Ñ Ğ¿Ğ°Ñ€ĞºĞ¾Ğ²ĞºĞ°', f3_desc:'ĞÑ…Ñ€Ğ°Ğ½ÑĞµĞ¼Ğ°Ñ Ğ±ĞµÑĞ¿Ğ»Ğ°Ñ‚Ğ½Ğ°Ñ ĞºÑ€Ñ‹Ñ‚Ğ°Ñ Ğ¸ Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚Ğ°Ñ Ğ¿Ğ°Ñ€ĞºĞ¾Ğ²ĞºĞ° Ğ½Ğ° Ñ‚ĞµÑ€Ñ€Ğ¸Ñ‚Ğ¾Ñ€Ğ¸Ğ¸.',
-    f4_name:'ĞšĞ¾Ğ½Ğ´Ğ¸Ñ†Ğ¸Ğ¾Ğ½ĞµÑ€', f4_desc:'Ğ˜Ğ½Ğ´Ğ¸Ğ²Ğ¸Ğ´ÑƒĞ°Ğ»ÑŒĞ½Ğ¾ ĞºĞ¾Ğ½Ñ‚Ñ€Ğ¾Ğ»Ğ¸Ñ€ÑƒĞµĞ¼Ğ°Ñ ÑĞ¸ÑÑ‚ĞµĞ¼Ğ° ĞºĞ¾Ğ½Ğ´Ğ¸Ñ†Ğ¸Ğ¾Ğ½Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ Ğ´Ğ¾ÑÑ‚ÑƒĞ¿Ğ½Ğ° Ğ²Ğ¾ Ğ²ÑĞµÑ… Ğ°Ğ¿Ğ°Ñ€Ñ‚Ğ°Ğ¼ĞµĞ½Ñ‚Ğ°Ñ….',
-    f5_name:'Ğ¡Ğ°ÑƒĞ½Ğ°', f5_desc:'Ğ§Ğ°ÑÑ‚Ğ½Ğ°Ñ ÑĞ°ÑƒĞ½Ğ° Ğ·Ğ° Ğ´Ğ¾Ğ¿Ğ¾Ğ»Ğ½Ğ¸Ñ‚ĞµĞ»ÑŒĞ½ÑƒÑ Ğ¿Ğ»Ğ°Ñ‚Ñƒ. Ğ¢Ñ€ĞµĞ±ÑƒĞµÑ‚ÑÑ Ğ¿Ñ€ĞµĞ´Ğ²Ğ°Ñ€Ğ¸Ñ‚ĞµĞ»ÑŒĞ½Ğ¾Ğµ Ğ±Ñ€Ğ¾Ğ½Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ.',
-    f6_name:'Ğ‘Ğ°Ñ€Ğ±ĞµĞºÑ Ğ¸ ÑĞ°Ğ´', f6_desc:'Ğ—Ğ¾Ğ½Ğ° Ğ´Ğ»Ñ Ğ±Ğ°Ñ€Ğ±ĞµĞºÑ Ğ¸ Ğ±Ğ¾Ğ»ÑŒÑˆĞ¾Ğ¹ Ğ·ĞµĞ»ĞµĞ½Ñ‹Ğ¹ ÑĞ°Ğ´. Ğ¡Ñ‚Ğ¾Ğ»Ñ‹ Ğ´Ğ»Ñ Ğ¿Ğ¸ĞºĞ½Ğ¸ĞºĞ° Ğ² Ğ½Ğ°Ğ»Ğ¸Ñ‡Ğ¸Ğ¸.',
-    f7_name:'Ğ¢Ñ€Ğ°Ğ½ÑÑ„ĞµÑ€ Ğ¸Ğ· Ğ°ÑÑ€Ğ¾Ğ¿Ğ¾Ñ€Ñ‚Ğ°', f7_desc:'ĞÑÑ€Ğ¾Ğ¿Ğ¾Ñ€Ñ‚ ĞĞ½Ñ‚Ğ°Ğ»ÑŒĞ¸ Ğ² 30 Ğ¼Ğ¸Ğ½ÑƒÑ‚Ğ°Ñ…. ĞÑ€Ğ³Ğ°Ğ½Ğ¸Ğ·ÑƒĞµÑ‚ÑÑ Ğ¿Ğ¾ Ğ·Ğ°Ğ¿Ñ€Ğ¾ÑÑƒ.',
-    f8_name:'ĞĞ±ÑĞ»ÑƒĞ¶Ğ¸Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ½Ğ° 4 ÑĞ·Ñ‹ĞºĞ°Ñ…', f8_desc:'ĞšĞ¾Ğ¼Ğ°Ğ½Ğ´Ğ° Ğ³Ğ¾Ğ²Ğ¾Ñ€Ğ¸Ñ‚ Ğ½Ğ° Ñ‚ÑƒÑ€ĞµÑ†ĞºĞ¾Ğ¼, Ğ°Ğ½Ğ³Ğ»Ğ¸Ğ¹ÑĞºĞ¾Ğ¼, Ğ½ĞµĞ¼ĞµÑ†ĞºĞ¾Ğ¼ Ğ¸ Ñ€ÑƒÑÑĞºĞ¾Ğ¼ ÑĞ·Ñ‹ĞºĞ°Ñ….',
-    gallery_eyebrow:'Ğ¤Ğ¾Ñ‚Ğ¾Ğ³Ñ€Ğ°Ñ„Ğ¸Ğ¸', gallery_title:'Ğ“Ğ°Ğ»ĞµÑ€ĞµÑ',
-    viking_eyebrow:'ĞĞ° Ñ‚ĞµÑ€Ñ€Ğ¸Ñ‚Ğ¾Ñ€Ğ¸Ğ¸', viking_title:'Viking19<br>Ğ ĞµÑÑ‚Ğ¾Ñ€Ğ°Ğ½ Ğ¸ Ğ±Ğ°Ñ€',
-    viking_desc:'Ğ¡Ğ´ĞµĞ»Ğ°Ğ¹Ñ‚Ğµ Ğ²Ğ°Ñˆ Ğ¾Ñ‚Ğ´Ñ‹Ñ… ĞµÑ‰Ğµ Ğ±Ğ¾Ğ»ĞµĞµ Ğ¾ÑĞ¾Ğ±ĞµĞ½Ğ½Ñ‹Ğ¼ Ñ Ğ½Ğ°ÑˆĞ¸Ğ¼ ÑƒĞ½Ğ¸ĞºĞ°Ğ»ÑŒĞ½Ñ‹Ğ¼ Ğ¿Ğ°ĞºĞµÑ‚Ğ¾Ğ¼, ÑĞ¾Ñ‡ĞµÑ‚Ğ°ÑÑ‰Ğ¸Ğ¼ ÑƒÑ€Ğ¾ĞºĞ¸ Ğ³Ğ¾Ğ»ÑŒÑ„Ğ° Ğ¸ ÑƒĞ¶Ğ¸Ğ½. ĞÑ‚ĞºÑ€Ğ¾Ğ¹Ñ‚Ğµ Ğ´Ğ»Ñ ÑĞµĞ±Ñ ÑĞ°Ğ¼Ñ‹Ğµ Ğ¸Ğ·Ñ‹ÑĞºĞ°Ğ½Ğ½Ñ‹Ğµ Ğ²ĞºÑƒÑÑ‹ Ğ¼Ğ¸Ñ€Ğ¾Ğ²Ğ¾Ğ¹ ĞºÑƒÑ…Ğ½Ğ¸ Ğ² Ñ€ĞµÑÑ‚Ğ¾Ñ€Ğ°Ğ½Ğµ Viking19 Hole.',
-    reviews_eyebrow:'ĞĞ°ÑˆĞ¸ Ğ³Ğ¾ÑÑ‚Ğ¸', reviews_title:'Ğ§Ñ‚Ğ¾ Ğ¾Ğ½Ğ¸ ÑĞºĞ°Ğ·Ğ°Ğ»Ğ¸?',
-    reviews_count_31:'31 Ğ¾Ñ‚Ğ·Ñ‹Ğ²', reviews_very_good:'ĞÑ‡ĞµĞ½ÑŒ Ñ…Ğ¾Ñ€Ğ¾ÑˆĞ¾',
-    reviews_couples:'ĞŸĞ°Ñ€Ñ‹: 8.8 / 10', reviews_count_5:'5 Ğ¾Ñ‚Ğ·Ñ‹Ğ²Ğ¾Ğ²',
-    see_all_reviews:'Ğ’ÑĞµ Ğ¾Ñ‚Ğ·Ñ‹Ğ²Ñ‹ â†’',
-    rev1_text:'"ĞÑ‡ĞµĞ½ÑŒ ĞºÑ€Ğ°ÑĞ¸Ğ²Ğ¾Ğµ Ğ¸ Ñ‡Ğ¸ÑÑ‚Ğ¾Ğµ Ğ¼ĞµÑÑ‚Ğ¾ Ğ´Ğ»Ñ Ğ¿Ñ€Ğ¾Ğ¶Ğ¸Ğ²Ğ°Ğ½Ğ¸Ñ Ğ² Ğ‘ĞµĞ»ĞµĞºĞµ. ĞœÑ‹ Ğ¾Ğ¿Ñ€ĞµĞ´ĞµĞ»ĞµĞ½Ğ½Ğ¾ Ñ€ĞµĞºĞ¾Ğ¼ĞµĞ½Ğ´ÑƒĞµĞ¼ ĞµĞ³Ğ¾. ĞœÑ‹ Ğ¿Ñ€Ğ¸ĞµĞ´ĞµĞ¼ ÑĞ½Ğ¾Ğ²Ğ° Ğ² ÑĞ»ĞµĞ´ÑƒÑÑ‰ĞµĞ¼ Ğ³Ğ¾Ğ´Ñƒ, Ğ±Ğ¾Ğ»ÑŒÑˆĞ¾Ğµ ÑĞ¿Ğ°ÑĞ¸Ğ±Ğ¾!"',
-    rev1_author:'ĞŸĞ¾Ğ´Ñ‚Ğ²ĞµÑ€Ğ¶Ğ´ĞµĞ½Ğ½Ñ‹Ğ¹ Ğ³Ğ¾ÑÑ‚ÑŒ â€¢ Hotels.com',
-    rev2_author:'Ğ“Ğ¾ÑÑ‚ÑŒ Ğ¸Ğ· Ğ“ĞµÑ€Ğ¼Ğ°Ğ½Ğ¸Ğ¸ â€¢ Booking.com',
-    rev3_author:'ĞŸĞ¾Ğ´Ñ‚Ğ²ĞµÑ€Ğ¶Ğ´ĞµĞ½Ğ½Ñ‹Ğ¹ Ğ³Ğ¾ÑÑ‚ÑŒ â€¢ TripAdvisor',
-    footer_desc:'Ğ Ğ¾ÑĞºĞ¾ÑˆĞ½Ñ‹Ğµ Ğ°Ğ¿Ğ°Ñ€Ñ‚Ğ°Ğ¼ĞµĞ½Ñ‚Ñ‹ Ñ Ñ‡Ğ°ÑÑ‚Ğ½Ñ‹Ğ¼ Ğ±Ğ°ÑÑĞµĞ¹Ğ½Ğ¾Ğ¼ Ğ¸ Ğ¿Ğ¾Ğ»Ğ½Ñ‹Ğ¼ Ğ¾Ğ±Ğ¾Ñ€ÑƒĞ´Ğ¾Ğ²Ğ°Ğ½Ğ¸ĞµĞ¼ Ğ² ÑĞ°Ğ¼Ğ¾Ğ¼ ÑĞµÑ€Ğ´Ñ†Ğµ Ğ‘ĞµĞ»ĞµĞºĞ°, Ğ¿Ñ€ÑĞ¼Ğ¾ Ñ€ÑĞ´Ğ¾Ğ¼ Ñ Ğ¿Ğ¾Ğ»ÑĞ¼Ğ¸ Ğ´Ğ»Ñ Ğ³Ğ¾Ğ»ÑŒÑ„Ğ°.',
-    footer_rooms:'ĞĞ¿Ğ°Ñ€Ñ‚Ğ°Ğ¼ĞµĞ½Ñ‚Ñ‹', footer_room1:'1+1 Exclusive Poolside', footer_room2:'2+1 Deluxe Poolside', footer_room3:'3+1 Dublex Apt.',
-    footer_info:'Ğ˜Ğ½Ñ„Ğ¾Ñ€Ğ¼Ğ°Ñ†Ğ¸Ñ', footer_amenities:'ĞÑĞ¾Ğ±ĞµĞ½Ğ½Ğ¾ÑÑ‚Ğ¸', footer_gallery:'Ğ“Ğ°Ğ»ĞµÑ€ĞµÑ', footer_restaurant:'Ğ ĞµÑÑ‚Ğ¾Ñ€Ğ°Ğ½', footer_reviews:'ĞÑ‚Ğ·Ñ‹Ğ²Ñ‹',
-    footer_contact:'ĞšĞ¾Ğ½Ñ‚Ğ°ĞºÑ‚Ñ‹', footer_privacy:'ĞŸĞ¾Ğ»Ğ¸Ñ‚Ğ¸ĞºĞ° ĞºĞ¾Ğ½Ñ„Ğ¸Ğ´ĞµĞ½Ñ†Ğ¸Ğ°Ğ»ÑŒĞ½Ğ¾ÑÑ‚Ğ¸', footer_terms:'Ğ£ÑĞ»Ğ¾Ğ²Ğ¸Ñ Ğ¸ÑĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ'
+    nav_rooms:'Номера', nav_amenities:'Особенности', nav_gallery:'Галерея',
+    nav_restaurant:'Ресторан', nav_reviews:'Отзывы', nav_location:'Расположение', nav_book:'Забронировать',
+    hero_label:'Белек, Анталья • Рядом с полем для гольфа',
+    hero_title:'Роскошный апарт-отдых,<br><em>с домашним комфортом</em>',
+    hero_desc:'Роскошные апартаменты с частным бассейном и полным оборудованием в самом сердце Белека, прямо рядом с полями для гольфа. Чувствуйте себя как дома в каждой поездке.',
+    btn_book: '<i class="fab fa-whatsapp"></i> ЗАБРОНИРОВАТЬ',
+    viking_book_btn: 'Забронировать',
+    btn_view_rooms:'Посмотреть номера',
+    rating_text:'500+ баллов гостей',
+    bb_main_title:'Сделать бронирование', bb_main_sub:'Гарантия лучшей цены • Прямое бронирование',
+    bb_room:'ТИП НОМЕРА', bb_checkin:'ЗАЕЗД', bb_checkout:'ВЫЕЗД', bb_adults:'ВЗРОСЛЫЕ', bb_children:'ДЕТИ',
+    bb_extras:'ДОП. УСЛУГИ', bb_breakfast:'Завтрак', bb_breakfast_price:'+15€ / чел / ночь',
+    bb_transfer:'Трансфер из аэропорта', bb_transfer_price:'45€ (≤5 чел) / 85€ (6+)',
+    bb_summary_title:'ИТОГО', bb_wire:'Перевод', bb_card:'Кредитная карта', bb_reserve:'ЗАБРОНИРОВАТЬ',
+    intro_eyebrow:'Belka Golf Residence', intro_title:'Эксклюзивные варианты проживания',
+    intro_desc:'Откройте для себя тепло вашего дома с качеством обслуживания люкс в наших тщательно спроектированных апартаментах в самом сердце Белека, где встречаются покой и комфорт.',
+    feat1_title:'Круглогодичный открытый бассейн', feat1_desc:'Большой и ухоженный открытый бассейн, детская площадка и пышный зеленый сад.',
+    feat2_title:'Полностью оборудованная кухня', feat2_desc:'Духовка, посудомоечная машина, стиральная машина и все кухонные принадлежности в комплекте.',
+    feat3_title:'Рядом с полем для гольфа', feat3_desc:'Поля для гольфа Montgomerie и Cornelia находятся всего в 3 минутах езды.',
+    location_eyebrow:'Расположение', location_title:'Отличное расположение и окрестности',
+    location_desc:'Все, что вам нужно во время отпуска, находится в шаговой доступности или в нескольких минутах езды!',
+    loc1:'Центральная мечеть Белека / Часовая башня:', loc1_dist:'5 минут (пешком)',
+    loc2:'MM Migros и магазины:', loc2_dist:'10 минут (пешком)',
+    loc3:'Общественный пляж Белека:', loc3_dist:'5 минут (на машине)',
+    loc4:'The Land of Legends:', loc4_dist:'7 минут (на машине)',
+    loc5:'Montgomerie и Cornelia Golf:', loc5_dist:'3 минуты (на машине)',
+    loc6:'Аэропорт Антальи:', loc6_dist:'30 минут (на машине)',
+    rooms_eyebrow:'Варианты проживания', rooms_title:'Наши апартаменты',
+    rooms_desc:'Варианты апартаментов, подходящие для любых нужд, с видом на бассейн и полным оборудованием.',
+    room1_type:'Апартаменты', room1_name:'1+1 Exclusive Poolside',
+    room1_desc:'Идеальный, стильный и комфортный отдых для пар у бассейна с современным декором и специальными удобствами.',
+    room2_type:'Роскошные апартаменты', room2_name:'2+1 Deluxe Poolside',
+    room2_desc:'Идеальный выбор для длительного проживания с большим балконом и полностью оборудованной кухней, сочетающий роскошь и функциональность.',
+    room3_type:'Большие семейные апартаменты', room3_name:'3+1 Dublex Apt.',
+    room3_desc:'Созданы для больших семей, просторные жилые зоны с видом на бассейн и самые выдающиеся образцы современной архитектуры.',
+    room_from:'За ночь', room_inquire:'Узнать →',
+    pool_eyebrow:'Объект', pool_title:'Круглогодичный открытый бассейн',
+    pool_desc:'Большой и ухоженный открытый бассейн, где можно загорать весь день, детская площадка и пышный зеленый сад.',
+    amenities_eyebrow:'Удобства', amenities_title:'Что мы предлагаем',
+    f1_name:'Бассейн', f1_desc:'Открытый круглый год, большой открытый бассейн. Шезлонги и лежаки в наличии.',
+    f2_name:'Бесплатный Wi-Fi', f2_desc:'Высокоскоростной бесперебойный интернет во всех зонах.',
+    f3_name:'Бесплатная парковка', f3_desc:'Охраняемая бесплатная крытая и открытая парковка на территории.',
+    f4_name:'Кондиционер', f4_desc:'Индивидуально контролируемая система кондиционирования доступна во всех апартаментах.',
+    f5_name:'Сауна', f5_desc:'Частная сауна за дополнительную плату. Требуется предварительное бронирование.',
+    f6_name:'Барбекю и сад', f6_desc:'Зона для барбекю и большой зеленый сад. Столы для пикника в наличии.',
+    f7_name:'Трансфер из аэропорта', f7_desc:'Аэропорт Антальи в 30 минутах. Организуется по запросу.',
+    f8_name:'Обслуживание на 4 языках', f8_desc:'Команда говорит на турецком, английском, немецком и русском языках.',
+    gallery_eyebrow:'Фотографии', gallery_title:'Галерея',
+    viking_eyebrow:'На территории', viking_title:'Viking19<br>Ресторан и бар',
+    viking_desc:'Сделайте ваш отдых еще более особенным с нашим уникальным пакетом, сочетающим уроки гольфа и ужин. Откройте для себя самые изысканные вкусы мировой кухни в ресторане Viking19 Hole.',
+    reviews_eyebrow:'Наши гости', reviews_title:'Что они сказали?',
+    reviews_count_31:'31 отзыв', reviews_very_good:'Очень хорошо',
+    reviews_couples:'Пары: 8.8 / 10', reviews_count_5:'5 отзывов',
+    see_all_reviews:'Все отзывы →',
+    rev1_text:'"Очень красивое и чистое место для проживания в Белеке. Мы определенно рекомендуем его. Мы приедем снова в следующем году, большое спасибо!"',
+    rev1_author:'Подтвержденный гость • Hotels.com',
+    rev2_author:'Гость из Германии • Booking.com',
+    rev3_author:'Подтвержденный гость • TripAdvisor',
+    footer_desc:'Роскошные апартаменты с частным бассейном и полным оборудованием в самом сердце Белека, прямо рядом с полями для гольфа.',
+    footer_rooms:'Апартаменты', footer_room1:'1+1 Exclusive Poolside', footer_room2:'2+1 Deluxe Poolside', footer_room3:'3+1 Dublex Apt.',
+    footer_info:'Информация', footer_amenities:'Особенности', footer_gallery:'Галерея', footer_restaurant:'Ресторан', footer_reviews:'Отзывы',
+    footer_contact:'Контакты', footer_privacy:'Политика конфиденциальности', footer_terms:'Условия использования'
   }
 };
 
@@ -1714,5 +1714,3 @@ setLang('tr');
 </script>
 </body>
 </html>
-
-
