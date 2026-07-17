@@ -364,6 +364,18 @@
     .loc-text h4 { font-size: 0.9rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
     .loc-text p { font-size: 0.85rem; color: #777; }
     .map-container { height: 450px; background: #eee; border-radius: 2px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
+    .map-placeholder {
+      width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 14px; cursor: pointer; text-align: center;
+      background: linear-gradient(135deg, #f4f1ea 0%, #e9e4d8 100%);
+      font-family: 'Jost', sans-serif; font-size: 0.85rem; letter-spacing: 0.05em;
+      color: #4a4a4a; transition: background 0.3s;
+    }
+    .map-placeholder:hover { background: linear-gradient(135deg, #efeade 0%, #e2dccc 100%); }
+    .map-directions {
+      margin-top: 6px; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #b8923a; border-bottom: 1px solid rgba(184,146,58,0.4); padding-bottom: 2px;
+    }
 
     /* ══ DAİRELER ══ */
     #daireler { padding: 120px 80px; background: #fff; }
@@ -663,7 +675,7 @@
     </p>
     <div class="hero-actions">
       <a href="https://wa.me/905322622773?text=Rezervasyon%20sormak%20istiyorum" class="btn-primary" target="_blank" data-i18n-html="btn_book">
-        <svg class="icon icon-solid"><use href="#i-whatsapp"/></svg> Rezervasyon Yap
+        <svg class="icon icon-solid" aria-hidden="true"><use href="#i-whatsapp"/></svg> Rezervasyon Yap
       </a>
       <a href="#daireler" class="btn-ghost" data-i18n="btn_view_rooms">Daireleri Gör</a>
     </div>
@@ -813,51 +825,61 @@
   <div class="loc-grid">
     <div class="loc-list">
       <div class="loc-item reveal">
-        <div class="loc-icon"><svg class="icon icon-line"><use href="#i-mosque"/></svg></div>
+        <div class="loc-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-mosque"/></svg></div>
         <div class="loc-text">
           <h4 data-i18n="loc1">Belek Merkez Camii / Saat Kulesi:</h4>
           <p data-i18n="loc1_dist">5 Dakika (Yürüme)</p>
         </div>
       </div>
       <div class="loc-item reveal">
-        <div class="loc-icon"><svg class="icon icon-line"><use href="#i-shopping-cart"/></svg></div>
+        <div class="loc-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-shopping-cart"/></svg></div>
         <div class="loc-text">
           <h4 data-i18n="loc2">MM Migros & Alışveriş:</h4>
           <p data-i18n="loc2_dist">10 Dakika (Yürüme)</p>
         </div>
       </div>
       <div class="loc-item reveal">
-        <div class="loc-icon"><svg class="icon icon-line"><use href="#i-umbrella-beach"/></svg></div>
+        <div class="loc-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-umbrella-beach"/></svg></div>
         <div class="loc-text">
           <h4 data-i18n="loc3">Belek Halk Plajı:</h4>
           <p data-i18n="loc3_dist">5 Dakika (Araç ile)</p>
         </div>
       </div>
       <div class="loc-item reveal">
-        <div class="loc-icon"><svg class="icon icon-line"><use href="#i-ticket"/></svg></div>
+        <div class="loc-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-ticket"/></svg></div>
         <div class="loc-text">
           <h4 data-i18n="loc4">The Land of Legends:</h4>
           <p data-i18n="loc4_dist">7 Dakika (Araç ile)</p>
         </div>
       </div>
       <div class="loc-item reveal">
-        <div class="loc-icon"><svg class="icon icon-line"><use href="#i-golf-ball"/></svg></div>
+        <div class="loc-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-golf-ball"/></svg></div>
         <div class="loc-text">
           <h4 data-i18n="loc5">Montgomerie & Cornelia Golf:</h4>
           <p data-i18n="loc5_dist">3 Dakika (Araç ile)</p>
         </div>
       </div>
       <div class="loc-item reveal">
-        <div class="loc-icon"><svg class="icon icon-line"><use href="#i-plane"/></svg></div>
+        <div class="loc-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-plane"/></svg></div>
         <div class="loc-text">
           <h4 data-i18n="loc6">Antalya Havalimanı:</h4>
           <p data-i18n="loc6_dist">30 Dakika (Araç ile)</p>
         </div>
       </div>
     </div>
-    <div class="map-container reveal">
-      <iframe src="https://www.google.com/maps?q=Belka+Golf+Residence,+M.+Akif+Ersoy+Cad.+Belka+Golf+Sitesi+A+Blok+No:25,+Belek,+Antalya,+Turkey&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="map-container reveal" id="map-facade">
+      <div class="map-placeholder" onclick="loadMap()">
+        <svg class="icon icon-line" aria-hidden="true" style="width:2.4rem;height:2.4rem;color:#b8923a;"><use href="#i-map-marker"/></svg>
+        <span data-i18n="map_cta">Haritayı Görüntülemek İçin Tıklayın</span>
+        <a href="https://www.google.com/maps?q=Belka+Golf+Residence,+M.+Akif+Ersoy+Cad.+Belka+Golf+Sitesi+A+Blok+No:25,+Belek,+Antalya,+Turkey" target="_blank" rel="noopener" class="map-directions" onclick="event.stopPropagation()" data-i18n="map_directions">Yol Tarifi Al ↗</a>
+      </div>
     </div>
+    <script>
+      function loadMap() {
+        var c = document.getElementById('map-facade');
+        c.innerHTML = '<iframe src="https://www.google.com/maps?q=Belka+Golf+Residence,+M.+Akif+Ersoy+Cad.+Belka+Golf+Sitesi+A+Blok+No:25,+Belek,+Antalya,+Turkey&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>';
+      }
+    </script>
   </div>
 </div>
 </section>
@@ -940,42 +962,42 @@
   
   <div class="feats-grid">
     <div class="feat-box reveal">
-      <div class="feat-icon"><svg class="icon icon-line"><use href="#i-swimmer"/></svg></div>
+      <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-swimmer"/></svg></div>
       <h4 data-i18n="f1_name">Yüzme Havuzu</h4>
       <p data-i18n="f1_desc">Yıl boyu açık, geniş açık havuz. Şezlong ve güneş yatakları mevcut.</p>
     </div>
     <div class="feat-box reveal">
-      <div class="feat-icon"><svg class="icon icon-line"><use href="#i-wifi"/></svg></div>
+      <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-wifi"/></svg></div>
       <h4 data-i18n="f2_name">Ücretsiz Wi-Fi</h4>
       <p data-i18n="f2_desc">Tüm alanlarda yüksek hızlı, kesintisiz internet bağlantısı.</p>
     </div>
     <div class="feat-box reveal">
-      <div class="feat-icon"><svg class="icon icon-line"><use href="#i-parking"/></svg></div>
+      <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-parking"/></svg></div>
       <h4 data-i18n="f3_name">Ücretsiz Otopark</h4>
       <p data-i18n="f3_desc">Tesis bünyesinde güvenlikli, ücretsiz kapalı ve açık otopark.</p>
     </div>
     <div class="feat-box reveal">
-      <div class="feat-icon"><svg class="icon icon-line"><use href="#i-snowflake"/></svg></div>
+      <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-snowflake"/></svg></div>
       <h4 data-i18n="f4_name">Klima</h4>
       <p data-i18n="f4_desc">Tüm dairelerde bireysel kontrollü klima sistemi mevcuttur.</p>
     </div>
     <div class="feat-box reveal">
-      <div class="feat-icon"><svg class="icon icon-line"><use href="#i-hot-tub"/></svg></div>
+      <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-hot-tub"/></svg></div>
       <h4 data-i18n="f5_name">Sauna</h4>
       <p data-i18n="f5_desc">Ek ücrete tabi özel sauna hizmeti. Önceden rezervasyon gereklidir.</p>
     </div>
     <div class="feat-box reveal">
-      <div class="feat-icon"><svg class="icon icon-line"><use href="#i-utensils"/></svg></div>
+      <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-utensils"/></svg></div>
       <h4 data-i18n="f6_name">BBQ & Bahçe</h4>
       <p data-i18n="f6_desc">Mangal alanı ve geniş yeşil bahçe. Piknik masaları mevcut.</p>
     </div>
     <div class="feat-box reveal">
-      <div class="feat-icon"><svg class="icon icon-line"><use href="#i-shuttle-van"/></svg></div>
+      <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-shuttle-van"/></svg></div>
       <h4 data-i18n="f7_name">Havalimanı Transferi</h4>
       <p data-i18n="f7_desc">Antalya Havalimanı 30 dakika. Talep üzerine düzenlenir.</p>
     </div>
     <div class="feat-box reveal">
-      <div class="feat-icon"><svg class="icon icon-line"><use href="#i-globe"/></svg></div>
+      <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-globe"/></svg></div>
       <h4 data-i18n="f8_name">4 Dilde Hizmet</h4>
       <p data-i18n="f8_desc">Türkçe, İngilizce, Almanca ve Rusça konuşan ekip.</p>
     </div>
@@ -1034,8 +1056,8 @@
         <div class="gc-caption">Golf Sahası Manzarası</div>
       </div>
 
-      <button class="gc-arrow gc-prev" onclick="gcPrev()" aria-label="Önceki fotoğraf"><svg class="icon icon-line"><use href="#i-chevron-left"/></svg></button>
-      <button class="gc-arrow gc-next" onclick="gcNext()" aria-label="Sonraki fotoğraf"><svg class="icon icon-line"><use href="#i-chevron-right"/></svg></button>
+      <button class="gc-arrow gc-prev" onclick="gcPrev()" aria-label="Önceki fotoğraf"><svg class="icon icon-line" aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
+      <button class="gc-arrow gc-next" onclick="gcNext()" aria-label="Sonraki fotoğraf"><svg class="icon icon-line" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
       <div class="gc-counter"><span id="gcCurrent">01</span> / 11</div>
     </div>
 
@@ -1180,9 +1202,9 @@
       <div class="footer-logo">Belka Golf Residence</div>
       <p class="footer-desc" data-i18n="footer_desc">Belek'in kalbinde golf sahası yanı, havuzlu, tam donanımlı lüks apart daireler.</p>
       <div class="footer-social">
-        <a href="https://www.instagram.com/belkagolfresidence/" target="_blank"><svg class="icon icon-line"><use href="#i-instagram"/></svg></a>
-        <a href="#"><svg class="icon icon-solid"><use href="#i-facebook"/></svg></a>
-        <a href="#"><svg class="icon icon-solid"><use href="#i-tiktok"/></svg></a>
+        <a href="https://www.instagram.com/belkagolfresidence/" target="_blank" aria-label="Instagram"><svg class="icon icon-line" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg class="icon icon-solid" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg class="icon icon-solid" aria-hidden="true"><use href="#i-tiktok"/></svg></a>
       </div>
     </div>
     <div class="footer-col">
@@ -1206,19 +1228,19 @@
       <h4 data-i18n="footer_contact">İletişim</h4>
       <div class="footer-links">
         <div class="footer-contact-item">
-          <svg class="icon icon-line"><use href="#i-map-marker"/></svg>
+          <svg class="icon icon-line" aria-hidden="true"><use href="#i-map-marker"/></svg>
           <div class="footer-contact-text">
             <p>Belek Mah. Mehmet Akif Ersoy Cad. 25, Belek, Antalya</p>
           </div>
         </div>
         <div class="footer-contact-item">
-          <svg class="icon icon-line"><use href="#i-phone"/></svg>
+          <svg class="icon icon-line" aria-hidden="true"><use href="#i-phone"/></svg>
           <div class="footer-contact-text">
             <p>+90 532 262 27 73</p>
           </div>
         </div>
         <div class="footer-contact-item">
-          <svg class="icon icon-line"><use href="#i-envelope"/></svg>
+          <svg class="icon icon-line" aria-hidden="true"><use href="#i-envelope"/></svg>
           <div class="footer-contact-text">
             <p>info@belkagolf.com</p>
           </div>
@@ -1236,7 +1258,7 @@
 </footer>
 
 <a href="https://wa.me/905322622773" class="wa-fab" target="_blank" title="WhatsApp ile iletişime geç">
-  <svg class="icon icon-solid"><use href="#i-whatsapp"/></svg>
+  <svg class="icon icon-solid" aria-hidden="true"><use href="#i-whatsapp"/></svg>
 </a>
 
 <script>
@@ -1499,7 +1521,7 @@ const translations = {
     hero_label:'Belek, Antalya • Golf Sahası Yanı',
     hero_title:'Lüks apart tatil,<br><em>ev konforu ile</em>',
     hero_desc:'Belek\'in kalbinde, golf sahaları hemen yanı başında, özel havuzlu ve tam donanımlı apart daireler. Her konaklamada ev gibi hissedin.',
-    btn_book:'<svg class="icon icon-solid"><use href="#i-whatsapp"/></svg> Rezervasyon Yap',
+    btn_book:'<svg class="icon icon-solid" aria-hidden="true"><use href="#i-whatsapp"/></svg> Rezervasyon Yap',
     viking_book_btn:'Rezervasyon Yap',
     btn_view_rooms:'Daireleri Gör',
     rating_text:'500+ Misafir Puanı',
@@ -1521,6 +1543,7 @@ const translations = {
     loc4:'The Land of Legends:', loc4_dist:'7 Dakika (Araç ile)',
     loc5:'Montgomerie & Cornelia Golf:', loc5_dist:'3 Dakika (Araç ile)',
     loc6:'Antalya Havalimanı:', loc6_dist:'30 Dakika (Araç ile)',
+    map_cta:'Haritayı Görüntülemek İçin Tıklayın', map_directions:'Yol Tarifi Al ↗',
     rooms_eyebrow:'Konaklama Seçenekleri', rooms_title:'Dairelerimiz',
     rooms_desc:'Her ihtiyaca uygun, havuz manzaralı ve tam donanımlı daire seçenekleri.',
     room1_type:'Apart Daire', room1_name:'1+1 Exclusive Poolside',
@@ -1563,7 +1586,7 @@ const translations = {
     hero_label:'Belek, Antalya • Next to Golf Course',
     hero_title:'Luxury apart holiday,<br><em>with home comfort</em>',
     hero_desc:'Luxury apartments with private pool and fully equipped in the heart of Belek, right next to golf courses. Feel like home in every stay.',
-    btn_book: '<svg class="icon icon-solid"><use href="#i-whatsapp"/></svg> BOOK NOW',
+    btn_book: '<svg class="icon icon-solid" aria-hidden="true"><use href="#i-whatsapp"/></svg> BOOK NOW',
     viking_book_btn: 'Book Now',
     btn_view_rooms:'View Rooms',
     rating_text:'500+ Guest Points',
@@ -1585,6 +1608,7 @@ const translations = {
     loc4:'The Land of Legends:', loc4_dist:'7 Minutes (By Car)',
     loc5:'Montgomerie & Cornelia Golf:', loc5_dist:'3 Minutes (By Car)',
     loc6:'Antalya Airport:', loc6_dist:'30 Minutes (By Car)',
+    map_cta:'Click to View Map', map_directions:'Get Directions ↗',
     rooms_eyebrow:'Accommodation Options', rooms_title:'Our Apartments',
     rooms_desc:'Apartment options suitable for every need, with pool view and fully equipped.',
     room1_type:'Apartment', room1_name:'1+1 Exclusive Poolside',
@@ -1627,7 +1651,7 @@ const translations = {
     hero_label:'Belek, Antalya • Neben dem Golfplatz',
     hero_title:'Luxus-Apart-Urlaub,<br><em>mit Wohnkomfort</em>',
     hero_desc:'Luxusapartments mit privatem Pool und voll ausgestattet im Herzen von Belek, direkt neben Golfplätzen. Fühlen Sie sich bei jedem Aufenthalt wie zu Hause.',
-    btn_book:'<svg class="icon icon-solid"><use href="#i-whatsapp"/></svg> Jetzt Buchen',
+    btn_book:'<svg class="icon icon-solid" aria-hidden="true"><use href="#i-whatsapp"/></svg> Jetzt Buchen',
     viking_book_btn:'Jetzt Buchen',
     btn_view_rooms:'Zimmer ansehen',
     rating_text:'500+ Gästepunkte',
@@ -1649,6 +1673,7 @@ const translations = {
     loc4:'The Land of Legends:', loc4_dist:'7 Minuten (mit dem Auto)',
     loc5:'Montgomerie & Cornelia Golf:', loc5_dist:'3 Minuten (mit dem Auto)',
     loc6:'Flughafen Antalya:', loc6_dist:'30 Minuten (mit dem Auto)',
+    map_cta:'Klicken, um die Karte anzuzeigen', map_directions:'Route abrufen ↗',
     rooms_eyebrow:'Unterkunftsmöglichkeiten', rooms_title:'Unsere Apartments',
     rooms_desc:'Apartmentoptionen für jeden Bedarf, mit Poolblick und voll ausgestattet.',
     room1_type:'Apartment', room1_name:'1+1 Exclusive Poolside',
@@ -1691,7 +1716,7 @@ const translations = {
     hero_label:'Белек, Анталья • Рядом с полем для гольфа',
     hero_title:'Роскошный апарт-отдых,<br><em>с домашним комфортом</em>',
     hero_desc:'Роскошные апартаменты с частным бассейном и полным оборудованием в самом сердце Белека, прямо рядом с полями для гольфа. Чувствуйте себя как дома в каждой поездке.',
-    btn_book: '<svg class="icon icon-solid"><use href="#i-whatsapp"/></svg> ЗАБРОНИРОВАТЬ',
+    btn_book: '<svg class="icon icon-solid" aria-hidden="true"><use href="#i-whatsapp"/></svg> ЗАБРОНИРОВАТЬ',
     viking_book_btn: 'Забронировать',
     btn_view_rooms:'Посмотреть номера',
     rating_text:'500+ баллов гостей',
@@ -1713,6 +1738,7 @@ const translations = {
     loc4:'The Land of Legends:', loc4_dist:'7 минут (на машине)',
     loc5:'Montgomerie и Cornelia Golf:', loc5_dist:'3 минуты (на машине)',
     loc6:'Аэропорт Антальи:', loc6_dist:'30 минут (на машине)',
+    map_cta:'Нажмите, чтобы посмотреть карту', map_directions:'Маршрут ↗',
     rooms_eyebrow:'Варианты проживания', rooms_title:'Наши апартаменты',
     rooms_desc:'Варианты апартаментов, подходящие для любых нужд, с видом на бассейн и полным оборудованием.',
     room1_type:'Апартаменты', room1_name:'1+1 Exclusive Poolside',
