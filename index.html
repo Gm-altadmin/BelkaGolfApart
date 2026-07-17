@@ -55,7 +55,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
 
     <link rel="preload" as="image" href="images/havuzhero.webp" fetchpriority="high"/>
 
@@ -349,7 +348,7 @@
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 400; color: #1a1a1a; line-height: 1.2; margin-bottom: 24px; }
     .intro-desc { font-size: 1.05rem; line-height: 1.8; color: #4a4a4a; margin-bottom: 40px; }
     .intro-features { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 32px; }
-    .intro-feat-item h4 { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; color: #1a1a1a; margin-bottom: 8px; }
+    .intro-feat-item h3 { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; color: #1a1a1a; margin-bottom: 8px; }
     .intro-feat-item p { font-size: 0.85rem; line-height: 1.6; color: #777; }
     .intro-image { position: relative; padding-bottom: 125%; overflow: hidden; }
     .intro-image img { position: absolute; inset: 0; transition: transform 0.8s ease; }
@@ -361,7 +360,7 @@
     .loc-list { display: flex; flex-direction: column; gap: 24px; }
     .loc-item { display: flex; gap: 20px; align-items: flex-start; }
     .loc-icon { font-size: 1.2rem; color: #b8923a; margin-top: 3px; }
-    .loc-text h4 { font-size: 0.9rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
+    .loc-text h3 { font-size: 0.9rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
     .loc-text p { font-size: 0.85rem; color: #777; }
     .map-container { height: 450px; background: #eee; border-radius: 2px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
     .map-placeholder {
@@ -406,7 +405,7 @@
     .feats-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 40px; margin-top: 60px; }
     .feat-box { text-align: center; }
     .feat-icon { font-size: 1.8rem; color: #b8923a; margin-bottom: 20px; }
-    .feat-box h4 { font-size: 0.9rem; font-weight: 600; color: #1a1a1a; margin-bottom: 10px; }
+    .feat-box h3 { font-size: 0.9rem; font-weight: 600; color: #1a1a1a; margin-bottom: 10px; }
     .feat-box p { font-size: 0.8rem; line-height: 1.6; color: #777; }
 
     /* ══ GALERİ / KAROSEL ══ */
@@ -508,7 +507,7 @@
     .footer-social { display: flex; gap: 16px; }
     .footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; transition: all 0.3s; }
     .footer-social a:hover { border-color: #b8923a; color: #b8923a; }
-    .footer-col h4 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #fff; margin-bottom: 24px; }
+    .footer-col h3 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #fff; margin-bottom: 24px; }
     .footer-links { display: flex; flex-direction: column; gap: 14px; }
     .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
     .footer-links a:hover { color: #b8923a; }
@@ -696,7 +695,7 @@
 
   <div class="bb-form">
     <div class="bb-field">
-      <label class="bb-label" data-i18n="bb_room">ODA TİPİ</label>
+      <label class="bb-label" for="bb-room" data-i18n="bb_room">ODA TİPİ</label>
       <select id="bb-room" class="bb-select">
         <option value="148">1+1 Exclusive Poolside</option>
         <option value="184" selected>2+1 Deluxe Poolside</option>
@@ -704,15 +703,15 @@
       </select>
     </div>
     <div class="bb-field">
-      <label class="bb-label" data-i18n="bb_checkin">GİRİŞ</label>
+      <label class="bb-label" for="bb-checkin" data-i18n="bb_checkin">GİRİŞ</label>
       <input type="date" id="bb-checkin" class="bb-input"/>
     </div>
     <div class="bb-field">
-      <label class="bb-label" data-i18n="bb_checkout">ÇIKIŞ</label>
+      <label class="bb-label" for="bb-checkout" data-i18n="bb_checkout">ÇIKIŞ</label>
       <input type="date" id="bb-checkout" class="bb-input"/>
     </div>
     <div class="bb-field">
-      <label class="bb-label" data-i18n="bb_adults">YETİŞKİN</label>
+      <label class="bb-label" for="bb-adults" data-i18n="bb_adults">YETİŞKİN</label>
       <select id="bb-adults" class="bb-select">
         <option value="1">1 Kişi</option>
         <option value="2" selected>2 Kişi</option>
@@ -722,7 +721,7 @@
       </select>
     </div>
     <div class="bb-field">
-      <label class="bb-label" data-i18n="bb_children">ÇOCUK</label>
+      <label class="bb-label" for="bb-children" data-i18n="bb_children">ÇOCUK</label>
       <select id="bb-children" class="bb-select">
         <option value="0">Yok</option>
         <option value="1">1 Çocuk</option>
@@ -794,15 +793,15 @@
       </p>
       <div class="intro-features">
         <div class="intro-feat-item reveal">
-          <h4 data-i18n="feat1_title">Yıl Boyu Açık Havuz</h4>
+          <h3 data-i18n="feat1_title">Yıl Boyu Açık Havuz</h3>
           <p data-i18n="feat1_desc">Geniş ve bakımlı açık yüzme havuzu, çocuk oyun alanı ve yemyeşil bahçe.</p>
         </div>
         <div class="intro-feat-item reveal">
-          <h4 data-i18n="feat2_title">Tam Donanımlı Mutfak</h4>
+          <h3 data-i18n="feat2_title">Tam Donanımlı Mutfak</h3>
           <p data-i18n="feat2_desc">Fırın, bulaşık makinesi, çamaşır makinesi ve tüm mutfak gereçleri eksiksiz.</p>
         </div>
         <div class="intro-feat-item reveal">
-          <h4 data-i18n="feat3_title">Golf Sahası Yanı</h4>
+          <h3 data-i18n="feat3_title">Golf Sahası Yanı</h3>
           <p data-i18n="feat3_desc">Montgomerie & Cornelia Golf Sahaları yalnızca 3 dakika mesafede.</p>
         </div>
       </div>
@@ -827,42 +826,42 @@
       <div class="loc-item reveal">
         <div class="loc-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-mosque"/></svg></div>
         <div class="loc-text">
-          <h4 data-i18n="loc1">Belek Merkez Camii / Saat Kulesi:</h4>
+          <h3 data-i18n="loc1">Belek Merkez Camii / Saat Kulesi:</h3>
           <p data-i18n="loc1_dist">5 Dakika (Yürüme)</p>
         </div>
       </div>
       <div class="loc-item reveal">
         <div class="loc-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-shopping-cart"/></svg></div>
         <div class="loc-text">
-          <h4 data-i18n="loc2">MM Migros & Alışveriş:</h4>
+          <h3 data-i18n="loc2">MM Migros & Alışveriş:</h3>
           <p data-i18n="loc2_dist">10 Dakika (Yürüme)</p>
         </div>
       </div>
       <div class="loc-item reveal">
         <div class="loc-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-umbrella-beach"/></svg></div>
         <div class="loc-text">
-          <h4 data-i18n="loc3">Belek Halk Plajı:</h4>
+          <h3 data-i18n="loc3">Belek Halk Plajı:</h3>
           <p data-i18n="loc3_dist">5 Dakika (Araç ile)</p>
         </div>
       </div>
       <div class="loc-item reveal">
         <div class="loc-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-ticket"/></svg></div>
         <div class="loc-text">
-          <h4 data-i18n="loc4">The Land of Legends:</h4>
+          <h3 data-i18n="loc4">The Land of Legends:</h3>
           <p data-i18n="loc4_dist">7 Dakika (Araç ile)</p>
         </div>
       </div>
       <div class="loc-item reveal">
         <div class="loc-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-golf-ball"/></svg></div>
         <div class="loc-text">
-          <h4 data-i18n="loc5">Montgomerie & Cornelia Golf:</h4>
+          <h3 data-i18n="loc5">Montgomerie & Cornelia Golf:</h3>
           <p data-i18n="loc5_dist">3 Dakika (Araç ile)</p>
         </div>
       </div>
       <div class="loc-item reveal">
         <div class="loc-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-plane"/></svg></div>
         <div class="loc-text">
-          <h4 data-i18n="loc6">Antalya Havalimanı:</h4>
+          <h3 data-i18n="loc6">Antalya Havalimanı:</h3>
           <p data-i18n="loc6_dist">30 Dakika (Araç ile)</p>
         </div>
       </div>
@@ -963,42 +962,42 @@
   <div class="feats-grid">
     <div class="feat-box reveal">
       <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-swimmer"/></svg></div>
-      <h4 data-i18n="f1_name">Yüzme Havuzu</h4>
+      <h3 data-i18n="f1_name">Yüzme Havuzu</h3>
       <p data-i18n="f1_desc">Yıl boyu açık, geniş açık havuz. Şezlong ve güneş yatakları mevcut.</p>
     </div>
     <div class="feat-box reveal">
       <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-wifi"/></svg></div>
-      <h4 data-i18n="f2_name">Ücretsiz Wi-Fi</h4>
+      <h3 data-i18n="f2_name">Ücretsiz Wi-Fi</h3>
       <p data-i18n="f2_desc">Tüm alanlarda yüksek hızlı, kesintisiz internet bağlantısı.</p>
     </div>
     <div class="feat-box reveal">
       <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-parking"/></svg></div>
-      <h4 data-i18n="f3_name">Ücretsiz Otopark</h4>
+      <h3 data-i18n="f3_name">Ücretsiz Otopark</h3>
       <p data-i18n="f3_desc">Tesis bünyesinde güvenlikli, ücretsiz kapalı ve açık otopark.</p>
     </div>
     <div class="feat-box reveal">
       <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-snowflake"/></svg></div>
-      <h4 data-i18n="f4_name">Klima</h4>
+      <h3 data-i18n="f4_name">Klima</h3>
       <p data-i18n="f4_desc">Tüm dairelerde bireysel kontrollü klima sistemi mevcuttur.</p>
     </div>
     <div class="feat-box reveal">
       <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-hot-tub"/></svg></div>
-      <h4 data-i18n="f5_name">Sauna</h4>
+      <h3 data-i18n="f5_name">Sauna</h3>
       <p data-i18n="f5_desc">Ek ücrete tabi özel sauna hizmeti. Önceden rezervasyon gereklidir.</p>
     </div>
     <div class="feat-box reveal">
       <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-utensils"/></svg></div>
-      <h4 data-i18n="f6_name">BBQ & Bahçe</h4>
+      <h3 data-i18n="f6_name">BBQ & Bahçe</h3>
       <p data-i18n="f6_desc">Mangal alanı ve geniş yeşil bahçe. Piknik masaları mevcut.</p>
     </div>
     <div class="feat-box reveal">
       <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-shuttle-van"/></svg></div>
-      <h4 data-i18n="f7_name">Havalimanı Transferi</h4>
+      <h3 data-i18n="f7_name">Havalimanı Transferi</h3>
       <p data-i18n="f7_desc">Antalya Havalimanı 30 dakika. Talep üzerine düzenlenir.</p>
     </div>
     <div class="feat-box reveal">
       <div class="feat-icon"><svg class="icon icon-line" aria-hidden="true"><use href="#i-globe"/></svg></div>
-      <h4 data-i18n="f8_name">4 Dilde Hizmet</h4>
+      <h3 data-i18n="f8_name">4 Dilde Hizmet</h3>
       <p data-i18n="f8_desc">Türkçe, İngilizce, Almanca ve Rusça konuşan ekip.</p>
     </div>
   </div>
@@ -1208,7 +1207,7 @@
       </div>
     </div>
     <div class="footer-col">
-      <h4 data-i18n="footer_rooms">Apartlar</h4>
+      <h3 data-i18n="footer_rooms">Apartlar</h3>
       <div class="footer-links">
         <a href="#daireler" data-i18n="footer_room1">1+1 Exclusive Poolside</a>
         <a href="#daireler" data-i18n="footer_room2">2+1 Deluxe Poolside</a>
@@ -1216,7 +1215,7 @@
       </div>
     </div>
     <div class="footer-col">
-      <h4 data-i18n="footer_info">Bilgi</h4>
+      <h3 data-i18n="footer_info">Bilgi</h3>
       <div class="footer-links">
         <a href="#ozellikler" data-i18n="footer_amenities">Özellikler</a>
         <a href="#galeri" data-i18n="footer_gallery">Galeri</a>
@@ -1225,7 +1224,7 @@
       </div>
     </div>
     <div class="footer-col">
-      <h4 data-i18n="footer_contact">İletişim</h4>
+      <h3 data-i18n="footer_contact">İletişim</h3>
       <div class="footer-links">
         <div class="footer-contact-item">
           <svg class="icon icon-line" aria-hidden="true"><use href="#i-map-marker"/></svg>
