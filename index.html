@@ -53,8 +53,26 @@
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Erken bağlantı: DNS/TLS gecikmesini önden bitirir, render-blocking süresini azaltır -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
+
+  <!-- LCP görseli (hero arka planı) erken indirilsin diye preload -->
+  <link rel="preload" as="image" href="images/havuzhero.webp" fetchpriority="high"/>
+
+  <!-- Google Fonts: render'ı bloklamadan, print-media hilesiyle asenkron yükle -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+
+  <!-- Font Awesome: kritik değil (sadece birkaç ikon), asenkron yükle -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'"/>
+
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  </noscript>
 
   <style>
     /* ══ RESET & BASE ══ */
@@ -603,7 +621,7 @@
       Lüks apart tatil,<br><em>ev konforu ile</em>
     </h1>
     <p class="hero-desc" data-i18n="hero_desc">
-      Belek'in kalbinde, golf sahaları hemen yanı başında, özel havuzlu and tam donanımlı apart daireler. Her konaklamada ev gibi hissedin.
+      Belek'in kalbinde, golf sahaları hemen yanı başında, özel havuzlu ve tam donanımlı apart daireler. Her konaklamada ev gibi hissedin.
     </p>
     <div class="hero-actions">
       <a href="https://wa.me/905322622773?text=Rezervasyon%20sormak%20istiyorum" class="btn-primary" target="_blank" data-i18n-html="btn_book">
@@ -722,16 +740,16 @@
       <div class="gold-line reveal"></div>
       <h2 class="section-title reveal" style="margin-top:20px" data-i18n="intro_title">Ayrıcalıklı Konaklama Seçenekleri</h2>
       <p class="intro-desc reveal" data-i18n="intro_desc">
-        Belek'in kalbinde, huzur and konforun buluştuÄŸu noktada; her detayı özenle tasarlanmış dairelerimizde evinizdeki sıcaklıÄŸı lüks hizmet kalitesiyle keşfedin.
+        Belek'in kalbinde, huzur ve konforun buluştuğu noktada; her detayı özenle tasarlanmış dairelerimizde evinizdeki sıcaklığı lüks hizmet kalitesiyle keşfedin.
       </p>
       <div class="intro-features">
         <div class="intro-feat-item reveal">
           <h4 data-i18n="feat1_title">Yıl Boyu Açık Havuz</h4>
-          <p data-i18n="feat1_desc">Geniş and bakımlı açık yüzme havuzu, çocuk oyun alanı and yemyeşil bahçe.</p>
+          <p data-i18n="feat1_desc">Geniş ve bakımlı açık yüzme havuzu, çocuk oyun alanı ve yemyeşil bahçe.</p>
         </div>
         <div class="intro-feat-item reveal">
           <h4 data-i18n="feat2_title">Tam Donanımlı Mutfak</h4>
-          <p data-i18n="feat2_desc">Fırın, bulaşık makinesi, çamaşır makinesi and tüm mutfak gereçleri eksiksiz.</p>
+          <p data-i18n="feat2_desc">Fırın, bulaşık makinesi, çamaşır makinesi ve tüm mutfak gereçleri eksiksiz.</p>
         </div>
         <div class="intro-feat-item reveal">
           <h4 data-i18n="feat3_title">Golf Sahası Yanı</h4>
@@ -740,7 +758,7 @@
       </div>
     </div>
     <div class="intro-image reveal">
-      <img src="images/havuz3.webp" alt="Belka Golf Residence Pool"/>
+      <img src="images/havuz3.webp" alt="Belka Golf Residence Pool" loading="lazy" decoding="async"/>
     </div>
   </div>
 </section>
@@ -811,19 +829,19 @@
   <div class="section-eyebrow reveal" data-i18n="rooms_eyebrow">Konaklama Seçenekleri</div>
   <h2 class="section-title reveal" data-i18n="rooms_title">Dairelerimiz</h2>
   <p class="intro-desc reveal" style="max-width:600px" data-i18n="rooms_desc">
-    Her ihtiyaca uygun, havuz manzaralı and tam donanımlı daire seçenekleri.
+    Her ihtiyaca uygun, havuz manzaralı ve tam donanımlı daire seçenekleri.
   </p>
 
   <div class="rooms-grid">
     <!-- Room 1 -->
     <div class="room-card reveal">
       <div class="room-img">
-        <img src="images/havuz4.webp" alt="1+1 Exclusive Poolside"/>
+        <img src="images/havuz4.webp" alt="1+1 Exclusive Poolside" loading="lazy" decoding="async"/>
       </div>
       <div class="room-info">
         <div class="room-type" data-i18n="room1_type">Apart Daire</div>
         <h3 class="room-name" data-i18n="room1_name">1+1 Exclusive Poolside</h3>
-        <p class="room-desc" data-i18n="room1_desc">Havuz başında, modern dekorasyonu and sunduğu özel imkânlarla çiftler için ideal, şık and konforlu bir kaçış noktası.</p>
+        <p class="room-desc" data-i18n="room1_desc">Havuz başında, modern dekorasyonu ve sunduğu özel imkânlarla çiftler için ideal, şık ve konforlu bir kaçış noktası.</p>
         <div class="room-footer">
           <div class="room-price">109 <sub>€</sub> <sub data-i18n="room_from">Gecelik</sub></div>
           <a href="https://wa.me/905322622773?text=1%2B1%20Exclusive%20Poolside%20dairesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="room-link" data-i18n="room_inquire">Bilgi Al →</a>
@@ -833,12 +851,12 @@
     <!-- Room 2 -->
     <div class="room-card reveal">
       <div class="room-img">
-        <img src="images/salon1.webp" alt="2+1 Deluxe Poolside"/>
+        <img src="images/salon1.webp" alt="2+1 Deluxe Poolside" loading="lazy" decoding="async"/>
       </div>
       <div class="room-info">
         <div class="room-type" data-i18n="room2_type">Lüks Apart Daire</div>
         <h3 class="room-name" data-i18n="room2_name">2+1 Deluxe Poolside</h3>
-        <p class="room-desc" data-i18n="room2_desc">Lüksü and fonksiyonelliği bir araya getiren, geniş balkonlu and tam donanımlı mutfaÄŸıyla uzun süreli konaklamalar için kusursuz bir tercih.</p>
+        <p class="room-desc" data-i18n="room2_desc">Lüksü ve fonksiyonelliği bir araya getiren, geniş balkonlu ve tam donanımlı mutfağıyla uzun süreli konaklamalar için kusursuz bir tercih.</p>
         <div class="room-footer">
           <div class="room-price">135 <sub>€</sub> <sub data-i18n="room_from">Gecelik</sub></div>
           <a href="https://wa.me/905322622773?text=2%2B1%20Deluxe%20Poolside%20dairesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="room-link" data-i18n="room_inquire">Bilgi Al →</a>
@@ -848,12 +866,12 @@
     <!-- Room 3 -->
     <div class="room-card reveal">
       <div class="room-img">
-        <img src="images/yatak4.webp" alt="3+1 Dublex Apt."/>
+        <img src="images/yatak4.webp" alt="3+1 Dublex Apt." loading="lazy" decoding="async"/>
       </div>
       <div class="room-info">
         <div class="room-type" data-i18n="room3_type">Geniş Aile Dairesi</div>
         <h3 class="room-name" data-i18n="room3_name">3+1 Dublex Apt.</h3>
-        <p class="room-desc" data-i18n="room3_desc">Geniş aileler için tasarlanmış, havuz manzarası eşliÄŸinde ferah yaşam alanları and modern mimarinin en seçkin örnekleri.</p>
+        <p class="room-desc" data-i18n="room3_desc">Geniş aileler için tasarlanmış, havuz manzarası eşliğinde ferah yaşam alanları ve modern mimarinin en seçkin örnekleri.</p>
         <div class="room-footer">
           <div class="room-price">155 <sub>€</sub> <sub data-i18n="room_from">Gecelik</sub></div>
           <a href="https://wa.me/905322622773?text=3%2B1%20Dublex%20dairesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="room-link" data-i18n="room_inquire">Bilgi Al →</a>
@@ -871,7 +889,7 @@
     <div class="section-eyebrow reveal" style="color:#f5dfa0" data-i18n="pool_eyebrow">Tesis</div>
     <h2 class="section-title reveal" style="color:#fff" data-i18n="pool_title">Yıl Boyu Açık Havuz</h2>
     <p class="intro-desc reveal" style="color:rgba(255,255,255,0.8)" data-i18n="pool_desc">
-      Gün boyu güneşlenebileceğiniz geniş and bakımlı açık yüzme havuzu, çocuk oyun alanı and yemyeşil bahçe.
+      Gün boyu güneşlenebileceğiniz geniş ve bakımlı açık yüzme havuzu, çocuk oyun alanı ve yemyeşil bahçe.
     </p>
     <a href="#rezervasyon" class="btn-primary reveal" style="margin-top:20px" data-i18n="nav_book">Rezervasyon Yap</a>
   </div>
@@ -886,17 +904,17 @@
     <div class="feat-box reveal">
       <div class="feat-icon"><i class="fas fa-swimmer"></i></div>
       <h4 data-i18n="f1_name">Yüzme Havuzu</h4>
-      <p data-i18n="f1_desc">Yıl boyu açık, geniş açık havuz. Şezlong and güneş yatakları mevcut.</p>
+      <p data-i18n="f1_desc">Yıl boyu açık, geniş açık havuz. Şezlong ve güneş yatakları mevcut.</p>
     </div>
     <div class="feat-box reveal">
       <div class="feat-icon"><i class="fas fa-wifi"></i></div>
       <h4 data-i18n="f2_name">Ücretsiz Wi-Fi</h4>
-      <p data-i18n="f2_desc">Tüm alanlarda yüksek hızlı, kesintisiz internet baÄŸlantısı.</p>
+      <p data-i18n="f2_desc">Tüm alanlarda yüksek hızlı, kesintisiz internet bağlantısı.</p>
     </div>
     <div class="feat-box reveal">
       <div class="feat-icon"><i class="fas fa-parking"></i></div>
       <h4 data-i18n="f3_name">Ücretsiz Otopark</h4>
-      <p data-i18n="f3_desc">Tesis bünyesinde güvenlikli, ücretsiz kapalı and açık otopark.</p>
+      <p data-i18n="f3_desc">Tesis bünyesinde güvenlikli, ücretsiz kapalı ve açık otopark.</p>
     </div>
     <div class="feat-box reveal">
       <div class="feat-icon"><i class="fas fa-snowflake"></i></div>
@@ -911,7 +929,7 @@
     <div class="feat-box reveal">
       <div class="feat-icon"><i class="fas fa-utensils"></i></div>
       <h4 data-i18n="f6_name">BBQ & Bahçe</h4>
-      <p data-i18n="f6_desc">Mangal alanı and geniş yeşil bahçe. Piknik masaları mevcut.</p>
+      <p data-i18n="f6_desc">Mangal alanı ve geniş yeşil bahçe. Piknik masaları mevcut.</p>
     </div>
     <div class="feat-box reveal">
       <div class="feat-icon"><i class="fas fa-shuttle-van"></i></div>
@@ -921,7 +939,7 @@
     <div class="feat-box reveal">
       <div class="feat-icon"><i class="fas fa-globe"></i></div>
       <h4 data-i18n="f8_name">4 Dilde Hizmet</h4>
-      <p data-i18n="f8_desc">Türkçe, İngilizce, Almanca and Rusça konuşan ekip.</p>
+      <p data-i18n="f8_desc">Türkçe, İngilizce, Almanca ve Rusça konuşan ekip.</p>
     </div>
   </div>
 </section>
@@ -934,47 +952,47 @@
   <div class="gc-wrap reveal">
     <div class="gc-stage" id="gcStage">
       <div class="gc-slide active" data-index="0">
-        <img src="images/havuzhero.webp" alt="Havuz Manzarası"/>
+        <img src="images/havuzhero.webp" alt="Havuz Manzarası" loading="lazy" decoding="async"/>
         <div class="gc-caption">Havuz Manzarası</div>
       </div>
       <div class="gc-slide" data-index="1">
-        <img src="images/havuz20.webp" alt="Bahçe"/>
+        <img src="images/havuz20.webp" alt="Bahçe" loading="lazy" decoding="async"/>
         <div class="gc-caption">Bahçe</div>
       </div>
       <div class="gc-slide" data-index="2">
-        <img src="images/salon3.webp" alt="Apartman Dış Cephe"/>
+        <img src="images/salon3.webp" alt="Apartman Dış Cephe" loading="lazy" decoding="async"/>
         <div class="gc-caption">Apartman Dış Cephe</div>
       </div>
       <div class="gc-slide" data-index="3">
-        <img src="images/YATAK7.webp" alt="Oturma Odası"/>
+        <img src="images/YATAK7.webp" alt="Oturma Odası" loading="lazy" decoding="async"/>
         <div class="gc-caption">Oturma Odası</div>
       </div>
       <div class="gc-slide" data-index="4">
-        <img src="images/havuz2.webp" alt="Yatak Odası"/>
+        <img src="images/havuz2.webp" alt="Yatak Odası" loading="lazy" decoding="async"/>
         <div class="gc-caption">Yatak Odası</div>
       </div>
       <div class="gc-slide" data-index="5">
-        <img src="images/salon4.webp" alt="Mutfak"/>
+        <img src="images/salon4.webp" alt="Mutfak" loading="lazy" decoding="async"/>
         <div class="gc-caption">Mutfak</div>
       </div>
       <div class="gc-slide" data-index="6">
-        <img src="images/salon6.webp" alt="Balkon"/>
+        <img src="images/salon6.webp" alt="Balkon" loading="lazy" decoding="async"/>
         <div class="gc-caption">Balkon</div>
       </div>
       <div class="gc-slide" data-index="7">
-        <img src="images/havuz3.webp" alt="Teras"/>
+        <img src="images/havuz3.webp" alt="Teras" loading="lazy" decoding="async"/>
         <div class="gc-caption">Teras</div>
       </div>
       <div class="gc-slide" data-index="8">
-        <img src="images/sauna2.webp" alt="Banyo"/>
+        <img src="images/sauna2.webp" alt="Banyo" loading="lazy" decoding="async"/>
         <div class="gc-caption">Banyo</div>
       </div>
       <div class="gc-slide" data-index="9">
-        <img src="images/xpark1.webp" alt="Gece Manzarası"/>
+        <img src="images/xpark1.webp" alt="Gece Manzarası" loading="lazy" decoding="async"/>
         <div class="gc-caption">Gece Manzarası</div>
       </div>
       <div class="gc-slide" data-index="10">
-        <img src="images/dıs12.webp" alt="Golf Sahası Manzarası"/>
+        <img src="images/dıs12.webp" alt="Golf Sahası Manzarası" loading="lazy" decoding="async"/>
         <div class="gc-caption">Golf Sahası Manzarası</div>
       </div>
 
@@ -1002,7 +1020,7 @@
       Viking19<br>Restaurant & Bar
     </h2>
     <p class="section-body reveal" data-i18n="viking_desc">
-      Golf dersleri ve akşam yemeğini birleştiren benzersiz paketimizle tatilinizi daha da özel kılın. Viking19 Hole Restaurant'ta dünya mutfaÄŸının en seçkin lezzetlerini keşfedin.
+      Golf dersleri ve akşam yemeğini birleştiren benzersiz paketimizle tatilinizi daha da özel kılın. Viking19 Hole Restaurant'ta dünya mutfağının en seçkin lezzetlerini keşfedin.
     </p>
     <a href="https://wa.me/905322622773?text=Viking19 paketi hakkında bilgi almak istiyorum"
        class="btn-primary reveal" target="_blank"
@@ -1101,17 +1119,17 @@
   <div class="rev-grid">
     <div class="rev-card reveal">
       <div class="rev-stars">★★★★★</div>
-      <p class="rev-text" data-i18n="rev1_text">"Belek'te çok güzel and temiz bir konaklama yeri. Kesinlikle tavsiye ediyoruz. Gelecek yıl tekrar geleceğiz, çok teşekkürler!"</p>
+      <p class="rev-text" data-i18n="rev1_text">"Belek'te çok güzel ve temiz bir konaklama yeri. Kesinlikle tavsiye ediyoruz. Gelecek yıl tekrar geleceğiz, çok teşekkürler!"</p>
       <div class="rev-author" data-i18n="rev1_author">Onaylı Misafir • Hotels.com</div>
     </div>
     <div class="rev-card reveal">
       <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">"Harika bir konum, golf sahalarına çok yakın. Daireler geniş and mutfak ekipmanları tam. Aileler için mükemmel."</p>
+      <p class="rev-text">"Harika bir konum, golf sahalarına çok yakın. Daireler geniş ve mutfak ekipmanları tam. Aileler için mükemmel."</p>
       <div class="rev-author" data-i18n="rev2_author">Almanya'dan Misafir • Booking.com</div>
     </div>
     <div class="rev-card reveal">
       <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">"Havuz başında kahvaltı keyfi paha biçilemez. Personel çok ilgili and yardımsever. 10/10 deneyim."</p>
+      <p class="rev-text">"Havuz başında kahvaltı keyfi paha biçilemez. Personel çok ilgili ve yardımsever. 10/10 deneyim."</p>
       <div class="rev-author" data-i18n="rev3_author">Onaylı Misafir • TripAdvisor</div>
     </div>
   </div>
@@ -1186,10 +1204,15 @@
 <script>
 /* ══ NAV & SCROLL ══ */
 const nav = document.getElementById('navbar');
+let navScrollTicking = false;
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) nav.classList.add('scrolled');
-  else nav.classList.remove('scrolled');
-});
+  if (navScrollTicking) return;
+  navScrollTicking = true;
+  requestAnimationFrame(() => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+    navScrollTicking = false;
+  });
+}, { passive: true });
 
 const ham = document.getElementById('hamburger');
 const mobNav = document.getElementById('mobileNav');
@@ -1437,7 +1460,7 @@ const translations = {
     nav_restaurant:'Restaurant', nav_reviews:'Yorumlar', nav_location:'Konum', nav_book:'Rezervasyon',
     hero_label:'Belek, Antalya • Golf Sahası Yanı',
     hero_title:'Lüks apart tatil,<br><em>ev konforu ile</em>',
-    hero_desc:'Belek\'in kalbinde, golf sahaları hemen yanı başında, özel havuzlu and tam donanımlı apart daireler. Her konaklamada ev gibi hissedin.',
+    hero_desc:'Belek\'in kalbinde, golf sahaları hemen yanı başında, özel havuzlu ve tam donanımlı apart daireler. Her konaklamada ev gibi hissedin.',
     btn_book:'<i class="fab fa-whatsapp"></i> Rezervasyon Yap',
     viking_book_btn:'Rezervasyon Yap',
     btn_view_rooms:'Daireleri Gör',
@@ -1448,9 +1471,9 @@ const translations = {
     bb_transfer:'Havalimanı Transferi', bb_transfer_price:'45€ (≤5 kişi) / 85€ (6+)',
     bb_summary_title:'FİYAT ÖZETİ', bb_wire:'Havale/EFT', bb_card:'Kredi Kartı', bb_reserve:'REZERVASYON YAP',
     intro_eyebrow:'Belka Golf Residence', intro_title:'Ayrıcalıklı Konaklama Seçenekleri',
-    intro_desc:'Belek\'in kalbinde, huzur and konforun buluştuÄŸu noktada; her detayı özenle tasarlanmış dairelerimizde evinizdeki sıcaklıÄŸı lüks hizmet kalitesiyle keşfedin.',
-    feat1_title:'Yıl Boyu Açık Havuz', feat1_desc:'Geniş and bakımlı açık yüzme havuzu, çocuk oyun alanı and yemyeşil bahçe.',
-    feat2_title:'Tam Donanımlı Mutfak', feat2_desc:'Fırın, bulaşık makinesi, çamaşır makinesi and tüm mutfak gereçleri eksiksiz.',
+    intro_desc:'Belek\'in kalbinde, huzur ve konforun buluştuğu noktada; her detayı özenle tasarlanmış dairelerimizde evinizdeki sıcaklığı lüks hizmet kalitesiyle keşfedin.',
+    feat1_title:'Yıl Boyu Açık Havuz', feat1_desc:'Geniş ve bakımlı açık yüzme havuzu, çocuk oyun alanı ve yemyeşil bahçe.',
+    feat2_title:'Tam Donanımlı Mutfak', feat2_desc:'Fırın, bulaşık makinesi, çamaşır makinesi ve tüm mutfak gereçleri eksiksiz.',
     feat3_title:'Golf Sahası Yanı', feat3_desc:'Montgomerie & Cornelia Golf Sahaları yalnızca 3 dakika mesafede.',
     location_eyebrow:'Konum', location_title:'Harika Konum & Yakın Çevre',
     location_desc:'Tatiliniz boyunca ihtiyacınız olan her şey yürüyüş veya kısa bir sürüş mesafesinde!',
@@ -1461,33 +1484,33 @@ const translations = {
     loc5:'Montgomerie & Cornelia Golf:', loc5_dist:'3 Dakika (Araç ile)',
     loc6:'Antalya Havalimanı:', loc6_dist:'30 Dakika (Araç ile)',
     rooms_eyebrow:'Konaklama Seçenekleri', rooms_title:'Dairelerimiz',
-    rooms_desc:'Her ihtiyaca uygun, havuz manzaralı and tam donanımlı daire seçenekleri.',
+    rooms_desc:'Her ihtiyaca uygun, havuz manzaralı ve tam donanımlı daire seçenekleri.',
     room1_type:'Apart Daire', room1_name:'1+1 Exclusive Poolside',
-    room1_desc:'Havuz başında, modern dekorasyonu and sunduğu özel imkânlarla çiftler için ideal, şık and konforlu bir kaçış noktası.',
+    room1_desc:'Havuz başında, modern dekorasyonu ve sunduğu özel imkânlarla çiftler için ideal, şık ve konforlu bir kaçış noktası.',
     room2_type:'Lüks Apart Daire', room2_name:'2+1 Deluxe Poolside',
-    room2_desc:'Lüksü and fonksiyonelliği bir araya getiren, geniş balkonlu and tam donanımlı mutfaÄŸıyla uzun süreli konaklamalar için kusursuz bir tercih.',
+    room2_desc:'Lüksü ve fonksiyonelliği bir araya getiren, geniş balkonlu ve tam donanımlı mutfağıyla uzun süreli konaklamalar için kusursuz bir tercih.',
     room3_type:'Geniş Aile Dairesi', room3_name:'3+1 Dublex Apt.',
-    room3_desc:'Geniş aileler için tasarlanmış, havuz manzarası eşliÄŸinde ferah yaşam alanları and modern mimarinin en seçkin örnekleri.',
+    room3_desc:'Geniş aileler için tasarlanmış, havuz manzarası eşliğinde ferah yaşam alanları ve modern mimarinin en seçkin örnekleri.',
     room_from:'Gecelik', room_inquire:'Bilgi Al →',
     pool_eyebrow:'Tesis', pool_title:'Yıl Boyu Açık Havuz',
-    pool_desc:'Gün boyu güneşlenebileceÄŸiniz geniş and bakımlı açık yüzme havuzu, çocuk oyun alanı and yemyeşil bahçe.',
+    pool_desc:'Gün boyu güneşlenebileceğiniz geniş ve bakımlı açık yüzme havuzu, çocuk oyun alanı ve yemyeşil bahçe.',
     amenities_eyebrow:'Tesis İmkânları', amenities_title:'Neler Sunuyoruz?',
-    f1_name:'Yüzme Havuzu', f1_desc:'Yıl boyu açık, geniş açık havuz. Şezlong and güneş yatakları mevcut.',
-    f2_name:'Ücretsiz Wi-Fi', f2_desc:'Tüm alanlarda yüksek hızlı, kesintisiz internet baÄŸlantısı.',
-    f3_name:'Ücretsiz Otopark', f3_desc:'Tesis bünyesinde güvenlikli, ücretsiz kapalı and açık otopark.',
+    f1_name:'Yüzme Havuzu', f1_desc:'Yıl boyu açık, geniş açık havuz. Şezlong ve güneş yatakları mevcut.',
+    f2_name:'Ücretsiz Wi-Fi', f2_desc:'Tüm alanlarda yüksek hızlı, kesintisiz internet bağlantısı.',
+    f3_name:'Ücretsiz Otopark', f3_desc:'Tesis bünyesinde güvenlikli, ücretsiz kapalı ve açık otopark.',
     f4_name:'Klima', f4_desc:'Tüm dairelerde bireysel kontrollü klima sistemi mevcuttur.',
     f5_name:'Sauna', f5_desc:'Ek ücrete tabi özel sauna hizmeti. Önceden rezervasyon gereklidir.',
-    f6_name:'BBQ & Bahçe', f6_desc:'Mangal alanı and geniş yeşil bahçe. Piknik masaları mevcut.',
+    f6_name:'BBQ & Bahçe', f6_desc:'Mangal alanı ve geniş yeşil bahçe. Piknik masaları mevcut.',
     f7_name:'Havalimanı Transferi', f7_desc:'Antalya Havalimanı 30 dakika. Talep üzerine düzenlenir.',
-    f8_name:'4 Dilde Hizmet', f8_desc:'Türkçe, İngilizce, Almanca and Rusça konuşan ekip.',
+    f8_name:'4 Dilde Hizmet', f8_desc:'Türkçe, İngilizce, Almanca ve Rusça konuşan ekip.',
     gallery_eyebrow:'Fotoğraflar', gallery_title:'Galeri',
     viking_eyebrow:'Tesis İçi', viking_title:'Viking19<br>Restaurant & Bar',
-    viking_desc:'Golf dersleri and akşam yemeğini birleştiren benzersiz paketimizle tatilinizi daha da özel kılın. Viking19 Hole Restaurant\'ta dünya mutfaÄŸının en seçkin lezzetlerini keşfedin.',
+    viking_desc:'Golf dersleri ve akşam yemeğini birleştiren benzersiz paketimizle tatilinizi daha da özel kılın. Viking19 Hole Restaurant\'ta dünya mutfağının en seçkin lezzetlerini keşfedin.',
     reviews_eyebrow:'Misafirlerimiz', reviews_title:'Neler Dediler?',
     reviews_count_31:'31 Değerlendirme', reviews_very_good:'Çok İyi',
     reviews_couples:'Çiftler: 8.8 / 10', reviews_count_5:'5 Değerlendirme',
     see_all_reviews:'Tüm Yorumlar →',
-    rev1_text:'"Belek\'te çok güzel and temiz bir konaklama yeri. Kesinlikle tavsiye ediyoruz. Gelecek yıl tekrar geleceğiz, çok teşekkürler!"',
+    rev1_text:'"Belek\'te çok güzel ve temiz bir konaklama yeri. Kesinlikle tavsiye ediyoruz. Gelecek yıl tekrar geleceğiz, çok teşekkürler!"',
     rev1_author:'Onaylı Misafir • Hotels.com',
     rev2_author:'Almanya\'dan Misafir • Booking.com',
     rev3_author:'Onaylı Misafir • TripAdvisor',
@@ -1705,10 +1728,18 @@ function setLang(lang) {
   bbUpdate();
 }
 
-window.addEventListener('load', initBooking);
-document.addEventListener('DOMContentLoaded', initBooking);
-setTimeout(initBooking, 500);
-setTimeout(initBooking, 2000);
+/* Not: initBooking() önceden 4 farklı olayla (load, DOMContentLoaded, iki setTimeout)
+   tetikleniyordu. Bu, aynı input'lara üzerine üzerine event listener eklenmesine
+   (Rezervasyon butonuna tıklandığında birden fazla WhatsApp sekmesi açılmasına) ve
+   PageSpeed'in bildirdiği "zorlanmış reflow"a yol açıyordu. Script zaten body sonunda
+   olduğu için DOM hazır; tek seferlik ve korumalı şekilde çağırmak yeterli. */
+let __bookingInited = false;
+function bootBooking() {
+  if (__bookingInited) return;
+  __bookingInited = true;
+  initBooking();
+}
+bootBooking();
 
 setLang('tr');
 </script>
