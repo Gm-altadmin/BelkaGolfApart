@@ -1431,10 +1431,10 @@ function bbUpdate() {
     const totalTry = totalEur * EXCHANGE_RATE;
 
     const allL = {
-      tr: { room:'Oda', nights:'gece', breakfast:'Kahvaltı', transfer:'Transfer', total:'Toplam', person:'kişi', summer:'-30% yaz sezonu fiyatı uygulanmıştır', winter:'-35% sezon fiyatı uygulanmıştır', event:'Yoğun etkinlik dönemi — tam fiyat uygulanır', holiday:'Dini bayram dönemi — tam fiyat uygulanır', religious30:'-30% sezon fiyatı uygulanmıştır' },
-      en: { room:'Room', nights:'nights', breakfast:'Breakfast', transfer:'Transfer', total:'Total', person:'pers', summer:'-30% summer season price applied', winter:'-35% season price applied', event:'High-demand event period — full price applies', holiday:'Religious holiday period — full price applies', religious30:'-30% season price applied' },
-      de: { room:'Zimmer', nights:'Nächte', breakfast:'Frühstück', transfer:'Transfer', total:'Gesamt', person:'Pers', summer:'-30% Sommerpreis angewendet', winter:'-35% Saisonpreis angewendet', event:'Stark nachgefragter Veranstaltungszeitraum — voller Preis', holiday:'Religiöser Feiertag — voller Preis', religious30:'-30% Saisonpreis angewendet' },
-      ru: { room:'Номер', nights:'ночей', breakfast:'Завтрак', transfer:'Трансфер', total:'Итого', person:'чел', summer:'Применена сезонная скидка 30%', winter:'Применена сезонная скидка 35%', event:'Период высокого спроса — полная цена', holiday:'Религиозный праздник — полная цена', religious30:'Применена сезонная скидка 30%' }
+      tr: { room:'Oda', nights:'gece', breakfast:'Kahvaltı', transfer:'Transfer', total:'Toplam', person:'kişi', summer:'-30% yaz sezonu fiyatı uygulanmıştır', winter:'-35% sezon fiyatı uygulanmıştır', event:'Yoğun etkinlik dönemi', holiday:'Dini bayram dönemi', religious30:'-30% sezon fiyatı uygulanmıştır' },
+      en: { room:'Room', nights:'nights', breakfast:'Breakfast', transfer:'Transfer', total:'Total', person:'pers', summer:'-30% summer season price applied', winter:'-35% season price applied', event:'High-demand event period', holiday:'Religious holiday period', religious30:'-30% season price applied' },
+      de: { room:'Zimmer', nights:'Nächte', breakfast:'Frühstück', transfer:'Transfer', total:'Gesamt', person:'Pers', summer:'-30% Sommerpreis angewendet', winter:'-35% Saisonpreis angewendet', event:'Stark nachgefragter Veranstaltungszeitraum', holiday:'Religiöser Feiertag', religious30:'-30% Saisonpreis angewendet' },
+      ru: { room:'Номер', nights:'ночей', breakfast:'Завтрак', transfer:'Трансфер', total:'Итого', person:'чел', summer:'Применена сезонная скидка 30%', winter:'Применена сезонная скидка 35%', event:'Период высокого спроса', holiday:'Религиозный праздник', religious30:'Применена сезонная скидка 30%' }
     };
     const L = allL[lang] || allL.tr;
     
@@ -1446,8 +1446,14 @@ function bbUpdate() {
     if (pricing.note === 'summer') html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.summer}</div>`;
     if (pricing.note === 'winter') html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.winter}</div>`;
     if (pricing.note === 'religious30') html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.religious30}</div>`;
-    /* Not: 'event' ve 'holiday' durumlarında fiyat aynen (baz fiyat) uygulanmaya devam ediyor,
-       sadece müşteri kafası karışmasın diye ekranda açıklayıcı not gösterilmiyor. */
+    if (pricing.note === 'event') {
+      const evName = pricing.event.label[lang] || pricing.event.label.tr;
+      html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.event}: ${evName}</div>`;
+    }
+    if (pricing.note === 'holiday') {
+      const hName = pricing.event.label[lang] || pricing.event.label.tr;
+      html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.holiday}: ${hName}</div>`;
+    }
     if (breakfast) html += `<div style="display:flex;justify-content:space-between;font-size:.82rem;padding:3px 0;color:rgba(255,255,255,.65)"><span>${L.breakfast} (${totalPeople} ${L.person})</span><span style="color:#fff;font-weight:500;">${Math.round(breakfastPrice)} €</span></div>`;
     if (transfer) html += `<div style="display:flex;justify-content:space-between;font-size:.82rem;padding:3px 0;color:rgba(255,255,255,.65)"><span>${L.transfer}</span><span style="color:#fff;font-weight:500;">${Math.round(transferPrice)} €</span></div>`;
     
@@ -1514,7 +1520,8 @@ function bbReserve() {
   if (pricing.note === 'summer') msg += `✦ -30% yaz sezonu fiyatı uygulanmıştır\n`;
   if (pricing.note === 'winter') msg += `✦ -35% sezon fiyatı uygulanmıştır\n`;
   if (pricing.note === 'religious30') msg += `✦ -30% sezon fiyatı uygulanmıştır\n`;
-  /* Not: event/holiday durumlarında fiyat aynen uygulanıyor, ayrıca not gösterilmiyor. */
+  if (pricing.note === 'event') msg += `✦ Yoğun etkinlik dönemi: ${pricing.event.label[lang] || pricing.event.label.tr}\n`;
+  if (pricing.note === 'holiday') msg += `✦ Dini bayram dönemi: ${pricing.event.label[lang] || pricing.event.label.tr}\n`;
   msg += `☕ ${L.b}: ${breakfast ? 'Evet (' + Math.round(breakfastPrice) + '€)' : 'Hayır'}\n`;
   msg += `🚘 ${L.t}: ${transfer ? 'Evet (' + Math.round(transferPrice) + '€)' : 'Hayır'}\n\n`;
   msg += `💰 ${L.tot}: ${Math.round(totalEur)} € (~${Math.round(totalTry).toLocaleString('tr-TR')} ₺)`;
