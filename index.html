@@ -222,7 +222,7 @@
     }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 10px;
-      background: #b8923a; color: #fff; padding: 14px 28px; border-radius: 2px;
+      background: #b8923a; color: #1a1a1a; padding: 14px 28px; border-radius: 2px;
       font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em;
       text-transform: uppercase; transition: all 0.3s; white-space: nowrap;
     }
@@ -275,7 +275,7 @@
       font-size: 1.6rem; font-weight: 400; color: #fff;
       margin-bottom: 6px; letter-spacing: 0.02em;
     }
-    .bb-subtitle { font-size: 0.7rem; color: rgba(255,255,255,0.45); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 28px; }
+    .bb-subtitle { font-size: 0.7rem; color: rgba(255,255,255,0.6); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 28px; }
     .bb-form {
       display: grid;
       grid-template-columns: minmax(0,2fr) repeat(4, minmax(0,1fr));
@@ -285,7 +285,7 @@
     .bb-field { display: flex; flex-direction: column; gap: 8px; }
     .bb-label {
       font-size: 0.58rem; font-weight: 600; letter-spacing: 0.22em;
-      text-transform: uppercase; color: rgba(255,255,255,0.45);
+      text-transform: uppercase; color: rgba(255,255,255,0.6);
     }
     .bb-select, .bb-input {
       background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
@@ -298,7 +298,7 @@
     .bb-select:focus, .bb-input:focus { border-color: #b8923a; }
     .bb-input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1) opacity(0.5); cursor: pointer; }
     .bb-extras-row { margin-top: 20px; }
-    .bb-extras-label { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
+    .bb-extras-label { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 12px; }
     .bb-extras { display: flex; gap: 28px; flex-wrap: wrap; }
     .bb-check { display: flex; align-items: center; gap: 10px; cursor: pointer; }
     .bb-check input[type="checkbox"] { position: absolute; opacity: 0; pointer-events: none; }
@@ -312,14 +312,14 @@
       color: #fff; font-size: 0.6rem;
     }
     .bb-check-label { font-size: 0.85rem; color: rgba(255,255,255,0.85); }
-    .bb-check-label em { font-style: normal; font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-left: 8px; }
+    .bb-check-label em { font-style: normal; font-size: 0.7rem; color: rgba(255,255,255,0.6); margin-left: 8px; }
     
     .bb-bottom {
       margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);
       display: flex; justify-content: space-between; align-items: flex-end; gap: 40px;
     }
     .bb-summary-box { flex: 1; max-width: 500px; }
-    .bb-summary-title { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 16px; }
+    .bb-summary-title { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 16px; }
     #bb-summary { min-height: 80px; }
     .bb-actions { display: flex; flex-direction: column; gap: 16px; min-width: 240px; }
     .bb-pay-row { display: flex; gap: 12px; }
@@ -333,12 +333,12 @@
     .bb-pay-opt input { position: absolute; opacity: 0; pointer-events: none; }
     .bb-pay-opt:has(input:checked) { background: rgba(184,146,58,0.1); border-color: #b8923a; color: #fff; }
     .bb-btn {
-      background: #b8923a; color: #fff; border: none; padding: 16px; border-radius: 2px;
+      background: #b8923a; color: #1a1a1a; border: none; padding: 16px; border-radius: 2px;
       font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
       cursor: pointer; transition: all 0.3s;
     }
     .bb-btn:hover { background: #a07c2e; transform: translateY(-2px); }
-    .bb-rate-info { margin-top: 12px; font-size: 0.65rem; color: rgba(255,255,255,0.3); letter-spacing: 0.05em; }
+    .bb-rate-info { margin-top: 12px; font-size: 0.65rem; color: rgba(255,255,255,0.6); letter-spacing: 0.05em; }
 
     /* ══ INTRO ══ */
     #intro { padding: 120px 80px; background: #fff; }
@@ -390,7 +390,7 @@
     .room-desc { font-size: 0.85rem; line-height: 1.7; color: #666; margin-bottom: 24px; height: 70px; overflow: hidden; }
     .room-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 24px; border-top: 1px solid #f0ece5; }
     .room-price { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: #1a1a1a; }
-    .room-price sub { font-family: 'Jost', sans-serif; font-size: 0.6rem; letter-spacing: 0.1em; bottom: 0; color: #aaa; }
+    .room-price sub { font-family: 'Jost', sans-serif; font-size: 0.6rem; letter-spacing: 0.1em; bottom: 0; color: #767676; }
     .room-link { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #b8923a; }
 
     /* ══ POOL SECTION ══ */
@@ -479,13 +479,13 @@
     }
     .platform-item:last-child { border-right: none; }
     .platform-item:hover { background: #faf8f4; }
-    .platform-name { font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: #b8923a; margin-bottom: 8px; }
+    .platform-name { font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: #8a6c2c; margin-bottom: 8px; }
     .platform-score { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: #1a1a1a; line-height: 1; }
     .platform-stars { font-size: 0.6rem; color: #b8923a; letter-spacing: 3px; margin: 5px 0; }
-    .platform-count { font-size: 0.6rem; color: #aaa; letter-spacing: 0.1em; }
+    .platform-count { font-size: 0.6rem; color: #767676; letter-spacing: 0.1em; }
     .platform-link {
       display: inline-block; margin-top: 10px; font-size: 0.58rem;
-      letter-spacing: 0.18em; text-transform: uppercase; color: #b8923a;
+      letter-spacing: 0.18em; text-transform: uppercase; color: #8a6c2c;
       border-bottom: 1px solid rgba(184,146,58,0.3); padding-bottom: 1px;
       transition: border-color 0.2s;
     }
@@ -497,13 +497,13 @@
     .rev-card { padding: 40px; border: 1px solid #f0ece5; text-align: center; }
     .rev-stars { color: #b8923a; font-size: 0.7rem; letter-spacing: 3px; margin-bottom: 20px; }
     .rev-text { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; color: #1a1a1a; line-height: 1.5; margin-bottom: 24px; }
-    .rev-author { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #aaa; }
+    .rev-author { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #767676; }
 
     /* ══ FOOTER ══ */
     footer { background: #08120a; color: #fff; padding: 100px 80px 40px; }
     .footer-grid { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.2fr); gap: 60px; margin-bottom: 80px; }
     .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #fff; margin-bottom: 20px; }
-    .footer-desc { font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.8; margin-bottom: 30px; }
+    .footer-desc { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 30px; }
     .footer-social { display: flex; gap: 16px; }
     .footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; transition: all 0.3s; }
     .footer-social a:hover { border-color: #b8923a; color: #b8923a; }
@@ -515,7 +515,7 @@
     .footer-contact-item i { color: #b8923a; font-size: 1rem; }
     .footer-contact-text p { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.5; }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; }
-    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
 
     /* ══ WHATSAPP FAB ══ */
     .icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.125em; flex-shrink: 0; }
@@ -1183,12 +1183,12 @@
     </div>
     <div class="rev-card reveal">
       <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">"Harika bir konum, golf sahalarına çok yakın. Daireler geniş ve mutfak ekipmanları tam. Aileler için mükemmel."</p>
+      <p class="rev-text" data-i18n="rev2_text">"Harika bir konum, golf sahalarına çok yakın. Daireler geniş ve mutfak ekipmanları tam. Aileler için mükemmel."</p>
       <div class="rev-author" data-i18n="rev2_author">Almanya'dan Misafir • Booking.com</div>
     </div>
     <div class="rev-card reveal">
       <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">"Havuz başında kahvaltı keyfi paha biçilemez. Personel çok ilgili ve yardımsever. 10/10 deneyim."</p>
+      <p class="rev-text" data-i18n="rev3_text">"Havuz başında kahvaltı keyfi paha biçilemez. Personel çok ilgili ve yardımsever. 10/10 deneyim."</p>
       <div class="rev-author" data-i18n="rev3_author">Onaylı Misafir • TripAdvisor</div>
     </div>
   </div>
@@ -1571,6 +1571,8 @@ const translations = {
     reviews_couples:'Çiftler: 8.8 / 10', reviews_count_5:'5 Değerlendirme',
     see_all_reviews:'Tüm Yorumlar →',
     rev1_text:'"Belek\'te çok güzel ve temiz bir konaklama yeri. Kesinlikle tavsiye ediyoruz. Gelecek yıl tekrar geleceğiz, çok teşekkürler!"',
+    rev2_text:'"Harika bir konum, golf sahalarına çok yakın. Daireler geniş ve mutfak ekipmanları tam. Aileler için mükemmel."',
+    rev3_text:'"Havuz başında kahvaltı keyfi paha biçilemez. Personel çok ilgili ve yardımsever. 10/10 deneyim."',
     rev1_author:'Onaylı Misafir • Hotels.com',
     rev2_author:'Almanya\'dan Misafir • Booking.com',
     rev3_author:'Onaylı Misafir • TripAdvisor',
@@ -1636,6 +1638,8 @@ const translations = {
     reviews_couples:'Couples: 8.8 / 10', reviews_count_5:'5 Reviews',
     see_all_reviews:'All Reviews →',
     rev1_text:'"A very nice and clean place to stay in Belek. We definitely recommend it. We will come again next year, thanks a lot!"',
+    rev2_text:'"A fantastic location, very close to the golf courses. The apartments are spacious with a full kitchen. Perfect for families."',
+    rev3_text:'"Breakfast by the pool was priceless. The staff were very attentive and helpful. A 10/10 experience."',
     rev1_author:'Verified Guest • Hotels.com',
     rev2_author:'Guest from Germany • Booking.com',
     rev3_author:'Verified Guest • TripAdvisor',
@@ -1701,6 +1705,8 @@ const translations = {
     reviews_couples:'Paare: 8.8 / 10', reviews_count_5:'5 Bewertungen',
     see_all_reviews:'Alle Bewertungen →',
     rev1_text:'"Eine sehr schöne und saubere Unterkunft in Belek. Wir empfehlen es auf jeden Fall. Wir kommen nächstes Jahr wieder, vielen Dank!"',
+    rev2_text:'"Eine fantastische Lage, ganz in der Nähe der Golfplätze. Die Apartments sind geräumig und die Küche komplett ausgestattet. Perfekt für Familien."',
+    rev3_text:'"Das Frühstück am Pool war unbezahlbar. Das Personal war sehr aufmerksam und hilfsbereit. Ein 10/10 Erlebnis."',
     rev1_author:'Verifizierter Gast • Hotels.com',
     rev2_author:'Gast aus Deutschland • Booking.com',
     rev3_author:'Verifizierter Gast • TripAdvisor',
@@ -1766,6 +1772,8 @@ const translations = {
     reviews_couples:'Пары: 8.8 / 10', reviews_count_5:'5 отзывов',
     see_all_reviews:'Все отзывы →',
     rev1_text:'"Очень красивое и чистое место для проживания в Белеке. Мы определенно рекомендуем его. Мы приедем снова в следующем году, большое спасибо!"',
+    rev2_text:'"Прекрасное расположение, совсем рядом с полями для гольфа. Апартаменты просторные, кухня полностью укомплектована. Идеально для семей."',
+    rev3_text:'"Завтрак у бассейна был бесценен. Персонал был очень внимательным и отзывчивым. Опыт на 10 из 10."',
     rev1_author:'Подтвержденный гость • Hotels.com',
     rev2_author:'Гость из Германии • Booking.com',
     rev3_author:'Подтвержденный гость • TripAdvisor',
