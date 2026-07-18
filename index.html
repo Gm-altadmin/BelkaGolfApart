@@ -747,7 +747,7 @@
         <span class="bb-check-box"></span>
         <span class="bb-check-label">
           <span data-i18n="bb_transfer">Havalimanı Transferi</span>
-          <em data-i18n="bb_transfer_price">45€ (≤5 kişi) / 85€ (6+)</em>
+          <em data-i18n="bb_transfer_price">55€ (≤5 kişi) / 85€ (6+)</em>
         </span>
       </label>
     </div>
@@ -1329,6 +1329,65 @@ const PRICES = { "85": 85, "99": 99, "120": 120 };
 const EXCHANGE_RATE = 53.00;
 const WA_NUM = "905322622773";
 
+/* ══ EKİM 2026 - MART 2027: BÜYÜK ORGANİZASYON TAKVİMİ ══
+   Bu tarih aralıklarında (giriş tarihi bu aralıklardan birine denk gelirse)
+   yüksek talep nedeniyle indirim UYGULANMAZ, baz fiyat kullanılır.
+   Diğer tüm günlerde (01.10.2026 - 31.03.2027 arası) baz fiyattan %35 indirim uygulanır. */
+const WINTER_RANGE_START = new Date('2026-10-01');
+const WINTER_RANGE_END   = new Date('2026-12-31'); // 01.10.26 - 31.12.26 (01.01.27'den itibaren aşağıdaki yeni kural geçerli)
+
+/* ══ 01.01.2027 - 01.06.2027: DİNİ BAYRAMLAR DÖNEMİ ══
+   Bu aralıkta dini bayram günlerinde (ve büyük organizasyon tarihlerinde) baz fiyat,
+   diğer tüm günlerde baz fiyattan %30 indirim uygulanır. */
+const RELIGIOUS_RANGE_START = new Date('2027-01-01');
+const RELIGIOUS_RANGE_END   = new Date('2027-06-01');
+const RELIGIOUS_HOLIDAYS = [
+  { start: new Date('2027-03-08'), end: new Date('2027-03-11'), label: { tr:'Ramazan Bayramı', en:'Eid al-Fitr', de:'Ramadanfest', ru:'Рамазан-байрам' } },
+  { start: new Date('2027-05-15'), end: new Date('2027-05-19'), label: { tr:'Kurban Bayramı', en:'Eid al-Adha', de:'Opferfest', ru:'Курбан-байрам' } },
+];
+function getReligiousHoliday(date) {
+  return RELIGIOUS_HOLIDAYS.find(h => date >= h.start && date <= h.end) || null;
+}
+
+const EVENT_PERIODS = [
+  { start: new Date('2026-10-05'), end: new Date('2026-10-09'), label: { tr:'Uluslararası Uzay Kongresi (IAC 2026)', en:'International Astronautical Congress (IAC 2026)', de:'Internationaler Astronautischer Kongress (IAC 2026)', ru:'Международный астронавтический конгресс (IAC 2026)' } },
+  { start: new Date('2026-10-26'), end: new Date('2026-10-28'), label: { tr:'Antalya Turizm Fuarı (ATF)', en:'Antalya Tourism Fair (ATF)', de:'Antalya Tourismusmesse (ATF)', ru:'Анталийская туристическая выставка (ATF)' } },
+  { start: new Date('2026-11-09'), end: new Date('2026-11-20'), label: { tr:'BM İklim Zirvesi (COP31)', en:'UN Climate Summit (COP31)', de:'UN-Klimagipfel (COP31)', ru:'Климатический саммит ООН (COP31)' } },
+  { start: new Date('2026-11-24'), end: new Date('2026-11-27'), label: { tr:'Uluslararası Tarım Teknolojileri Fuarı', en:'International Agri-Tech Fair', de:'Internationale Agrartechnik-Messe', ru:'Международная выставка агротехнологий' } },
+  { start: new Date('2026-12-17'), end: new Date('2026-12-20'), label: { tr:'Enerji Teknolojileri Fuarı', en:'Energy Technologies Fair', de:'Messe für Energietechnologien', ru:'Выставка энергетических технологий' } },
+  { start: new Date('2027-01-12'), end: new Date('2027-01-15'), label: { tr:'Anfaş Hotel Equipment Fuarı', en:'Anfaş Hotel Equipment Fair', de:'Anfaş Hotel Equipment Messe', ru:'Выставка Anfaş Hotel Equipment' } },
+];
+
+function getEventPeriod(date) {
+  return EVENT_PERIODS.find(p => date >= p.start && date <= p.end) || null;
+}
+
+/* Giriş tarihine göre gecelik oda fiyatını ve varsa uygulanan not/etiketi döndürür */
+function computeRoomPricing(baseRoomPrice, ciDate) {
+  const checkInMonth = ciDate.getMonth();
+  const isSummer = checkInMonth >= 5 && checkInMonth <= 8; // Haziran-Eylül
+  const isWinterRange = ciDate >= WINTER_RANGE_START && ciDate <= WINTER_RANGE_END; // 01.10.26 - 31.12.26
+  const isReligiousRange = ciDate >= RELIGIOUS_RANGE_START && ciDate <= RELIGIOUS_RANGE_END; // 01.01.27 - 01.06.27
+  const event = (isWinterRange || isReligiousRange) ? getEventPeriod(ciDate) : null;
+  const holiday = isReligiousRange ? getReligiousHoliday(ciDate) : null;
+
+  if (isSummer) {
+    return { price: baseRoomPrice * 0.70, note: 'summer', event: null };
+  }
+  if (isReligiousRange) {
+    if (event) return { price: baseRoomPrice, note: 'event', event }; // Büyük organizasyon: baz fiyat
+    if (holiday) return { price: baseRoomPrice, note: 'holiday', event: holiday }; // Dini bayram: baz fiyat
+    return { price: baseRoomPrice * 0.70, note: 'religious30', event: null }; // Diğer günler: -%30 indirim
+  }
+  if (isWinterRange) {
+    if (event) {
+      return { price: baseRoomPrice, note: 'event', event }; // Yoğun dönem: indirim yok, baz fiyat
+    }
+    return { price: baseRoomPrice * 0.65, note: 'winter', event: null }; // -%35 indirim
+  }
+  return { price: baseRoomPrice, note: null, event: null };
+}
+
 function formatDate(dateStr) {
   if(!dateStr) return "";
   const parts = dateStr.split('-');
@@ -1361,23 +1420,21 @@ function bbUpdate() {
   
   if (dayDiff > 0) {
     let baseRoomPrice = parseFloat(roomVal);
-    const checkInMonth = ciDate.getMonth();
-    const isSummer = checkInMonth >= 5 && checkInMonth <= 8;
-    // Yaz sezonunda %30 indirim uygulanıyor (isteğe göre revize edildi)
-    if (isSummer) baseRoomPrice = baseRoomPrice * 0.70;
+    const pricing = computeRoomPricing(baseRoomPrice, ciDate);
+    baseRoomPrice = pricing.price;
 
     const totalRoomPrice = baseRoomPrice * dayDiff;
     const breakfastPrice = breakfast ? 15 * dayDiff * totalPeople : 0;
-    const transferPrice = transfer ? (totalPeople <= 5 ? 45 : 85) : 0;
+    const transferPrice = transfer ? (totalPeople <= 5 ? 55 : 85) : 0;
     
     const totalEur = totalRoomPrice + breakfastPrice + transferPrice;
     const totalTry = totalEur * EXCHANGE_RATE;
 
     const allL = {
-      tr: { room:'Oda', nights:'gece', breakfast:'Kahvaltı', transfer:'Transfer', total:'Toplam', person:'kişi', summer:'-30% yaz sezonu fiyatı uygulanmıştır' },
-      en: { room:'Room', nights:'nights', breakfast:'Breakfast', transfer:'Transfer', total:'Total', person:'pers', summer:'-30% summer season price applied' },
-      de: { room:'Zimmer', nights:'Nächte', breakfast:'Frühstück', transfer:'Transfer', total:'Gesamt', person:'Pers', summer:'-30% Sommerpreis angewendet' },
-      ru: { room:'Номер', nights:'ночей', breakfast:'Завтрак', transfer:'Трансфер', total:'Итого', person:'чел', summer:'Применена сезонная скидка 30%' }
+      tr: { room:'Oda', nights:'gece', breakfast:'Kahvaltı', transfer:'Transfer', total:'Toplam', person:'kişi', summer:'-30% yaz sezonu fiyatı uygulanmıştır', winter:'-35% sezon fiyatı uygulanmıştır', event:'Yoğun etkinlik dönemi — tam fiyat uygulanır', holiday:'Dini bayram dönemi — tam fiyat uygulanır', religious30:'-30% sezon fiyatı uygulanmıştır' },
+      en: { room:'Room', nights:'nights', breakfast:'Breakfast', transfer:'Transfer', total:'Total', person:'pers', summer:'-30% summer season price applied', winter:'-35% season price applied', event:'High-demand event period — full price applies', holiday:'Religious holiday period — full price applies', religious30:'-30% season price applied' },
+      de: { room:'Zimmer', nights:'Nächte', breakfast:'Frühstück', transfer:'Transfer', total:'Gesamt', person:'Pers', summer:'-30% Sommerpreis angewendet', winter:'-35% Saisonpreis angewendet', event:'Stark nachgefragter Veranstaltungszeitraum — voller Preis', holiday:'Religiöser Feiertag — voller Preis', religious30:'-30% Saisonpreis angewendet' },
+      ru: { room:'Номер', nights:'ночей', breakfast:'Завтрак', transfer:'Трансфер', total:'Итого', person:'чел', summer:'Применена сезонная скидка 30%', winter:'Применена сезонная скидка 35%', event:'Период высокого спроса — полная цена', holiday:'Религиозный праздник — полная цена', religious30:'Применена сезонная скидка 30%' }
     };
     const L = allL[lang] || allL.tr;
     
@@ -1386,7 +1443,17 @@ function bbUpdate() {
                   <span style="color:#fff;font-weight:500;">${Math.round(totalRoomPrice)} €</span>
                 </div>`;
     
-    if (isSummer) html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.summer}</div>`;
+    if (pricing.note === 'summer') html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.summer}</div>`;
+    if (pricing.note === 'winter') html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.winter}</div>`;
+    if (pricing.note === 'religious30') html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.religious30}</div>`;
+    if (pricing.note === 'event') {
+      const evName = pricing.event.label[lang] || pricing.event.label.tr;
+      html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.event} (${evName})</div>`;
+    }
+    if (pricing.note === 'holiday') {
+      const hName = pricing.event.label[lang] || pricing.event.label.tr;
+      html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.holiday} (${hName})</div>`;
+    }
     if (breakfast) html += `<div style="display:flex;justify-content:space-between;font-size:.82rem;padding:3px 0;color:rgba(255,255,255,.65)"><span>${L.breakfast} (${totalPeople} ${L.person})</span><span style="color:#fff;font-weight:500;">${Math.round(breakfastPrice)} €</span></div>`;
     if (transfer) html += `<div style="display:flex;justify-content:space-between;font-size:.82rem;padding:3px 0;color:rgba(255,255,255,.65)"><span>${L.transfer}</span><span style="color:#fff;font-weight:500;">${Math.round(transferPrice)} €</span></div>`;
     
@@ -1426,11 +1493,12 @@ function bbReserve() {
   const lang = document.documentElement.lang || 'tr';
 
   let baseRoomPrice = parseFloat(roomEl.value);
-  if (ciDate.getMonth() >= 5 && ciDate.getMonth() <= 8) baseRoomPrice = baseRoomPrice * 0.70;
+  const pricing = computeRoomPricing(baseRoomPrice, ciDate);
+  baseRoomPrice = pricing.price;
 
   const totalRoomPrice = baseRoomPrice * dayDiff;
   const breakfastPrice = breakfast ? 15 * dayDiff * totalPeople : 0;
-  const transferPrice = transfer ? (totalPeople <= 5 ? 45 : 85) : 0;
+  const transferPrice = transfer ? (totalPeople <= 5 ? 55 : 85) : 0;
   const totalEur = totalRoomPrice + breakfastPrice + transferPrice;
   const totalTry = totalEur * EXCHANGE_RATE;
 
@@ -1449,6 +1517,11 @@ function bbReserve() {
   msg += `📅 ${L.o}: ${formatDate(co)}\n`;
   msg += `🌙 ${L.n}: ${dayDiff} Gece\n`;
   msg += `👤 ${L.g}: ${adults} Yetişkin, ${children} Çocuk\n`;
+  if (pricing.note === 'summer') msg += `✦ -30% yaz sezonu fiyatı uygulanmıştır\n`;
+  if (pricing.note === 'winter') msg += `✦ -35% sezon fiyatı uygulanmıştır\n`;
+  if (pricing.note === 'religious30') msg += `✦ -30% sezon fiyatı uygulanmıştır\n`;
+  if (pricing.note === 'event') msg += `✦ Yoğun etkinlik dönemi (${pricing.event.label[lang] || pricing.event.label.tr}) — tam fiyat uygulanır\n`;
+  if (pricing.note === 'holiday') msg += `✦ Dini bayram dönemi (${pricing.event.label[lang] || pricing.event.label.tr}) — tam fiyat uygulanır\n`;
   msg += `☕ ${L.b}: ${breakfast ? 'Evet (' + Math.round(breakfastPrice) + '€)' : 'Hayır'}\n`;
   msg += `🚘 ${L.t}: ${transfer ? 'Evet (' + Math.round(transferPrice) + '€)' : 'Hayır'}\n\n`;
   msg += `💰 ${L.tot}: ${Math.round(totalEur)} € (~${Math.round(totalTry).toLocaleString('tr-TR')} ₺)`;
@@ -1527,7 +1600,7 @@ const translations = {
     bb_main_title:'Rezervasyon Yap', bb_main_sub:'En iyi fiyat garantisi • Direkt rezervasyon',
     bb_room:'ODA TİPİ', bb_checkin:'GİRİŞ', bb_checkout:'ÇIKIŞ', bb_adults:'YETİŞKİN', bb_children:'ÇOCUK',
     bb_extras:'EKSTRA HİZMETLER', bb_breakfast:'Kahvaltı', bb_breakfast_price:'+15€ / kişi / gece',
-    bb_transfer:'Havalimanı Transferi', bb_transfer_price:'45€ (≤5 kişi) / 85€ (6+)',
+    bb_transfer:'Havalimanı Transferi', bb_transfer_price:'55€ (≤5 kişi) / 85€ (6+)',
     bb_summary_title:'FİYAT ÖZETİ', bb_wire:'Havale/EFT', bb_card:'Kredi Kartı', bb_reserve:'REZERVASYON YAP',
     intro_eyebrow:'Belka Golf Residence', intro_title:'Ayrıcalıklı Konaklama Seçenekleri',
     intro_desc:'Belek\'in kalbinde, huzur ve konforun buluştuğu noktada; her detayı özenle tasarlanmış dairelerimizde evinizdeki sıcaklığı lüks hizmet kalitesiyle keşfedin.',
@@ -1594,7 +1667,7 @@ const translations = {
     bb_main_title:'Make a Reservation', bb_main_sub:'Best price guarantee • Direct booking',
     bb_room:'ROOM TYPE', bb_checkin:'CHECK-IN', bb_checkout:'CHECK-OUT', bb_adults:'ADULTS', bb_children:'CHILDREN',
     bb_extras:'EXTRA SERVICES', bb_breakfast:'Breakfast', bb_breakfast_price:'+15€ / pers / night',
-    bb_transfer:'Airport Transfer', bb_transfer_price:'45€ (≤5 pers) / 85€ (6+)',
+    bb_transfer:'Airport Transfer', bb_transfer_price:'55€ (≤5 pers) / 85€ (6+)',
     bb_summary_title:'PRICE SUMMARY', bb_wire:'Wire/EFT', bb_card:'Credit Card', bb_reserve:'BOOK NOW',
     intro_eyebrow:'Belka Golf Residence', intro_title:'Exclusive Accommodation Options',
     intro_desc:'Discover the warmth of your home with luxury service quality in our carefully designed apartments in the heart of Belek, where peace and comfort meet.',
@@ -1661,7 +1734,7 @@ const translations = {
     bb_main_title:'Reservierung vornehmen', bb_main_sub:'Bestpreisgarantie • Direktbuchung',
     bb_room:'ZIMMERTYP', bb_checkin:'ANREISE', bb_checkout:'ABREISE', bb_adults:'ERWACHSENE', bb_children:'KINDER',
     bb_extras:'ZUSATZLEISTUNGEN', bb_breakfast:'Frühstück', bb_breakfast_price:'+15€ / Pers / Nacht',
-    bb_transfer:'Flughafentransfer', bb_transfer_price:'45€ (≤5 Pers) / 85€ (6+)',
+    bb_transfer:'Flughafentransfer', bb_transfer_price:'55€ (≤5 Pers) / 85€ (6+)',
     bb_summary_title:'PREISÜBERSICHT', bb_wire:'Überweisung', bb_card:'Kreditkarte', bb_reserve:'JETZT BUCHEN',
     intro_eyebrow:'Belka Golf Residence', intro_title:'Exklusive Unterkunftsmöglichkeiten',
     intro_desc:'Entdecken Sie die Wärme Ihres Zuhauses mit Luxus-Servicequalität in unseren sorgfältig gestalteten Apartments im Herzen von Belek, wo Ruhe und Komfort aufeinandertreffen.',
@@ -1728,7 +1801,7 @@ const translations = {
     bb_main_title:'Сделать бронирование', bb_main_sub:'Гарантия лучшей цены • Прямое бронирование',
     bb_room:'ТИП НОМЕРА', bb_checkin:'ЗАЕЗД', bb_checkout:'ВЫЕЗД', bb_adults:'ВЗРОСЛЫЕ', bb_children:'ДЕТИ',
     bb_extras:'ДОП. УСЛУГИ', bb_breakfast:'Завтрак', bb_breakfast_price:'+15€ / чел / ночь',
-    bb_transfer:'Трансфер из аэропорта', bb_transfer_price:'45€ (≤5 чел) / 85€ (6+)',
+    bb_transfer:'Трансфер из аэропорта', bb_transfer_price:'55€ (≤5 чел) / 85€ (6+)',
     bb_summary_title:'ИТОГО', bb_wire:'Перевод', bb_card:'Кредитная карта', bb_reserve:'ЗАБРОНИРОВАТЬ',
     intro_eyebrow:'Belka Golf Residence', intro_title:'Эксклюзивные варианты проживания',
     intro_desc:'Откройте для себя тепло вашего дома с качеством обслуживания люкс в наших тщательно спроектированных апартаментах в самом сердце Белека, где встречаются покой и комфорт.',
