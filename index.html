@@ -275,7 +275,7 @@
       font-size: 1.6rem; font-weight: 400; color: #fff;
       margin-bottom: 6px; letter-spacing: 0.02em;
     }
-    .bb-subtitle { font-size: 0.7rem; color: rgba(255,255,255,0.6); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 28px; }
+    .bb-subtitle { font-size: 0.85rem; color: rgba(255,255,255,0.75); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 28px; }
     .bb-form {
       display: grid;
       grid-template-columns: minmax(0,2fr) repeat(4, minmax(0,1fr));
@@ -284,61 +284,63 @@
     }
     .bb-field { display: flex; flex-direction: column; gap: 8px; }
     .bb-label {
-      font-size: 0.58rem; font-weight: 600; letter-spacing: 0.22em;
-      text-transform: uppercase; color: rgba(255,255,255,0.6);
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: rgba(255,255,255,0.85);
     }
     .bb-select, .bb-input {
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
-      color: #fff; padding: 12px 14px; font-family: 'Jost', sans-serif;
-      font-size: 0.85rem; border-radius: 2px; outline: none;
+      background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.25);
+      color: #fff; padding: 14px 16px; font-family: 'Jost', sans-serif;
+      font-size: 1rem; border-radius: 3px; outline: none;
       transition: border-color 0.2s; width: 100%;
       -webkit-appearance: none; appearance: none;
+      min-height: 48px;
     }
     .bb-select option { background: #1a2a1c; color: #fff; }
     .bb-select:focus, .bb-input:focus { border-color: #b8923a; }
     .bb-input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1) opacity(0.5); cursor: pointer; }
     .bb-extras-row { margin-top: 20px; }
-    .bb-extras-label { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 12px; }
+    .bb-extras-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 12px; }
     .bb-extras { display: flex; gap: 28px; flex-wrap: wrap; }
-    .bb-check { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+    .bb-check { display: flex; align-items: center; gap: 12px; cursor: pointer; padding: 6px 0; }
     .bb-check input[type="checkbox"] { position: absolute; opacity: 0; pointer-events: none; }
     .bb-check-box {
-      width: 16px; height: 16px; border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 2px; position: relative; transition: all 0.2s;
+      width: 24px; height: 24px; border: 2px solid rgba(255,255,255,0.4);
+      border-radius: 3px; position: relative; transition: all 0.2s; flex-shrink: 0;
     }
     .bb-check input:checked + .bb-check-box { background: #b8923a; border-color: #b8923a; }
     .bb-check input:checked + .bb-check-box::after {
       content: '✓'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-      color: #fff; font-size: 0.6rem;
+      color: #fff; font-size: 1rem; font-weight: 700;
     }
-    .bb-check-label { font-size: 0.85rem; color: rgba(255,255,255,0.85); }
-    .bb-check-label em { font-style: normal; font-size: 0.7rem; color: rgba(255,255,255,0.6); margin-left: 8px; }
+    .bb-check-label { font-size: 1rem; color: #fff; font-weight: 500; }
+    .bb-check-label em { font-style: normal; font-size: 0.85rem; color: rgba(255,255,255,0.75); margin-left: 8px; }
     
     .bb-bottom {
       margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);
       display: flex; justify-content: space-between; align-items: flex-end; gap: 40px;
     }
     .bb-summary-box { flex: 1; max-width: 500px; }
-    .bb-summary-title { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 16px; }
+    .bb-summary-title { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 16px; }
     #bb-summary { min-height: 80px; }
     .bb-actions { display: flex; flex-direction: column; gap: 16px; min-width: 240px; }
     .bb-pay-row { display: flex; gap: 12px; }
     .bb-pay-opt {
       flex: 1; position: relative; cursor: pointer;
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-      padding: 10px; border-radius: 2px; text-align: center;
-      font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5);
-      transition: all 0.2s;
+      background: rgba(255,255,255,0.06); border: 2px solid rgba(255,255,255,0.15);
+      padding: 14px 10px; border-radius: 3px; text-align: center;
+      font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.7);
+      transition: all 0.2s; font-weight: 600; min-height: 48px;
     }
     .bb-pay-opt input { position: absolute; opacity: 0; pointer-events: none; }
-    .bb-pay-opt:has(input:checked) { background: rgba(184,146,58,0.1); border-color: #b8923a; color: #fff; }
+    .bb-pay-opt:has(input:checked) { background: rgba(184,146,58,0.15); border-color: #b8923a; color: #fff; }
+    .bb-pay-opt:has(input:checked)::before { content: '✓ '; }
     .bb-btn {
-      background: #b8923a; color: #1a1a1a; border: none; padding: 16px; border-radius: 2px;
-      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-      cursor: pointer; transition: all 0.3s;
+      background: #b8923a; color: #1a1a1a; border: none; padding: 18px; border-radius: 3px;
+      font-size: 0.9rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.3s; min-height: 52px;
     }
     .bb-btn:hover { background: #a07c2e; transform: translateY(-2px); }
-    .bb-rate-info { margin-top: 12px; font-size: 0.65rem; color: rgba(255,255,255,0.6); letter-spacing: 0.05em; }
+    .bb-rate-info { margin-top: 12px; font-size: 0.78rem; color: rgba(255,255,255,0.75); letter-spacing: 0.03em; }
 
     /* ══ INTRO ══ */
     #intro { padding: 120px 80px; background: #fff; }
@@ -1438,31 +1440,31 @@ function bbUpdate() {
     };
     const L = allL[lang] || allL.tr;
     
-    let html = `<div style="display:flex;justify-content:space-between;font-size:.82rem;padding:3px 0;color:rgba(255,255,255,.65)">
+    let html = `<div style="display:flex;justify-content:space-between;font-size:1rem;padding:5px 0;color:rgba(255,255,255,.85)">
                   <span>${L.room} × ${dayDiff} ${L.nights}</span>
-                  <span style="color:#fff;font-weight:500;">${Math.round(totalRoomPrice)} €</span>
+                  <span style="color:#fff;font-weight:600;">${Math.round(totalRoomPrice)} €</span>
                 </div>`;
     
-    if (pricing.note === 'summer') html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.summer}</div>`;
-    if (pricing.note === 'winter') html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.winter}</div>`;
-    if (pricing.note === 'religious30') html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.religious30}</div>`;
+    if (pricing.note === 'summer') html += `<div style="font-size:.9rem;color:#f5dfa0;font-weight:700;padding:3px 0;">✓ ${L.summer}</div>`;
+    if (pricing.note === 'winter') html += `<div style="font-size:.9rem;color:#f5dfa0;font-weight:700;padding:3px 0;">✓ ${L.winter}</div>`;
+    if (pricing.note === 'religious30') html += `<div style="font-size:.9rem;color:#f5dfa0;font-weight:700;padding:3px 0;">✓ ${L.religious30}</div>`;
     if (pricing.note === 'event') {
       const evName = pricing.event.label[lang] || pricing.event.label.tr;
-      html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.event}: ${evName}</div>`;
+      html += `<div style="font-size:.9rem;color:#f5dfa0;font-weight:700;padding:3px 0;">✓ ${L.event}: ${evName}</div>`;
     }
     if (pricing.note === 'holiday') {
       const hName = pricing.event.label[lang] || pricing.event.label.tr;
-      html += `<div style="font-size:.7rem;color:#b8923a;padding:2px 0;">✦ ${L.holiday}: ${hName}</div>`;
+      html += `<div style="font-size:.9rem;color:#f5dfa0;font-weight:700;padding:3px 0;">✓ ${L.holiday}: ${hName}</div>`;
     }
-    if (breakfast) html += `<div style="display:flex;justify-content:space-between;font-size:.82rem;padding:3px 0;color:rgba(255,255,255,.65)"><span>${L.breakfast} (${totalPeople} ${L.person})</span><span style="color:#fff;font-weight:500;">${Math.round(breakfastPrice)} €</span></div>`;
-    if (transfer) html += `<div style="display:flex;justify-content:space-between;font-size:.82rem;padding:3px 0;color:rgba(255,255,255,.65)"><span>${L.transfer}</span><span style="color:#fff;font-weight:500;">${Math.round(transferPrice)} €</span></div>`;
+    if (breakfast) html += `<div style="display:flex;justify-content:space-between;font-size:1rem;padding:5px 0;color:rgba(255,255,255,.85)"><span>${L.breakfast} (${totalPeople} ${L.person})</span><span style="color:#fff;font-weight:600;">${Math.round(breakfastPrice)} €</span></div>`;
+    if (transfer) html += `<div style="display:flex;justify-content:space-between;font-size:1rem;padding:5px 0;color:rgba(255,255,255,.85)"><span>${L.transfer}</span><span style="color:#fff;font-weight:600;">${Math.round(transferPrice)} €</span></div>`;
     
-    html += `<div style="height:1px;background:rgba(255,255,255,.1);margin:8px 0;"></div>
+    html += `<div style="height:2px;background:rgba(255,255,255,.15);margin:10px 0;"></div>
       <div style="display:flex;justify-content:space-between;align-items:center;">
-        <span style="font-size:.82rem;font-weight:600;color:rgba(255,255,255,.9);text-transform:uppercase;letter-spacing:.06em;">${L.total}</span>
+        <span style="font-size:1rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.04em;">${L.total}</span>
         <div style="text-align:right;">
-          <span style="display:block;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:#fff;line-height:1;">${Math.round(totalEur)} €</span>
-          <span style="display:block;font-size:.85rem;font-weight:700;color:#f5dfa0;margin-top:4px;text-shadow:0 0 10px rgba(184,146,58,0.3);">≈ ${Math.round(totalTry).toLocaleString('tr-TR')} ₺</span>
+          <span style="display:block;font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#fff;line-height:1;">${Math.round(totalEur)} €</span>
+          <span style="display:block;font-size:1rem;font-weight:700;color:#f5dfa0;margin-top:5px;text-shadow:0 0 10px rgba(184,146,58,0.3);">≈ ${Math.round(totalTry).toLocaleString('tr-TR')} ₺</span>
         </div>
       </div>`;
 
