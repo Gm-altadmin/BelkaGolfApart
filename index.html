@@ -1506,10 +1506,10 @@ function bbReserve() {
 
   const headers = { tr:'Merhaba, yeni bir rezervasyon talebi var:', en:'Hello, there is a new reservation request:', de:'Hallo, es gibt eine neue Reservierungsanfrage:', ru:'Здравствуйте, поступил новый запрос на бронирование:' };
   const labels = {
-    tr: { r:'Oda Tipi', i:'Giriş', o:'Çıkış', n:'Konaklama', g:'Misafirler', b:'Kahvaltı', t:'Transfer', tot:'Toplam Tutar' },
-    en: { r:'Room Type', i:'Check-in', o:'Check-out', n:'Stay', g:'Guests', b:'Breakfast', t:'Transfer', tot:'Total Amount' },
-    de: { r:'Zimmertyp', i:'Anreise', o:'Abreise', n:'Aufenthalt', g:'Gäste', b:'Frühstück', t:'Transfer', tot:'Gesamtbetrag' },
-    ru: { r:'Тип номера', i:'Заезд', o:'Выезд', n:'Проживание', g:'Гости', b:'Завтрак', t:'Трансфер', tot:'Итоговая сумма' }
+    tr: { r:'Oda Tipi', i:'Giriş', o:'Çıkış', n:'Konaklama', g:'Misafirler', p:'Oda Fiyatı', b:'Kahvaltı', t:'Transfer', tot:'Toplam Tutar' },
+    en: { r:'Room Type', i:'Check-in', o:'Check-out', n:'Stay', g:'Guests', p:'Room Price', b:'Breakfast', t:'Transfer', tot:'Total Amount' },
+    de: { r:'Zimmertyp', i:'Anreise', o:'Abreise', n:'Aufenthalt', g:'Gäste', p:'Zimmerpreis', b:'Frühstück', t:'Transfer', tot:'Gesamtbetrag' },
+    ru: { r:'Тип номера', i:'Заезд', o:'Выезд', n:'Проживание', g:'Гости', p:'Цена номера', b:'Завтрак', t:'Трансфер', tot:'Итоговая сумма' }
   };
   const L = labels[lang] || labels.tr;
 
@@ -1519,6 +1519,7 @@ function bbReserve() {
   msg += `📅 ${L.o}: ${formatDate(co)}\n`;
   msg += `🌙 ${L.n}: ${dayDiff} Gece\n`;
   msg += `👤 ${L.g}: ${adults} Yetişkin, ${children} Çocuk\n`;
+  msg += `💶 ${L.p}: ${Math.round(totalRoomPrice)} €\n`;
   if (pricing.note === 'summer') msg += `✦ -30% yaz sezonu fiyatı uygulanmıştır\n`;
   if (pricing.note === 'winter') msg += `✦ -35% sezon fiyatı uygulanmıştır\n`;
   if (pricing.note === 'religious30') msg += `✦ -30% sezon fiyatı uygulanmıştır\n`;
