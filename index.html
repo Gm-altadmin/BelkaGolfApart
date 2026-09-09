@@ -1351,17 +1351,27 @@ function getReligiousHoliday(date) {
   return RELIGIOUS_HOLIDAYS.find(h => date >= h.start && date <= h.end) || null;
 }
 
+/* multiplier: baz fiyata uygulanacak çarpan (1.0 = indirim yok/normal baz fiyat).
+   Tarihler çakışırsa (ör. COP31 ile Golf Trips Tour aynı haftada), o gün için
+   en yüksek çarpanlı etkinlik esas alınır — bkz. getEventPeriod(). */
 const EVENT_PERIODS = [
-  { start: new Date('2026-10-05'), end: new Date('2026-10-09'), label: { tr:'Uluslararası Uzay Kongresi (IAC 2026)', en:'International Astronautical Congress (IAC 2026)', de:'Internationaler Astronautischer Kongress (IAC 2026)', ru:'Международный астронавтический конгресс (IAC 2026)' } },
-  { start: new Date('2026-10-26'), end: new Date('2026-10-28'), label: { tr:'Antalya Turizm Fuarı (ATF)', en:'Antalya Tourism Fair (ATF)', de:'Antalya Tourismusmesse (ATF)', ru:'Анталийская туристическая выставка (ATF)' } },
-  { start: new Date('2026-11-09'), end: new Date('2026-11-20'), label: { tr:'BM İklim Zirvesi (COP31)', en:'UN Climate Summit (COP31)', de:'UN-Klimagipfel (COP31)', ru:'Климатический саммит ООН (COP31)' } },
-  { start: new Date('2026-11-24'), end: new Date('2026-11-27'), label: { tr:'Uluslararası Tarım Teknolojileri Fuarı', en:'International Agri-Tech Fair', de:'Internationale Agrartechnik-Messe', ru:'Международная выставка агротехнологий' } },
-  { start: new Date('2026-12-17'), end: new Date('2026-12-20'), label: { tr:'Enerji Teknolojileri Fuarı', en:'Energy Technologies Fair', de:'Messe für Energietechnologien', ru:'Выставка энергетических технологий' } },
-  { start: new Date('2027-01-12'), end: new Date('2027-01-15'), label: { tr:'Anfaş Hotel Equipment Fuarı', en:'Anfaş Hotel Equipment Fair', de:'Anfaş Hotel Equipment Messe', ru:'Выставка Anfaş Hotel Equipment' } },
+  { start: new Date('2026-10-05'), end: new Date('2026-10-09'), multiplier: 2.5, label: { tr:'Uluslararası Uzay Kongresi (IAC 2026) — NEST Belek', en:'International Astronautical Congress (IAC 2026) — NEST Belek', de:'Internationaler Astronautischer Kongress (IAC 2026) — NEST Belek', ru:'Международный астронавтический конгресс (IAC 2026) — NEST Belek' } },
+  { start: new Date('2026-10-06'), end: new Date('2026-10-10'), multiplier: 1.3, label: { tr:'Race to Belek Golf Turnuvası Finali', en:'Race to Belek Golf Tournament Final', de:'Race to Belek Golfturnier-Finale', ru:'Финал турнира Race to Belek' } },
+  { start: new Date('2026-10-26'), end: new Date('2026-10-28'), multiplier: 1.5, label: { tr:'Antalya Turizm Fuarı (ATF)', en:'Antalya Tourism Fair (ATF)', de:'Antalya Tourismusmesse (ATF)', ru:'Анталийская туристическая выставка (ATF)' } },
+  { start: new Date('2026-11-05'), end: new Date('2026-11-07'), multiplier: 1.8, label: { tr:'EIF Enerji Dönüşümü Fuarı (30.000+ ziyaretçi)', en:'EIF Energy Transition Expo (30,000+ visitors)', de:'EIF Energiewende-Messe (30.000+ Besucher)', ru:'Выставка EIF по энергопереходу (30 000+ посетителей)' } },
+  { start: new Date('2026-11-07'), end: new Date('2026-11-14'), multiplier: 1.3, label: { tr:'Golf Trips Tour Finali — Gloria Serenity, Belek', en:'Golf Trips Tour Final — Gloria Serenity, Belek', de:'Golf Trips Tour Finale — Gloria Serenity, Belek', ru:'Финал Golf Trips Tour — Gloria Serenity, Belek' } },
+  { start: new Date('2026-11-09'), end: new Date('2026-11-20'), multiplier: 3.0, label: { tr:'BM İklim Zirvesi (COP31)', en:'UN Climate Summit (COP31)', de:'UN-Klimagipfel (COP31)', ru:'Климатический саммит ООН (COP31)' } },
+  { start: new Date('2026-11-24'), end: new Date('2026-11-27'), multiplier: 2.0, label: { tr:'Growtech Antalya — Uluslararası Tarım Teknolojileri Fuarı (38.000+ ziyaretçi)', en:'Growtech Antalya — International Agri-Tech Fair (38,000+ visitors)', de:'Growtech Antalya — Internationale Agrartechnik-Messe (38.000+ Besucher)', ru:'Growtech Antalya — Международная выставка агротехнологий (38 000+ посетителей)' } },
+  { start: new Date('2026-12-10'), end: new Date('2026-12-12'), multiplier: 1.4, label: { tr:'Hotel-Tech Antalya — NEST Kongre Merkezi, Belek', en:'Hotel-Tech Antalya — NEST Convention Center, Belek', de:'Hotel-Tech Antalya — NEST Kongresszentrum, Belek', ru:'Hotel-Tech Antalya — конгресс-центр NEST, Belek' } },
+  { start: new Date('2027-01-12'), end: new Date('2027-01-15'), multiplier: 1.4, label: { tr:'Anfaş Hotel Equipment Fuarı', en:'Anfaş Hotel Equipment Fair', de:'Anfaş Hotel Equipment Messe', ru:'Выставка Anfaş Hotel Equipment' } },
 ];
 
+/* Bir tarihte birden fazla etkinlik dönemi çakışıyorsa (ör. COP31 + Golf Trips Tour),
+   en yüksek çarpanlı olanı döndürür. */
 function getEventPeriod(date) {
-  return EVENT_PERIODS.find(p => date >= p.start && date <= p.end) || null;
+  const matches = EVENT_PERIODS.filter(p => date >= p.start && date <= p.end);
+  if (matches.length === 0) return null;
+  return matches.reduce((best, p) => p.multiplier > best.multiplier ? p : best, matches[0]);
 }
 
 /* Giriş tarihine göre gecelik oda fiyatını ve varsa uygulanan not/etiketi döndürür */
@@ -1377,13 +1387,13 @@ function computeRoomPricing(baseRoomPrice, ciDate) {
     return { price: baseRoomPrice * 0.70, note: 'summer', event: null };
   }
   if (isReligiousRange) {
-    if (event) return { price: baseRoomPrice, note: 'event', event }; // Büyük organizasyon: baz fiyat
+    if (event) return { price: baseRoomPrice * event.multiplier, note: 'event', event }; // Büyük organizasyon: çarpanlı fiyat
     if (holiday) return { price: baseRoomPrice, note: 'holiday', event: holiday }; // Dini bayram: baz fiyat
     return { price: baseRoomPrice * 0.70, note: 'religious30', event: null }; // Diğer günler: -%30 indirim
   }
   if (isWinterRange) {
     if (event) {
-      return { price: baseRoomPrice, note: 'event', event }; // Yoğun dönem: indirim yok, baz fiyat
+      return { price: baseRoomPrice * event.multiplier, note: 'event', event }; // Yoğun dönem: çarpanlı fiyat
     }
     return { price: baseRoomPrice * 0.65, note: 'winter', event: null }; // -%35 indirim
   }
